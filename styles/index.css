@@ -201,10 +201,10 @@ h3 {
   overflow: visible !important;
 }
 
-.slick-slide > div {
+/* .slick-slide > div {
   padding-top: 4rem;
   padding-bottom: 2rem;
-}
+} */
 
 .service-item:hover .font-outline {
   -webkit-text-stroke: 1.5px #f99b24;

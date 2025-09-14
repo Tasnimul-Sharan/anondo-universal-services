@@ -14,6 +14,7 @@ import Navbar from "@/components/Navbar";
 import TeamSection from "@/components/TeamSection";
 import Services from "@/components/Services";
 import AdvantagesSection from "@/components/AdvantagesSection";
+import HelpSection from "@/components/HelpSection";
 export default function Home() {
   const meta = {
     title:
@@ -47,14 +48,14 @@ export default function Home() {
       </Head>
       <Navbar />
       <LandingPage />
-      <AboutUsSection />
+      {/* <AboutUsSection /> */}
       <Services />
       <AdvantagesSection />
-      <SuitesSection />
-      {/* <TeamSection /> */}
+      {/* <SuitesSection /> */}
+      <TeamSection />
       <Gallery />
       <Testimonials />
-      {/* <AboutUs /> */}
+      <HelpSection />
       <WhyUsSection />
       <WorkProcess />
       <ContactSection />
