@@ -57,7 +57,7 @@ export default function Home() {
       <Testimonials />
       <HelpSection />
       <WhyUsSection />
-      <WorkProcess />
+      {/* <WorkProcess /> */}
       <ContactSection />
       <BlogSection />
     </div>

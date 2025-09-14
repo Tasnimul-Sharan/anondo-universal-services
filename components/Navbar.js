@@ -97,9 +97,9 @@ export default function Navbar() {
               className="object-contain"
             />
             <div className="text-left">
-              <h1 className="text-2xl font-bold">BRISTOL</h1>
+              <h1 className="text-2xl font-bold text-primary">Anondo</h1>
               <p className="text-xs tracking-widest text-gray-600">
-                SECURITY GUARD
+                Universal Services
               </p>
             </div>
           </Link>
