@@ -1,144 +1,146 @@
 "use client";
 import Image from "next/image";
-import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
-import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope } from "react-icons/fa";
 import Link from "next/link";
+import {
+  FaFacebookF,
+  FaTwitter,
+  FaLinkedinIn,
+  FaInstagram,
+} from "react-icons/fa";
+
+const recentPosts = [
+  {
+    id: 1,
+    title: "What Planning Process Needs?",
+    date: "06 June 2018",
+    img: "/blogs/blog-1.jpg",
+    slug: "planning-process",
+  },
+  {
+    id: 2,
+    title: "Tips To Move Your Project More Forward.",
+    date: "06 June 2018",
+    img: "/blogs/blog-2.jpg",
+    slug: "move-project-forward",
+  },
+];
 
 export default function Footer() {
   return (
-    <footer className="bg-secondary text-white relative">
-      <div className="absolute inset-0 bg-center bg-no-repeat opacity-20 pointer-events-none">
-        <Image
-          src="/footer-background.jpg"
-          alt="Background Pattern"
-          fill
-          className="object-cover"
-        />
-      </div>
-
-      <div className="custom-container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 py-16">
+    <footer className="bg-black text-gray-300">
+      <div className="custom-container mx-auto py-16 grid grid-cols-1 md:grid-cols-4 gap-12">
+        
+        {/* Logo + About */}
         <div>
-          <div className="bg-white px-4 py-4 rounded-lg w-48 h-28 mb-4">
+          <div className="flex items-center gap-3 mb-4">
             <Image
-              src="/anondo-baari-logo.png"
-              width={1200}
-              height={1200}
-              alt="Anondo Baari Logo"
-              className="object-cover w-full h-full z-10"
+              src="/anondo-universal-services-logo.jpg"
+              alt="Logo"
+              width={40}
+              height={40}
+              className="object-contain"
             />
-          </div>
+         <span className="text-sm text-white inline-block">
+  <span className="text-primary text-xl font-bold block">Anondo</span>
+  Universal Services
+</span>
 
-          <p className="text-sm leading-relaxed text-gray-200 mb-4">
-            A Sanctuary of Wellness and Dignity for Senior Citizens
+          </div>
+          <p className="text-sm leading-relaxed mb-6">
+            Enthusiastically mesh long-term high-impact infrastructures vis-a-vis
+            service. Leverage agile frameworks to provide a robust synopsis for
+            high-level overviews.
           </p>
 
-          <div className="flex gap-3">
-            {[
-              { Icon: FaFacebookF, link: "https://facebook.com/anondobari" },
-              { Icon: FaXTwitter, link: "https://twitter.com/anondobari" },
-              { Icon: FaInstagram, link: "https://instagram.com/anondobari" },
-              {
-                Icon: FaLinkedinIn,
-                link: "https://linkedin.com/company/anondobari",
-              },
-            ].map(({ Icon, link }, idx) => (
-              <a
-                key={idx}
-                href={link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-primary p-3 rounded-full hover:bg-white hover:text-primary transition-all transform duration-500"
+          {/* Social Icons */}
+          <div className="flex space-x-4 text-gray-400">
+            <Link href="#"><FaTwitter className="hover:text-white transition" /></Link>
+            <Link href="#"><FaFacebookF className="hover:text-white transition" /></Link>
+            <Link href="#"><FaLinkedinIn className="hover:text-white transition" /></Link>
+            <Link href="#"><FaInstagram className="hover:text-white transition" /></Link>
+          </div>
+        </div>
+
+        {/* Quick Links */}
+        <div>
+          <h3 className="text-white font-semibold text-lg mb-6 relative">
+            Quick Links
+            <span className="block w-10 h-[2px] bg-primary mt-2"></span>
+          </h3>
+          <ul className="space-y-3 text-sm">
+            <li><Link href="/" className="hover:text-white transition">Home</Link></li>
+            <li><Link href="/about" className="hover:text-white transition">About</Link></li>
+            <li><Link href="/services" className="hover:text-white transition">Services</Link></li>
+            <li><Link href="/portfolio" className="hover:text-white transition">Portfolio</Link></li>
+            <li><Link href="/blogs" className="hover:text-white transition">Blog</Link></li>
+            <li><Link href="/contact" className="hover:text-white transition">Contact</Link></li>
+          </ul>
+        </div>
+
+        {/* Recent Posts */}
+        <div>
+          <h3 className="text-white font-semibold text-lg mb-6 relative">
+            Recent Posts
+            <span className="block w-10 h-[2px] bg-primary mt-2"></span>
+          </h3>
+          <div className="space-y-6">
+            {recentPosts.map((post) => (
+              <Link
+                href={`/blogs/${post.slug}`}
+                key={post.id}
+                className="flex items-center gap-4 group"
               >
-                <Icon className="md:text-lg text-base" />
-              </a>
+                <div className="relative w-16 h-16 flex-shrink-0">
+                  <Image
+                    src={post.img}
+                    alt={post.title}
+                    fill
+                    className="object-cover rounded"
+                  />
+                </div>
+                <div>
+                  <p className="text-sm text-white group-hover:text-primary transition">
+                    {post.title}
+                  </p>
+                  <span className="text-xs text-primary">{post.date}</span>
+                </div>
+              </Link>
             ))}
           </div>
         </div>
 
+        {/* Contact Us */}
         <div>
-          <h3 className="md:text-xl text-lg font-semibold mb-4">Explore</h3>
-          <ul className="space-y-3 md:text-base text-sm text-gray-200">
-            {[
-              { name: "About", href: "/about" },
-              { name: "Services", href: "/services" },
-              { name: "Gallery", href: "/gallery" },
-              { name: "Blogs", href: "/blogs" },
-              { name: "Contact", href: "/contact" },
-            ].map(({ name, href }, idx) => (
-              <li key={idx}>
-                <Link href={href} className="relative group inline-block">
-                  <span className="hover:text-primary transition-all">
-                    {name}
-                  </span>
-                  <span className="hover-line"></span>
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        <div>
-          <h3 className="md:text-xl text-lg font-semibold mb-4">
-            Recent Posts
+          <h3 className="text-white font-semibold text-lg mb-6 relative">
+            Contact Us
+            <span className="block w-10 h-[2px] bg-primary mt-2"></span>
           </h3>
-          <ul className="space-y-4 md:text-base text-sm text-gray-200">
-            <li>
-              <Link
-                href="/blogs/staying-fit-after-60"
-                className="hover:text-primary cursor-pointer transition-all transform duration-500"
-              >
-                Staying Fit After 60: Gentle Exercises...
-                <span className="text-xs block mt-1">August 20, 2025</span>
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/blogs/art-music-therapy"
-                className="hover:text-primary cursor-pointer transition-all transform duration-500"
-              >
-                Healing Through Art and Music Therapy
-                <span className="text-xs block mt-1">August 25, 2025</span>
-              </Link>
-            </li>
-          </ul>
-        </div>
-        <div>
-          <h3 className="md:text-xl text-lg font-semibold mb-4">Contact Us</h3>
-          <ul className="space-y-3 md:text-base text-sm text-gray-200">
-            <li className="flex items-start gap-3">
-              <FaMapMarkerAlt className="text-primary mt-1 text-sm md:text-xl" />
-              <span>
-                Printers Building, 12-14th Floor, 5 Rajuk Avenue, Motijheel,
-                Dhaka
-              </span>
-            </li>
-
-            <li className="flex items-center gap-3">
-              <FaPhoneAlt className="text-primary text-sm md:text-xl" />
-              <a
-                href="tel:+8801234567890"
-                className="hover:text-primary transition-colors transform duration-500"
-              >
-                +880 1313775333
-              </a>
-            </li>
-            <li className="flex items-center gap-3">
-              <FaEnvelope className="text-primary text-sm md:text-xl" />
-              <a
-                href="mailto:info@anondobari.com"
-                className="hover:text-primary transition-colors transform duration-500"
-              >
-                info@anondobari.com
-              </a>
-            </li>
-          </ul>
+          <p className="text-sm mb-2">
+            Phone: <span className="text-white">+987 654 3210</span>
+          </p>
+          <p className="text-sm">
+            Email:{" "}
+            <span className="text-primary">security@support.com</span>
+          </p>
         </div>
       </div>
 
-      <div className="border-t border-gray-600 custom-container mx-auto py-6 text-center text-sm text-gray-400">
-        Copyright © {new Date().getFullYear()} by{" "}
-        <span className="text-primary">Anondo Baari</span>. All rights reserved.
+      {/* Bottom Bar */}
+      <div className="border-t border-gray-700 py-6 text-center md:flex md:items-center md:justify-between max-w-7xl mx-auto px-6 lg:px-12">
+        <p className="text-sm">
+          Copyright © 2025{" "}
+          <span className="text-primary font-semibold">Anondo
+Universal Services</span>. All
+          rights reserved.
+        </p>
+        <div className="flex items-center gap-6 text-sm mt-4 md:mt-0">
+          <Link href="/privacy-policy" className="hover:text-white transition">
+            Privacy Policy
+          </Link>
+          <Link href="/terms" className="hover:text-white transition">
+            Terms & Condition
+          </Link>
+        </div>
       </div>
     </footer>
   );

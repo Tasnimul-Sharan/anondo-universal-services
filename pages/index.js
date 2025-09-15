@@ -15,6 +15,7 @@ import TeamSection from "@/components/TeamSection";
 import Services from "@/components/Services";
 import AdvantagesSection from "@/components/AdvantagesSection";
 import HelpSection from "@/components/HelpSection";
+import ProductsSection from "@/components/ProductsSection";
 export default function Home() {
   const meta = {
     title:
@@ -50,6 +51,7 @@ export default function Home() {
       <LandingPage />
       {/* <AboutUsSection /> */}
       <Services />
+      <ProductsSection />
       <AdvantagesSection />
       {/* <SuitesSection /> */}
       <TeamSection />
