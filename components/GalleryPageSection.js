@@ -15,32 +15,32 @@ import { FiEye } from "react-icons/fi";
 export default function GalleryPageSection() {
   const gallery = [
     {
-      img: "/gallery/gallery1.jpg",
+      img: "/gallery/gallery1.jpeg",
       title: "Gallery Image 1",
       desc: "Description of image 1",
     },
     {
-      img: "/gallery/gallery2.jpg",
+      img: "/gallery/gallery2.jpeg",
       title: "Gallery Image 2",
       desc: "Description of image 2",
     },
     {
-      img: "/gallery/gallery3.jpg",
+      img: "/gallery/gallery3.jpeg",
       title: "Gallery Image 3",
       desc: "Description of image 3",
     },
     {
-      img: "/gallery/gallery4.jpg",
+      img: "/gallery/gallery4.jpeg",
       title: "Gallery Image 4",
       desc: "Description of image 4",
     },
     {
-      img: "/gallery/gallery5.jpg",
+      img: "/gallery/gallery5.jpeg",
       title: "Gallery Image 5",
       desc: "Description of image 5",
     },
     {
-      img: "/gallery/gallery6.jpg",
+      img: "/gallery/gallery6.jpeg",
       title: "Gallery Image 6",
       desc: "Description of image 6",
     },

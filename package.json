@@ -14,7 +14,7 @@
     "framer-motion": "^12.19.1",
     "gsap": "^3.12.5",
     "leaflet": "^1.9.4",
-    "lightbox.js-react": "^1.2.5",
+    "lightbox.js-react": "^1.6.2",
     "next": "^15.4.5",
     "nodemailer": "^7.0.5",
     "openai": "^5.16.0",
