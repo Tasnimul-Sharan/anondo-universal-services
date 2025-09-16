@@ -176,7 +176,7 @@ export default function Gallery() {
         </h2>
       </div>
 
-      <SlideshowLightbox  showThumbnails={true} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <SlideshowLightbox modalClose="clickOutside"  showThumbnails={true} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {gallery.map((item, idx) => (
           <img
             key={idx}
@@ -190,3 +190,49 @@ export default function Gallery() {
   );
 }
 
+// "use client";
+// import { SlideshowLightbox } from "lightbox.js-react";
+// // import "lightbox.js-react/style.css";
+
+// export default function Gallery() {
+//   const gallery = [
+//     { img: "/gallery/gallery1.jpeg", title: "Gallery Image 1" },
+//     { img: "/gallery/gallery2.jpeg", title: "Gallery Image 2" },
+//     { img: "/gallery/gallery3.jpeg", title: "Gallery Image 3" },
+//     { img: "/gallery/gallery4.jpeg", title: "Gallery Image 4" },
+//     { img: "/gallery/gallery5.jpeg", title: "Gallery Image 5" },
+//     { img: "/gallery/gallery6.jpeg", title: "Gallery Image 6" },
+//   ];
+
+//   return (
+//     <div className="custom-container mx-auto py-16">
+//       {/* Title */}
+//       <div className="text-center mb-12">
+//         <p className="uppercase font-medium text-primary tracking-[0.15em] text-sm">
+//           Our Works
+//         </p>
+//         <h2 className="text-secondary text-3xl md:text-4xl font-bold mt-2">
+//           Explore Our Gallery
+//         </h2>
+//       </div>
+
+//       <SlideshowLightbox
+//         showThumbnails={true}
+//         className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+//       >
+//         {gallery.map((item, idx) => (
+//           <div
+//             key={idx}
+//             className="overflow-hidden rounded-md cursor-pointer"
+//           >
+//             <img
+//               src={item.img}
+//               alt={item.title}
+//               className="w-full h-full object-cover rounded-md transform transition-transform duration-500 hover:scale-110"
+//             />
+//           </div>
+//         ))}
+//       </SlideshowLightbox>
+//     </div>
+//   );
+// }
