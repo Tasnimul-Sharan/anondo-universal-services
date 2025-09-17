@@ -166,7 +166,6 @@ export default function Gallery() {
 
   return (
     <div className="custom-container mx-auto py-16">
-      {/* Title */}
       <div className="text-center mb-12">
         <p className="uppercase font-medium text-primary tracking-[0.15em] text-sm">
           Our Works

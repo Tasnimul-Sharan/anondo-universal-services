@@ -330,7 +330,6 @@ export default function Services() {
   return (
     <section className="relative py-20 bg-white">
       <div className="max-w-6xl mx-auto px-4">
-        {/* Heading */}
         <div className="text-center mb-12">
           <h2 className="text-2xl md:text-3xl font-bold text-gray-900">
             OUR BEST SERVICES
@@ -340,9 +339,7 @@ export default function Services() {
           </p>
         </div>
 
-        {/* Layout */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 items-center">
-          {/* Left services */}
           <div className="flex flex-col gap-10">
             {services.slice(0, 3).map((service, i) => (
               <div key={i} className="flex items-center gap-4 text-left">
@@ -358,17 +355,13 @@ export default function Services() {
               </div>
             ))}
           </div>
-
-          {/* Middle image */}
           <div className="flex justify-center">
             <img
-              src="/services/security-guard.jpg"
+              src="/services/security-guard.jpeg"
               alt="Security Guard"
-              className="max-h-[420px] object-contain"
+              className="w-full h-full object-cover rounded-md"
             />
           </div>
-
-          {/* Right services */}
           <div className="flex flex-col gap-10">
             {services.slice(3).map((service, i) => (
               <div key={i} className="flex items-center gap-4 text-left">

@@ -12,7 +12,7 @@ import Link from "next/link";
 const sliderData = {
   slides: [
     {
-      image: "/slider/security1.jpg",
+      image: "/slider/security1.jpeg",
       subtitle: "Professional Security",
       title: "24/7 Protection Services",
       description:
@@ -21,7 +21,7 @@ const sliderData = {
       secondaryButton: { text: "Contact Us", link: "/contact" },
     },
     {
-      image: "/slider/security2.jpg",
+      image: "/slider/security2.jpeg",
       subtitle: "Corporate Solutions",
       title: "Trusted By Leading Companies",
       description:
@@ -30,7 +30,7 @@ const sliderData = {
       secondaryButton: { text: "Get Quote", link: "/quote" },
     },
     {
-      image: "/slider/security3.jpg",
+      image: "/slider/security3.jpeg",
       subtitle: "Smart Technology",
       title: "Modern Surveillance Systems",
       description:
@@ -73,6 +73,25 @@ const LandingPage = () => {
     beforeChange: (_, next) => setActiveIndex(next),
   };
 
+
+  const textVariants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.8, ease: "easeOut" },
+  },
+};
+
+const containerVariants = {
+  hidden: {},
+  visible: {
+    transition: { staggerChildren: 0.3 }, // ekta ekta kore asbe
+  },
+};
+
+
+
   return (
     <div className="relative w-full overflow-hidden group">
 
@@ -92,7 +111,7 @@ const LandingPage = () => {
             ></motion.div>
 
             <div className="absolute inset-0 bg-black bg-opacity-50"></div>
-            <div
+            {/* <div
               ref={(el) => (textRefs.current[index] = el)}
               className="absolute inset-0 flex flex-col items-center justify-center text-center text-white z-10 px-6"
             >
@@ -120,28 +139,6 @@ const LandingPage = () => {
                 {slide.description}
               </motion.p>
 
-              {/* <motion.div
-                className="mt-6 flex gap-4"
-                key={`button-${index}-${activeIndex}`}
-              >
-                {slide.buttonTexts.map((text, btnIndex) => (
-                  <Link
-                    key={btnIndex}
-                    href={slide.buttonLinks[btnIndex]}
-                    passHref
-                  >
-                    <Button
-                      title={text}
-                      className={`w-full sm:w-auto font-semibold rounded-md transition ${
-                        btnIndex === 0
-                          ? "bg-primary text-off_white hover:bg-Secound_primary"
-                          : "bg-secondary text-white hover:bg-soft_black"
-                      }`}
-                    />
-                  </Link>
-                ))}
-              </motion.div> */}
-
 <motion.div className="mt-6 flex gap-4">
   <Link href="/services">
     <Button variant="primary">services</Button>
@@ -152,7 +149,48 @@ const LandingPage = () => {
 </motion.div>
 
 
-            </div>
+            </div> */}
+            <motion.div
+  ref={(el) => (textRefs.current[index] = el)}
+  className="absolute inset-0 flex flex-col items-center justify-center text-center text-white z-10 px-6"
+  variants={containerVariants}
+  initial="hidden"
+  animate={activeIndex === index ? "visible" : "hidden"} // শুধুমাত্র active slide animate হবে
+>
+  <motion.p
+    className="uppercase tracking-widest text-sm"
+    variants={textVariants}
+  >
+    {slide.subtitle}
+  </motion.p>
+
+  <motion.h1
+    className="text-3xl md:text-6xl font-serif italic font-semibold mt-4"
+    variants={textVariants}
+  >
+    <span className="text-primary">
+      {slide.title.split(" ")[0]}
+    </span>{" "}
+    {slide.title.split(" ").slice(1).join(" ")}
+  </motion.h1>
+
+  <motion.p
+    className="mt-4 text-base md:text-lg max-w-xl text-gray-200"
+    variants={textVariants}
+  >
+    {slide.description}
+  </motion.p>
+
+  <motion.div className="mt-6 flex gap-4" variants={textVariants}>
+    <Link href="/services">
+      <Button variant="primary">Services</Button>
+    </Link>
+    <Link href="/contact">
+      <Button variant="outline">Contact Us</Button>
+    </Link>
+  </motion.div>
+</motion.div>
+
           </div>
         ))}
       </Slider>

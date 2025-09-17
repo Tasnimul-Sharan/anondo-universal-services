@@ -48,8 +48,8 @@ const advantages = [
 
 export default function AdvantagesSection() {
   return (
-    <section className="bg-[#0a2342] py-16 px-4 md:px-10">
-      <div className="max-w-7xl mx-auto text-center">
+    <section className="bg-gray-50 py-20">
+      <div className="max-w-7xl mx-auto text-center px-6 md:px-0">
         <h2 className="text-white text-3xl md:text-4xl font-bold uppercase">
           Our Advantages
         </h2>
