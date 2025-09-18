@@ -256,7 +256,7 @@
 //             <div className="flex flex-col gap-10 justify-center">
 //               {services.slice(0, 3).map((service, i) => (
 //                 <div key={i} className="flex items-center gap-4 text-left">
-//                   <div className="p-3 border-2 border-yellow-400 rounded-md">
+//                   <div className="p-3 border-2 border-primary rounded-md">
 //                     {service.icon}
 //                   </div>
 //                   <div>
@@ -284,7 +284,7 @@
 //             <div className="flex flex-col gap-10 justify-center md:col-start-2 md:row-start-1">
 //               {services.slice(3).map((service, i) => (
 //                 <div key={i} className="flex items-center gap-4 text-left">
-//                   <div className="p-3 border-2 border-yellow-400 rounded-md">
+//                   <div className="p-3 border-2 border-primary rounded-md">
 //                     {service.icon}
 //                   </div>
 //                   <div>
@@ -343,7 +343,7 @@ export default function Services() {
           <div className="flex flex-col gap-10">
             {services.slice(0, 3).map((service, i) => (
               <div key={i} className="flex items-center gap-4 text-left">
-                <div className="p-3 border-2 border-yellow-400 rounded-md text-yellow-500">
+                <div className="p-3 border-2 border-primary rounded-md text-primary">
                   {service.icon}
                 </div>
                 <div>
@@ -365,7 +365,7 @@ export default function Services() {
           <div className="flex flex-col gap-10">
             {services.slice(3).map((service, i) => (
               <div key={i} className="flex items-center gap-4 text-left">
-                <div className="p-3 border-2 border-yellow-400 rounded-md text-yellow-500">
+                <div className="p-3 border-2 border-primary rounded-md text-primary">
                   {service.icon}
                 </div>
                 <div>

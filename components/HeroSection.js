@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const HeroSection = ({ hero }) => {
   return (
-    <section className="relative w-full h-96 overflow-hidden flex items-center justify-center">
+    <section className="relative w-full h-[40rem] overflow-hidden flex items-center justify-center">
       <div
         className="absolute inset-0 transition bg-cover bg-center bg-no-repeat transform duration-1000 ease-out"
         style={{
@@ -12,7 +12,7 @@ const HeroSection = ({ hero }) => {
       >
         <div className="absolute inset-0 bg-black/40"></div>
       </div>
-      <div className="relative z-10 text-center custom-container mx-auto">
+      <div className="relative z-10 text-center custom-container mx-auto md:mt-36">
         <h1 className="text-white text-4xl md:text-5xl font-bold mb-4">
           {hero.title}
         </h1>

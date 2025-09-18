@@ -50,10 +50,10 @@ export default function AdvantagesSection() {
   return (
     <section className="bg-gray-50 py-20">
       <div className="max-w-7xl mx-auto text-center px-6 md:px-0">
-        <h2 className="text-white text-3xl md:text-4xl font-bold uppercase">
+        <h2 className="text-secondary text-3xl md:text-4xl font-bold uppercase">
           Our Advantages
         </h2>
-        <p className="text-gray-300 mt-2">
+        <p className="text-gray-500 mt-2">
           The Love Boat promises something for everyone now to beat every of just one
         </p>
 
@@ -62,7 +62,7 @@ export default function AdvantagesSection() {
           {advantages.map((adv) => (
             <div
               key={adv.id}
-              className="bg-white rounded-lg overflow-hidden shadow-lg"
+              className="bg-white rounded-lg overflow-hidden"
             >
               <div className="relative">
                 <img
@@ -70,7 +70,7 @@ export default function AdvantagesSection() {
                   alt={adv.title}
                   className="w-full h-60 object-cover"
                 />
-                <div className="absolute -bottom-6 left-6 bg-yellow-400 w-12 h-12 flex items-center justify-center shadow-md">
+                <div className="absolute -bottom-6 left-6 bg-primary w-12 h-12 flex items-center justify-center">
                   {adv.icon}
                 </div>
               </div>
@@ -81,7 +81,7 @@ export default function AdvantagesSection() {
                 <p className="text-gray-600 mt-2">{adv.desc}</p>
                 <a
                   href="#"
-                  className="mt-4 inline-block text-sm font-semibold text-gray-900 hover:text-yellow-500"
+                  className="mt-4 inline-block text-sm font-semibold text-gray-900 hover:text-primary"
                 >
                   READ MORE →
                 </a>

@@ -9,33 +9,66 @@ import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import Button from "./Button";
 import Link from "next/link";
 
+// const sliderData = {
+//   slides: [
+//     {
+//       image: "/slider/security1.jpeg",
+//       subtitle: "Professional Security",
+//       title: "24/7 Protection Services",
+//       description:
+//         "Our highly trained guards and advanced technology ensure complete safety for your home, office, and business around the clock.",
+//       primaryButton: { text: "Services", link: "/services" },
+//       secondaryButton: { text: "Contact Us", link: "/contact" },
+//     },
+//     {
+//       image: "/slider/security2.jpeg",
+//       subtitle: "Corporate Solutions",
+//       title: "Trusted By Leading Companies",
+//       description:
+//         "We provide reliable security services for banks, offices, and corporate establishments with years of proven experience.",
+//       primaryButton: { text: "Our Clients", link: "/clients" },
+//       secondaryButton: { text: "Get Quote", link: "/quote" },
+//     },
+//     {
+//       image: "/slider/security3.jpeg",
+//       subtitle: "Smart Technology",
+//       title: "Modern Surveillance Systems",
+//       description:
+//         "From CCTV to biometric access control and digital monitoring, we integrate the latest security technology for your safety.",
+//       primaryButton: { text: "Explore Services", link: "/services" },
+//       secondaryButton: { text: "Contact Us", link: "/contact" },
+//     },
+//   ],
+// };
+
+
 const sliderData = {
   slides: [
     {
       image: "/slider/security1.jpeg",
-      subtitle: "Professional Security",
-      title: "24/7 Protection Services",
+      subtitle: "Your Safety, Our Responsibility",
+      title: "Professional Security Services",
       description:
-        "Our highly trained guards and advanced technology ensure complete safety for your home, office, and business around the clock.",
-      primaryButton: { text: "Services", link: "/services" },
+        "Uniformed guards, armed protection, caretakers, and supervisors ensuring round-the-clock safety for homes, offices, and industries.",
+      primaryButton: { text: "Explore Services", link: "/services" },
       secondaryButton: { text: "Contact Us", link: "/contact" },
     },
     {
       image: "/slider/security2.jpeg",
-      subtitle: "Corporate Solutions",
-      title: "Trusted By Leading Companies",
+      subtitle: "Trusted by Leading Businesses",
+      title: "Corporate & Industrial Protection",
       description:
-        "We provide reliable security services for banks, offices, and corporate establishments with years of proven experience.",
+        "From corporate offices to large factories, we provide tailored security, supervision, access control, and fire-safety compliance.",
       primaryButton: { text: "Our Clients", link: "/clients" },
       secondaryButton: { text: "Get Quote", link: "/quote" },
     },
     {
       image: "/slider/security3.jpeg",
-      subtitle: "Smart Technology",
-      title: "Modern Surveillance Systems",
+      subtitle: "Smart & Modern Solutions",
+      title: "Technology-Enabled Surveillance",
       description:
-        "From CCTV to biometric access control and digital monitoring, we integrate the latest security technology for your safety.",
-      primaryButton: { text: "Explore Services", link: "/services" },
+        "CCTV, biometric access, alarm systems, and 24/7 central monitoring—combining people with technology for maximum protection.",
+      primaryButton: { text: "See Technology", link: "/services" },
       secondaryButton: { text: "Contact Us", link: "/contact" },
     },
   ],
@@ -155,7 +188,7 @@ const containerVariants = {
   className="absolute inset-0 flex flex-col items-center justify-center text-center text-white z-10 px-6"
   variants={containerVariants}
   initial="hidden"
-  animate={activeIndex === index ? "visible" : "hidden"} // শুধুমাত্র active slide animate হবে
+  animate={activeIndex === index ? "visible" : "hidden"}
 >
   <motion.p
     className="uppercase tracking-widest text-sm"
