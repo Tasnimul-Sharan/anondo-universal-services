@@ -2,6 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { FaRegCalendarAlt, FaRegUser } from "react-icons/fa";
+import SectionHeader from "./SectionHeader";
 
 const blogs = [
   {
@@ -40,14 +41,12 @@ export default function BlogSection() {
   return (
     <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-6 md:px-0">
-        <div className="text-center mb-12">
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 uppercase">
-            Latest News
-          </h2>
-          <p className="text-gray-500 mt-2">
-            The Love Boat promises something for everyone now to beat every of just one
-          </p>
-        </div>
+       <SectionHeader
+          subtitle="Our Blog"
+          title="Latest News"
+          details="The Love Boat promises something for everyone now to beat every of just one"
+        />
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {blogs.map((blog) => (
             <Link href={`/blogs/${blog.slug}`}>

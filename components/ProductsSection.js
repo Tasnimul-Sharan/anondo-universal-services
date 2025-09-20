@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import SectionHeader from "./SectionHeader";
 
 const products = [
   {
@@ -17,39 +18,27 @@ const products = [
     name: "ARCHWAY SCANNER",
     img: "/products/security-guard.jpg",
   },
+  {
+    id: 4,
+    name: "ENTRY CONTROL",
+    img: "/products/security-guard.jpg",
+  },
 ];
-// const products = [
-//   {
-//     id: 1,
-//     name: "GUARD VEST",
-//     img: "/products/guard-vest.png",
-//   },
-//   {
-//     id: 2,
-//     name: "METAL DETECTOR",
-//     img: "/products/metal-detector.png",
-//   },
-//   {
-//     id: 3,
-//     name: "ARCHWAY SCANNER",
-//     img: "/products/archway-scanner.png",
-//   },
-// ];
 
 export default function ProductsSection() {
   return (
     <section className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-6 md:px-0">
-        <div className="text-center mb-12">
-          <span className="bg-primary text-white text-xs font-semibold px-4 py-1 uppercase tracking-wide inline-block mb-4">
-            Our Equipment
-          </span>
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 uppercase">
-            Our Security Products
-          </h2>
-        </div>
+      <div className="custom-container mx-auto">
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<SectionHeader
+  subtitle="Our Equipment"
+  title="Our Security Products"
+  details="Explore our wide range of advanced security products designed to ensure safety, reliability, and peace of mind for your home and business."
+/>
+
+
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {products.map((product) => (
             <div
               key={product.id}

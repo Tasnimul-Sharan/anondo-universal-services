@@ -27,7 +27,7 @@ const recentPosts = [
 
 export default function Footer() {
   return (
-    <footer className="bg-black text-gray-300">
+    <footer className="bg-secondary text-gray-300">
       <div className="custom-container mx-auto py-16 grid grid-cols-1 md:grid-cols-4 gap-12">
         
         {/* Logo + About */}
@@ -36,9 +36,9 @@ export default function Footer() {
             <Image
               src="/anondo-universal-services-logo.jpg"
               alt="Logo"
-              width={40}
-              height={40}
-              className="object-contain"
+              width={100}
+              height={100}
+              className="object-cover rounded-full"
             />
          <span className="text-sm text-white inline-block">
   <span className="text-primary text-xl font-bold block">Anondo</span>
@@ -68,10 +68,9 @@ export default function Footer() {
             <span className="block w-10 h-[2px] bg-primary mt-2"></span>
           </h3>
           <ul className="space-y-3 text-sm">
-            <li><Link href="/" className="hover:text-white transition">Home</Link></li>
             <li><Link href="/about" className="hover:text-white transition">About</Link></li>
             <li><Link href="/services" className="hover:text-white transition">Services</Link></li>
-            <li><Link href="/portfolio" className="hover:text-white transition">Portfolio</Link></li>
+            <li><Link href="/portfolio" className="hover:text-white transition">Gallery</Link></li>
             <li><Link href="/blogs" className="hover:text-white transition">Blog</Link></li>
             <li><Link href="/contact" className="hover:text-white transition">Contact</Link></li>
           </ul>
@@ -109,7 +108,6 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Contact Us */}
         <div>
           <h3 className="text-white font-semibold text-lg mb-6 relative">
             Contact Us
@@ -126,7 +124,7 @@ export default function Footer() {
       </div>
 
       {/* Bottom Bar */}
-      <div className="border-t border-gray-700 py-6 text-center md:flex md:items-center md:justify-between max-w-7xl mx-auto px-6 lg:px-12">
+      <div className="border-t border-gray-400 py-6 text-center md:flex md:items-center md:justify-between max-w-7xl mx-auto px-6 lg:px-12">
         <p className="text-sm">
           Copyright © 2025{" "}
           <span className="text-primary font-semibold">Anondo

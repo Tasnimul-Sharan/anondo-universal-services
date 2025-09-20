@@ -6,6 +6,7 @@ import Slider from "react-slick";
 import { motion } from "framer-motion";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import SectionHeader from "./SectionHeader";
 
 const testimonials = [
   {
@@ -62,7 +63,7 @@ export default function Testimonials() {
 
   return (
     <section className="py-16 bg-gray-50 text-center">
-      <motion.p
+      {/* <motion.p
         className="uppercase text-primary font-medium tracking-widest text-sm"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -80,7 +81,13 @@ export default function Testimonials() {
         transition={{ duration: 0.6, delay: 0.1 }}
       >
         What our clients say
-      </motion.h2>
+      </motion.h2> */}
+
+        <SectionHeader
+          subtitle="Client Testimonials"
+          title="What our clients say"
+          details="The Love Boat promises something for everyone now to beat every of just one"
+        />
 
       <div className="max-w-7xl mx-auto overflow-hidden">
         <Slider {...settings}>

@@ -316,6 +316,7 @@ import {
   FaLock,
   FaExclamationTriangle,
 } from "react-icons/fa";
+import SectionHeader from "./SectionHeader";
 
 const services = [
   { title: "SECURITY CONSULTING", icon: <FaShieldAlt className="w-5 h-5" /> },
@@ -329,15 +330,12 @@ const services = [
 export default function Services() {
   return (
     <section className="relative py-20 bg-white">
-      <div className="max-w-6xl mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-900">
-            OUR BEST SERVICES
-          </h2>
-          <p className="text-gray-500 mt-2 max-w-2xl mx-auto">
-            The Love Boat promises something for everyone now to beat every of just one
-          </p>
-        </div>
+      <div className="max-w-6xl mx-auto px-6 md:px-0">
+          <SectionHeader
+          subtitle="Our Services"
+          title="OUR BEST SERVICES"
+          details="The Love Boat promises something for everyone now to beat every of just one"
+        />
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 items-center">
           <div className="flex flex-col gap-10">

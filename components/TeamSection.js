@@ -3,12 +3,13 @@
 import { FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram } from "react-icons/fa";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import SectionHeader from "./SectionHeader";
 
 const teamMembers = [
   {
     name: "SARA SMITH",
     role: "Event Manager",
-    img: "/team/team1.jpg",
+    img: "/team/team1.jpeg",
     socials: {
       facebook: "https://facebook.com/",
       linkedin: "https://linkedin.com/",
@@ -18,7 +19,7 @@ const teamMembers = [
   {
     name: "NATTASHA",
     role: "Event Manager",
-    img: "/team/team2.jpg",
+    img: "/team/team1.jpeg",
     socials: {
       facebook: "https://facebook.com/",
       linkedin: "https://linkedin.com/",
@@ -28,7 +29,7 @@ const teamMembers = [
   {
     name: "JOHN DOUE",
     role: "Event Manager",
-    img: "/team/team3.jpg",
+    img: "/team/team1.jpeg",
     socials: {
       facebook: "https://facebook.com/",
       linkedin: "https://linkedin.com/",
@@ -38,7 +39,7 @@ const teamMembers = [
   {
     name: "SARA SANA",
     role: "Event Manager",
-    img: "/team/team4.jpg",
+    img: "/team/team1.jpeg",
     socials: {
       facebook: "https://facebook.com/",
       linkedin: "https://linkedin.com/",
@@ -50,13 +51,11 @@ const teamMembers = [
 export default function TeamSection() {
   return (
     <section className="py-16 bg-gray-50">
-      <div className="text-center mb-12">
-        <h2 className="text-4xl font-bold text-gray-800">Our Team</h2>
-        <p className="text-gray-500 mt-2 max-w-xl mx-auto">
-          Meet our professional event managers who ensure everything runs
-          smoothly and securely.
-        </p>
-      </div>
+       <SectionHeader
+        subtitle="Our Team"
+        title="Meet Our Professional Team"
+        details="Meet our professional event managers who ensure everything runs smoothly and securely."
+      />
 
       <div className="grid grid-cols-1 md:grid-cols-4 gap-6 custom-container mx-auto px-6 md:px-0">
         {teamMembers.map((member, index) => (
@@ -68,9 +67,9 @@ export default function TeamSection() {
               <Image
                 src={member.img}
                 alt={member.name}
-                width={400}
-                height={500}
-                className="w-full h-[350px] object-cover"
+                width={1200}
+                height={600}
+                className="w-full h-96 object-cover"
               />
               <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 flex items-center justify-center gap-4 transition duration-500">
                 <a
