@@ -114,11 +114,10 @@ export default function Footer() {
             <span className="block w-10 h-[2px] bg-primary mt-2"></span>
           </h3>
           <p className="text-sm mb-2">
-            Phone: <span className="text-white">+987 654 3210</span>
+            Phone: <span className="text-white">+880 1313775333</span>
           </p>
           <p className="text-sm">
-            Email:{" "}
-            <span className="text-primary">security@support.com</span>
+            Email:{" "}<span className="text-primary">contact@anondouniversalserviceslimited.com</span>
           </p>
         </div>
       </div>

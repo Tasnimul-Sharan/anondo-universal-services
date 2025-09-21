@@ -60,24 +60,32 @@ export default function ContactSection() {
     <section className="relative py-20 bg-primary/5">
       <div className="max-w-7xl mx-auto px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch">
         {/* Left Side */}
-        <motion.div
+        {/* <motion.div
           className="flex flex-col justify-between rounded"
           initial={{ opacity: 0, x: -60 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
           viewport={{ once: true }}
-        >
+        > */}
+        <motion.div
+  className="flex flex-col justify-between rounded"
+  initial={{ opacity: 0, scale: 0.9, y: 50 }}
+  whileInView={{ opacity: 1, scale: 1, y: 0 }}
+  transition={{ duration: 0.8, ease: "easeOut" }}
+  viewport={{ once: true }}
+>
           <div>
-            <p className="uppercase text-primary tracking-[0.15em] mb-3 font-medium">
-              Get in Touch
-            </p>
-            <h2 className="md:text-3xl text-3xl font-bold text-secondary mb-4 leading-snug">
-              Visit <span className="text-primary"> Anondo Universal Services </span> <br /> or reach out to us anytime
-            </h2>
-            <p className="text-gray-500 mb-10 max-w-md">
-              We are here to answer your questions and guide you through our
-              senior wellness & living facilities. Feel free to connect with us.
-            </p>
+ <p className="bg-primary/20 text-primary rounded-full text-xs font-semibold px-4 py-2 uppercase tracking-wide inline-block mb-4">
+          Get in Touch
+        </p>
+<h2 className="md:text-3xl text-3xl font-bold text-secondary mb-4 leading-snug">
+  Connect with <span className="text-primary"> Anondo Universal Security </span> <br /> for reliable protection anytime
+</h2>
+<p className="text-gray-500 mb-6 max-w-xl">
+  We provide trusted security guard services for homes, offices, and businesses. 
+  Reach out to us anytime for dependable safety and professional support.
+</p>
+
           </div>
 <div className="grid gap-6 md:grid-cols-1">
   {/* Address Card */}
@@ -88,8 +96,7 @@ export default function ContactSection() {
     <div>
       <h4 className="font-semibold">Our Address</h4>
       <p className="text-sm opacity-90">
-        Anondo Baari, Printers’ Building, 5 RAJUK Avenue, Dilkusha,
-        Dhaka
+        Printers Building, 12-14th Floor, 5 Rajuk Avenue, Motijheel, 1000 Dhaka
       </p>
     </div>
   </div>
@@ -112,24 +119,27 @@ export default function ContactSection() {
     </div>
     <div>
       <h4 className="font-semibold">Our Email</h4>
-      <p className="text-sm opacity-90">info@anondobari.com</p>
+      <p className="text-sm opacity-90">contact@anondouniversalserviceslimited.com</p>
     </div>
   </div>
 </div>
 
 
         </motion.div>
-
-        {/* Right Side Form */}
-        <motion.div
-          className="bg-white border rounded-lg px-6 py-12 flex flex-col justify-between"
-          initial={{ opacity: 0, x: 60 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          viewport={{ once: true }}
-        >
-          <form onSubmit={handleSubmit} className="space-y-6 flex-1">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <motion.div
+  // className="bg-white border rounded-lg px-6 py-8 flex flex-col"
+  // initial={{ opacity: 0, x: 60 }}
+  // whileInView={{ opacity: 1, x: 0 }}
+  // transition={{ duration: 0.8, ease: "easeOut" }}
+  // viewport={{ once: true }}
+  className="bg-white border rounded-lg px-6 py-8 flex flex-col"
+  initial={{ opacity: 0, scale: 0.9, y: 50 }}
+  whileInView={{ opacity: 1, scale: 1, y: 0 }}
+  transition={{ duration: 0.9, ease: "easeOut", delay: 0.2 }}
+  viewport={{ once: true }}
+>
+  <form onSubmit={handleSubmit} className="space-y-6">
+  <div className="grid grid-cols-1 md:grid-cols-1 gap-6">
               <div>
                 <label className="block text-sm font-medium mb-2">Name</label>
                 <input
@@ -183,24 +193,36 @@ export default function ContactSection() {
                 required
               />
             </div>
-            <button
-              ref={buttonRef}
-              type="submit"
-              disabled={loading}
-              className="bg-primary hover:bg-primary/80 text-white font-semibold rounded-md px-6 py-3 w-full transition-all transform duration-500 flex items-center justify-center gap-2"
-            >
-              <FaRegPaperPlane className="text-lg" />
-              {loading ? "Sending..." : "Send Message"}
-            </button>
-          </form>
-        </motion.div>
-      </div>
+            <div className="relative">
+      {/* <button
+        ref={buttonRef}
+        type="submit"
+        disabled={loading}
+        className="bg-primary hover:bg-secondary text-white font-semibold rounded-md px-6 py-3 w-full transition-colors transform duration-500 flex items-center justify-center gap-2"
+      >
+        <FaRegPaperPlane className="text-lg" />
+        {loading ? "Sending..." : "Send Message"}
+      </button> */}
+      <button
+  ref={buttonRef}
+  type="submit"
+  disabled={loading}
+  className="bg-primary hover:bg-secondary text-white font-semibold rounded-md px-6 py-3 w-full transition-colors duration-500 flex items-center justify-center gap-2 group"
+>
+  {/* Text */}
+  <span>{loading ? "Sending..." : "Send Message"}</span>
 
-      {/* Success/Error Message */}
+  {/* Icon */}
+  <FaRegPaperPlane
+    className="text-lg transform transition-transform duration-500 group-hover:translate-x-2"
+  />
+</button>
+
+
       {status === "success" && (
         <motion.div
-          className="mt-6 flex items-center gap-2 p-4 bg-green-100 border border-green-400 text-green-700 rounded-md"
-          initial={{ opacity: 0, y: 40 }}
+          className="mt-4 flex items-center gap-2 p-4 bg-green-100 border border-green-400 text-green-700 rounded-md"
+          initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
@@ -211,8 +233,8 @@ export default function ContactSection() {
 
       {status === "error" && (
         <motion.div
-          className="mt-6 flex items-center gap-2 p-4 bg-red-100 border border-red-400 text-red-700 rounded-md"
-          initial={{ opacity: 0, y: 40 }}
+          className="mt-4 flex items-center gap-2 p-4 bg-red-100 border border-red-400 text-red-700 rounded-md"
+          initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
@@ -220,6 +242,10 @@ export default function ContactSection() {
           <span>Oops! Something went wrong. Please try again.</span>
         </motion.div>
       )}
+    </div>
+</form>
+        </motion.div>
+      </div>
     </section>
   );
 }

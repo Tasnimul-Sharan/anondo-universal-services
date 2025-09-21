@@ -21,86 +21,62 @@ export default function AboutPage() {
     image: "https://www.anondobari.com/about/about-og.jpg",
   };
 
-  const faqData = {
-    title: "Frequently Asked Questions",
-    faqs: [
-      {
-        question: "What is Anondo Baari?",
-        answer:
-          "Anondo Baari is a wellness and senior citizen living center that combines modern healthcare with holistic healing practices, offering a sanctuary for body, mind, and soul.",
-      },
-      {
-        question: "Where is Anondo Baari located?",
-        answer:
-          "It is situated in Ulukhola, Purbachal New Town—just 20 minutes from Hazrat Shahjalal International Airport—on the south bank of the River Turag, spread over 25 acres of landscaped land.",
-      },
-      {
-        question: "What is the vision of Anondo Baari?",
-        answer:
-          "To be the most trusted and respected wellness centre for senior citizens in South Asia, providing world-class facilities, healthcare, and compassionate living.",
-      },
-      {
-        question: "What is the mission of Anondo Baari?",
-        answer:
-          "To deliver exceptional wellness services and support systems that help senior residents live with joy, independence, and dignity.",
-      },
-      {
-        question: "How many residents can live here?",
-        answer:
-          "Anondo Baari accommodates up to 5,000 residents in 2,500 centrally air-conditioned suites.",
-      },
-      {
-        question: "What types of suites are available?",
-        answer:
-          "Standard Suites (modern décor, cozy bed, serene views), Executive Suites (luxury furnishings & premium interiors), Garden-View Suites (lush garden view, natural light), and Assisted Living Units (with medical support).",
-      },
-      {
-        question: "What medical facilities are provided?",
-        answer:
-          "24/7 in-house healthcare with physicians, nurses, physiotherapists, dieticians, and psychologists. Services include chronic disease management, physiotherapy, cognitive therapy, emergency helicopter evacuation, on-site diagnostics, and pharmacy.",
-      },
-      {
-        question: "What wellness programs are offered?",
-        answer:
-          "Yoga, meditation, tai chi, aerobics, aqua gym, massage, hydrotherapy, and stress-relief therapies.",
-      },
-      {
-        question: "What recreational activities are available?",
-        answer:
-          "Cultural evenings, art & craft workshops, gardening & cooking clubs, movie nights, intergenerational programs, and prayer sessions.",
-      },
-      {
-        question: "How is nutrition managed?",
-        answer:
-          "Meals are freshly prepared and dietitian-approved with special menus like vegetarian, diabetic-friendly, heart-healthy, and high-protein options. Residents enjoy dining halls, buffets, in-room dining, and herbal beverages.",
-      },
-      {
-        question: "What eco-friendly and sustainability initiatives exist?",
-        answer:
-          "Solar-powered lighting, rainwater harvesting, organic gardens, waste recycling, and eco-transport facilities inside the campus.",
-      },
-      {
-        question: "How is resident safety ensured?",
-        answer:
-          "300+ CCTV cameras, RFID-based entry, emergency response teams, wellness app, AI-based monitoring, telemedicine, and smart emergency buttons.",
-      },
-      {
-        question: "What learning and contribution opportunities are available?",
-        answer:
-          "Workshops, resident-led sessions, university partnerships, memoir writing support, and volunteering opportunities.",
-      },
-      {
-        question: "What is the admission process?",
-        answer:
-          "Inquiry & virtual tour, Application & health evaluation, Personal interview & suite selection, Contract & onboarding, Welcome & orientation.",
-      },
-      {
-        question: "How can I contact Anondo Baari?",
-        answer:
-          "📍 Ulukhola, Purbachal New Town, Dhaka (20 minutes from Airport). Correspondence:📍 Printers’ Building, 5 RAJUK Avenue, Dilkusha, Dhaka. 📞 Phone: +880 1313775333 . 📧 Email: info@anondobari.com . 🌐 Website: https://www.anondobari.com/.",
-      },
-    ],
-  };
+ const faqData = {
+  title: "Frequently Asked Questions",
+  faqs: [
+    {
+      question: "What is Anondo Universal Services Limited?",
+      answer:
+        "Anondo Universal Services Limited (AUSL) is a multidisciplinary service provider specializing in safety & security, engineering & real estate, and logistics & business support solutions. We are committed to ensuring safety, efficiency, and growth for individuals, businesses, and communities.",
+    },
+    {
+      question: "Where is Anondo Universal Services Limited located?",
+      answer:
+        "Our head office is located in Bangladesh, with operations spanning residential, commercial, and industrial sectors nationwide. We also provide 24/7 support and rapid response services across the country.",
+    },
+    {
+      question: "What is the vision of AUSL?",
+      answer:
+        "To be the most trusted security and service provider in South Asia, delivering innovative, reliable, and people-focused solutions.",
+    },
+    {
+      question: "What is the mission of AUSL?",
+      answer:
+        "To ensure safety, efficiency, and peace of mind through professionalism, modern technology, and uncompromising integrity.",
+    },
+    {
+      question: "What types of services do you provide?",
+      answer:
+        "We provide a wide range of services including security guards, armed guards, caretakers, supervisors, peons, drivers, courier & cargo services, ERP & digital solutions, CCTV installation, event management, office management, digital marketing, and media & advertising services.",
+    },
+    {
+      question: "How many security professionals are employed by AUSL?",
+      answer:
+        "We have over 2000+ trained security professionals deployed nationwide, supported by supervisors, caretakers, drivers, and specialized teams.",
+    },
+    {
+      question: "How is safety and quality ensured?",
+      answer:
+        "Our personnel undergo rigorous training in crisis response, fire safety, first aid, customer service, and advanced security protocols. We operate a Central Command & Monitoring Center with 24/7 oversight and rapid response teams.",
+    },
+    {
+      question: "Do you provide customized solutions?",
+      answer:
+        "Yes, AUSL offers tailored solutions for corporate offices, industrial sites, residential complexes, events, and high-risk facilities, ensuring every client receives the protection and support they need.",
+    },
+    {
+      question: "What technology-enabled services do you offer?",
+      answer:
+        "We provide CCTV surveillance, biometric access control, remote monitoring, ERP solutions, e-commerce platforms, and integrated alarm systems for businesses and individuals.",
+    },
+    {
+      question: "How can I contact Anondo Universal Services Limited?",
+      answer:
+        "📍 Head Office: [Insert Full Address Here]. 📞 Phone: [Insert Phone Number]. 📧 Email: [Insert Email Address]. 🌐 Website: [Insert Website URL].",
+    },
+  ],
+};
+
 
   return (
     <div className="w-full relative">
@@ -130,8 +106,8 @@ export default function AboutPage() {
       />
       <AboutUsSection />
       <VisionMissionGoals />
-      <WorkProcess />
-      {/* <TeamSection /> */}
+      {/* <WorkProcess /> */}
+      <TeamSection />
       <Testimonials />
       <WhyUsSection />
       <FAQ faqData={faqData} />

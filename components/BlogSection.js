@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import { FaRegCalendarAlt, FaRegUser } from "react-icons/fa";
+import { FaArrowRight, FaRegCalendarAlt, FaRegUser } from "react-icons/fa";
 import SectionHeader from "./SectionHeader";
 
 const blogs = [
@@ -56,7 +56,8 @@ export default function BlogSection() {
                   src={blog.img}
                   alt={blog.title}
                   fill
-                  className="object-cover rounded transform transition-all duration-700 group-hover:scale-125"
+                  // className="object-cover rounded transform transition-all duration-700 group-hover:scale-125"
+                    className="object-cover rounded transform transition-transform duration-1000 ease-in-out group-hover:scale-125"
                 />
               </div>
               <div className="mt-4">
@@ -75,6 +76,13 @@ export default function BlogSection() {
 
                 <p className="text-gray-600 text-sm">{blog.excerpt}</p>
               </div>
+               <div
+                    href={`/blogs/${blog.slug}`}
+                    className="relative mt-4 inline-flex items-center gap-1 text-primary text-sm font-semibold transition-all transform duration-500 group"
+                  >
+                    Read More <FaArrowRight />
+                    <span className="hover-line absolute left-0 -bottom-1 h-[2px] w-0 bg-primary transition-all duration-300 ease-out group-hover:w-full"></span>
+                  </div>
             </div>
             </Link>
           ))}

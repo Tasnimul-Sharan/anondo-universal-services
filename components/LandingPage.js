@@ -119,7 +119,7 @@ const LandingPage = () => {
 const containerVariants = {
   hidden: {},
   visible: {
-    transition: { staggerChildren: 0.3 }, // ekta ekta kore asbe
+    transition: { staggerChildren: 0.3 },
   },
 };
 
@@ -143,7 +143,7 @@ const containerVariants = {
               style={{ backgroundImage: `url(${slide.image})` }}
             ></motion.div>
 
-            <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+            <div className="absolute inset-0 bg-black bg-opacity-60"></div>
             {/* <div
               ref={(el) => (textRefs.current[index] = el)}
               className="absolute inset-0 flex flex-col items-center justify-center text-center text-white z-10 px-6"
