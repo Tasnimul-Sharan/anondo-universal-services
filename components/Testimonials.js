@@ -10,31 +10,31 @@ import SectionHeader from "./SectionHeader";
 
 const testimonials = [
   {
-    name: "Angel Jones",
-    role: "Execfise",
+    name: "Mahbub Rahman",
+    role: "Managing Director, Rahman Textiles Ltd.",
     img: "/clients/client1.jpg",
-    text: "The Love Boat promises something for everyone now to beat every of just one and his Skipper too will do their in their tropic island nest.",
+    text: "Anondo Universal Services has been a reliable partner in safeguarding our factory premises. Their guards are professional, disciplined, and always alert.",
+    stars: 5,
+  },
+  {
+    name: "Farzana Ahmed",
+    role: "HR Manager, Orion Group",
+    img: "/clients/client2.jpg",
+    text: "Their corporate security team ensures smooth operations at our head office. The reception and access control management have truly elevated our workplace security.",
+    stars: 5,
+  },
+  {
+    name: "Shakil Hossain",
+    role: "Event Organizer, Dhaka Event Solutions",
+    img: "/clients/client3.jpg",
+    text: "We hired Anondo Universal Services for a large corporate event in Dhaka. Their team managed the crowd and VIP security flawlessly. We felt completely at ease.",
     stars: 4,
   },
   {
-    name: "Matt Morgan",
-    role: "Execfise",
-    img: "/clients/client2.jpg",
-    text: "The Love Boat promises something for everyone now to beat every of just one and his Skipper too will do their in their tropic island nest.",
-    stars: 5,
-  },
-  {
-    name: "Paul Vincent",
-    role: "Execfise",
-    img: "/clients/client3.jpg",
-    text: "The Love Boat promises something for everyone now to beat every of just one and his Skipper too will do their in their tropic island nest.",
-    stars: 5,
-  },
-  {
-    name: "Sara Kim",
-    role: "Execfise",
+    name: "Dr. Nusrat Jahan",
+    role: "Principal, Greenfield International School",
     img: "/clients/client4.jpg",
-    text: "The Love Boat promises something for everyone now to beat every of just one and his Skipper too will do their in their tropic island nest.",
+    text: "The safety of our students is our top priority. Anondo’s trained guards and quick response team have given us peace of mind every single day.",
     stars: 5,
   },
 ];
@@ -63,31 +63,11 @@ export default function Testimonials() {
 
   return (
     <section className="py-16 bg-gray-50 text-center">
-      {/* <motion.p
-        className="uppercase text-primary font-medium tracking-widest text-sm"
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.6 }}
-      >
-        Client Testimonials
-      </motion.p>
-
-      <motion.h2
-        className="text-2xl md:text-4xl font-bold mt-2 mb-12 text-secondary"
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.6, delay: 0.1 }}
-      >
-        What our clients say
-      </motion.h2> */}
-
-        <SectionHeader
-          subtitle="Client Testimonials"
-          title="What our clients say"
-          details="The Love Boat promises something for everyone now to beat every of just one"
-        />
+      <SectionHeader
+        subtitle="Client Testimonials"
+        title="What Our Clients Say"
+        details="Hear from our valued clients across Bangladesh who trust us with their safety and security."
+      />
 
       <div className="max-w-7xl mx-auto overflow-hidden">
         <Slider {...settings}>
@@ -100,35 +80,31 @@ export default function Testimonials() {
               whileInView="visible"
               viewport={{ once: true }}
             >
+              <div className="bg-white p-6 rounded-lg relative text-left">
+                <FaQuoteLeft className="text-primary text-2xl mb-4" />
+                <p className="text-gray-600 text-sm leading-relaxed mb-6">{t.text}</p>
 
-                <div
-            key={idx}
-            className="bg-white p-6 rounded-lg relative text-left"
-          >
-            <FaQuoteLeft className="text-primary text-2xl mb-4" />
-            <p className="text-gray-600 text-sm leading-relaxed mb-6">{t.text}</p>
-            
-            <div className="flex items-center gap-4">
-              <div className="w-12 h-12 rounded-full overflow-hidden">
-                <Image
-                  src={t.img}
-                  alt={t.name}
-                  width={48}
-                  height={48}
-                  className="object-cover"
-                />
-              </div>
-              <div>
-                <h4 className="font-semibold text-gray-900">{t.name}</h4>
-                <p className="text-gray-500 text-sm">{t.role}</p>
-                <div className="flex mt-1">
-                  {Array.from({ length: t.stars }).map((_, i) => (
-                    <span key={i} className="text-yellow-500">★</span>
-                  ))}
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 rounded-full overflow-hidden">
+                    <Image
+                      src={t.img}
+                      alt={t.name}
+                      width={48}
+                      height={48}
+                      className="object-cover"
+                    />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900">{t.name}</h4>
+                    <p className="text-gray-500 text-sm">{t.role}</p>
+                    <div className="flex mt-1">
+                      {Array.from({ length: t.stars }).map((_, i) => (
+                        <span key={i} className="text-yellow-500">★</span>
+                      ))}
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
-          </div>
             </motion.div>
           ))}
         </Slider>

@@ -4,6 +4,7 @@ import { useRef, useState } from "react";
 import { AiOutlineMinusCircle, AiOutlinePlusCircle } from "react-icons/ai";
 import { motion, AnimatePresence } from "framer-motion";
 import gsap from "gsap";
+import SectionHeader from "./SectionHeader";
 
 export default function FAQ({ faqData }) {
   const [activeIndex, setActiveIndex] = useState(null);
@@ -76,15 +77,20 @@ export default function FAQ({ faqData }) {
       transition={{ duration: 0.6 }}
     >
       {/* Section Title */}
-      <motion.h2
-        className="text-center text-3xl font-bold mb-10"
+      <motion.div
+        // className="text-center mb-10"
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
       >
-        {faqData.title}
-      </motion.h2>
+        {/* {faqData.title} */}
+         <SectionHeader
+        subtitle="FAQs"
+        title={faqData.title}
+        details="Find answers to the most common questions about our services, operations, and commitment to safety."
+      />
+      </motion.div>
 
       <div className="space-y-4">
         {faqData.faqs.map((faq, index) => {
@@ -144,7 +150,7 @@ export default function FAQ({ faqData }) {
               </AnimatePresence> */}
               <div
                 ref={(el) => (answerRefs.current[index] = el)}
-                className="px-14 pb-4 text-sm overflow-hidden"
+                className="px-14 pb-4 text-sm overflow-hidden whitespace-pre-line"
                 style={{ height: 0, opacity: 0, display: "none" }}
               >
                 {faq.answer}

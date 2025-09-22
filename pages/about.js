@@ -69,11 +69,12 @@ export default function AboutPage() {
       answer:
         "We provide CCTV surveillance, biometric access control, remote monitoring, ERP solutions, e-commerce platforms, and integrated alarm systems for businesses and individuals.",
     },
-    {
-      question: "How can I contact Anondo Universal Services Limited?",
-      answer:
-        "📍 Head Office: [Insert Full Address Here]. 📞 Phone: [Insert Phone Number]. 📧 Email: [Insert Email Address]. 🌐 Website: [Insert Website URL].",
-    },
+   {
+  question: "How can I contact Anondo Universal Services Limited?",
+  answer:
+    "📍 Head Office: Printers Building, 12-14th Floor, 5 Rajuk Avenue, Motijheel, 1000 Dhaka.\n📞 Phone: +880 1313775333\n📧 Email: contact@anondouniversalserviceslimited.com\n🌐 Website: https://anondouniversalserviceslimited.com/",
+},
+
   ],
 };
 

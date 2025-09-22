@@ -1,298 +1,250 @@
 import { FaInstagram } from "react-icons/fa";
-import {
-  FaFacebookF,
-  FaTwitter,
-  FaLinkedinIn,
-  FaWhatsapp,
-} from "react-icons/fa";
+import { FaFacebookF, FaTwitter, FaLinkedinIn, FaWhatsapp } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 
 export const blogDetailsData = {
   meta: {
-    title: "Blogs | Anondo Baari - Senior Care & Wellness",
+    title: "Blogs | Anondo Universal Services Limited",
     description:
-      "Explore insightful blogs from Anondo Baari on senior care, wellness, fitness, mental health, community living, and healthy aging in Bangladesh.",
+      "Explore insightful blogs from Anondo Universal Services Limited on security solutions, risk management, residential safety, industrial site protection, corporate event security, and modern security technologies in Bangladesh.",
     keywords:
-      "Anondo Baari blog, senior care Bangladesh, elderly wellness, yoga meditation, nutrition after 60, community living, mental health seniors, art therapy, fitness after 60, healthy aging tips",
-    author: "Anondo Baari",
-    url: "https://www.anondobari.com/blogs",
-    image: "https://www.anondobari.com/blogs/blogs-og.jpg",
+      "Anondo Universal Services blog, security Bangladesh, risk management, residential security, industrial site security, corporate event safety, modern security technology, professional guards",
+    author: "Anondo Universal Services Limited",
+    url: "https://anondouniversalserviceslimited.com/blogs",
+    image: "https://anondouniversalserviceslimited.com/blogs/blogs-og.jpg",
   },
   blogDetails: [
     {
-      slug: "healing-power-of-yoga",
+      slug: "latest-security-techniques",
       blogPost: {
-        title: "The Healing Power of Yoga and Meditation for Seniors",
-        image: "/blogs/wellness/wellness-1.jpg",
-        author: "Anondo Baari Team",
-        date: "05 AUGUST, 2025",
+        title: "Latest Security Techniques",
+        image: "/blogs/security/security-1.jpg",
+        author: "Anondo Universal Team",
+        date: "20 SEPTEMBER, 2025",
         description:
-          "Yoga and meditation are more than just exercises; they are practices that bring balance, peace, and health. At Anondo Baari, we encourage seniors to embrace these routines for a happier and healthier lifestyle.",
+          "Explore the latest advancements in security technology and strategies that ensure maximum protection for your business and property. From AI-powered surveillance to advanced alarm systems, modern solutions are transforming security in Bangladesh.",
         checklist: [
-          "Gentle yoga improves flexibility and reduces joint pain.",
-          "Meditation helps reduce stress and improve memory.",
-          "Breathing exercises promote calmness and better sleep.",
+          "Integration of AI and CCTV for real-time monitoring.",
+          "Advanced alarm and access control systems.",
+          "Tailored security strategies for residential and commercial needs.",
         ],
         subImages: [
-          "/blogs/wellness/wellness-2.jpg",
-          "/blogs/wellness/wellness-3.jpg",
+          "/blogs/security/security-1a.jpg",
+          "/blogs/security/security-1b.jpg",
         ],
         quote:
-          "At any age, inner peace is the greatest form of wealth you can achieve.",
-        postTags: ["Yoga", "Meditation", "Wellness"],
+          "Effective security combines technology, expertise, and vigilance.",
+        postTags: ["Security Technology", "AI Surveillance", "Protection"],
       },
       socialIcons: [
         {
           icon: FaFacebookF,
-          link: (url) =>
-            `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
-              url
-            )}`,
+          link: (url) => `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`,
         },
         {
           icon: FaXTwitter,
           link: (url, title) =>
-            `https://twitter.com/intent/tweet?url=${encodeURIComponent(
-              url
-            )}&text=${encodeURIComponent(title)}`,
+            `https://twitter.com/intent/tweet?url=${encodeURIComponent(url)}&text=${encodeURIComponent(title)}`,
         },
         {
           icon: FaLinkedinIn,
           link: (url, title) =>
-            `https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(
-              url
-            )}&title=${encodeURIComponent(title)}`,
+            `https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(url)}&title=${encodeURIComponent(title)}`,
         },
       ],
     },
     {
-      slug: "nutrition-after-60",
+      slug: "risk-management-strategies",
       blogPost: {
-        title: "Nutrition After 60: Building Strength Through Food",
-        image: "/blogs/nutrition/nutrition-1.jpg",
-        author: "Dr. Sharmeen Rahman",
-        date: "10 AUGUST, 2025",
+        title: "Effective Risk Management Strategies",
+        image: "/blogs/security/security-2.jpg",
+        author: "Anondo Universal Team",
+        date: "15 SEPTEMBER, 2025",
         description:
-          "As we age, nutrition becomes a cornerstone of good health. Balanced diets rich in proteins, vitamins, and minerals ensure vitality and energy for senior citizens.",
+          "Learn how professional security services implement risk assessment and management to prevent potential threats effectively. Prioritizing risk planning ensures safety for employees, assets, and operations.",
         checklist: [
-          "Protein helps maintain muscle strength.",
-          "Omega-3s support brain and heart health.",
-          "Hydration is key for overall well-being.",
+          "Conduct comprehensive risk assessments.",
+          "Implement proactive mitigation measures.",
+          "Regular audits and monitoring to reduce vulnerabilities.",
         ],
         subImages: [
-          "/blogs/nutrition/nutrition-2.jpg",
-          "/blogs/nutrition/nutrition-3.jpg",
-        ],
-        quote: "Food is not just fuel—it’s medicine for body and soul.",
-        postTags: ["Nutrition", "Healthy Aging", "Lifestyle"],
-      },
-      socialIcons: [
-        {
-          icon: FaFacebookF,
-          link: (url) =>
-            `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
-              url
-            )}`,
-        },
-        {
-          icon: FaXTwitter,
-          link: (url, title) =>
-            `https://twitter.com/intent/tweet?url=${encodeURIComponent(
-              url
-            )}&text=${encodeURIComponent(title)}`,
-        },
-        {
-          icon: FaLinkedinIn,
-          link: (url, title) =>
-            `https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(
-              url
-            )}&title=${encodeURIComponent(title)}`,
-        },
-      ],
-    },
-    {
-      slug: "community-living-happiness",
-      blogPost: {
-        title: "Why Community Living Enhances Happiness in Aging",
-        image: "/blogs/community/community-1.jpg",
-        author: "Anondo Baari Team",
-        date: "15 AUGUST, 2025",
-        description:
-          "Living in a supportive community fosters joy, reduces loneliness, and encourages active participation. At Anondo Baari, we create spaces where seniors thrive together.",
-        checklist: [
-          "Shared activities strengthen social bonds.",
-          "Supportive neighbors reduce feelings of isolation.",
-          "Collective celebrations enhance overall happiness.",
-        ],
-        subImages: [
-          "/blogs/community/community-2.jpg",
-          "/blogs/community/community-3.jpg",
+          "/blogs/security/security-2a.jpg",
+          "/blogs/security/security-2b.jpg",
         ],
         quote:
-          "Happiness is multiplied when it is shared with others in a community.",
-        postTags: ["Community", "Happiness", "Wellbeing"],
+          "Preparedness is the first step towards effective security.",
+        postTags: ["Risk Management", "Threat Prevention", "Security Planning"],
       },
       socialIcons: [
         {
           icon: FaFacebookF,
-          link: (url) =>
-            `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
-              url
-            )}`,
+          link: (url) => `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`,
         },
         {
           icon: FaXTwitter,
           link: (url, title) =>
-            `https://twitter.com/intent/tweet?url=${encodeURIComponent(
-              url
-            )}&text=${encodeURIComponent(title)}`,
+            `https://twitter.com/intent/tweet?url=${encodeURIComponent(url)}&text=${encodeURIComponent(title)}`,
         },
         {
           icon: FaLinkedinIn,
           link: (url, title) =>
-            `https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(
-              url
-            )}&title=${encodeURIComponent(title)}`,
+            `https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(url)}&title=${encodeURIComponent(title)}`,
         },
       ],
     },
     {
-      slug: "mental-health-seniors",
+      slug: "corporate-event-security",
       blogPost: {
-        title: "Mental Health Awareness for Seniors: Breaking the Silence",
-        image: "/blogs/mentalhealth/mentalhealth-1.jpg",
-        author: "Dr. Tanvir Alam",
-        date: "20 AUGUST, 2025",
+        title: "Ensuring Safety in Corporate Events",
+        image: "/blogs/security/security-3.jpg",
+        author: "Anondo Universal Team",
+        date: "10 SEPTEMBER, 2025",
         description:
-          "Mental health is as important as physical health, yet it often goes unnoticed in seniors. At Anondo Baari, we focus on emotional well-being with therapy, counseling, and social interaction.",
+          "Understand best practices for event security, from crowd management to VIP protection, ensuring a safe and smooth experience for attendees and organizers alike.",
         checklist: [
-          "Regular counseling sessions improve outlook.",
-          "Group activities reduce depression and anxiety.",
-          "Mind games help sharpen memory.",
+          "Strategic planning and risk assessment for events.",
+          "Trained personnel for crowd and VIP management.",
+          "Emergency preparedness and contingency measures.",
         ],
         subImages: [
-          "/blogs/mentalhealth/mentalhealth-2.jpg",
-          "/blogs/mentalhealth/mentalhealth-3.jpg",
-        ],
-        quote: "There is no health without mental health.",
-        postTags: ["Mental Health", "Awareness", "Support"],
-      },
-      socialIcons: [
-        {
-          icon: FaFacebookF,
-          link: (url) =>
-            `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
-              url
-            )}`,
-        },
-        {
-          icon: FaXTwitter,
-          link: (url, title) =>
-            `https://twitter.com/intent/tweet?url=${encodeURIComponent(
-              url
-            )}&text=${encodeURIComponent(title)}`,
-        },
-        {
-          icon: FaLinkedinIn,
-          link: (url, title) =>
-            `https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(
-              url
-            )}&title=${encodeURIComponent(title)}`,
-        },
-      ],
-    },
-    {
-      slug: "art-music-therapy",
-      blogPost: {
-        title: "Healing Through Art and Music Therapy",
-        image: "/blogs/artmusic/artmusic-1.jpg",
-        author: "Anondo Baari Cultural Team",
-        date: "25 AUGUST, 2025",
-        description:
-          "Creative expression through art and music plays a vital role in healing. Seniors at Anondo Baari engage in painting, singing, and music sessions that bring joy and peace.",
-        checklist: [
-          "Art improves cognitive functions and motor skills.",
-          "Music reduces stress and uplifts mood.",
-          "Creative therapy boosts confidence and memory.",
-        ],
-        subImages: [
-          "/blogs/artmusic/artmusic-2.jpg",
-          "/blogs/artmusic/artmusic-3.jpg",
+          "/blogs/security/security-3a.jpg",
+          "/blogs/security/security-3b.jpg",
         ],
         quote:
-          "Art and music speak the language of the soul when words fall short.",
-        postTags: ["Art Therapy", "Music", "Healing"],
+          "A safe event is a successful event.",
+        postTags: ["Event Security", "VIP Protection", "Crowd Management"],
       },
       socialIcons: [
         {
           icon: FaFacebookF,
-          link: (url) =>
-            `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
-              url
-            )}`,
+          link: (url) => `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`,
         },
         {
           icon: FaXTwitter,
           link: (url, title) =>
-            `https://twitter.com/intent/tweet?url=${encodeURIComponent(
-              url
-            )}&text=${encodeURIComponent(title)}`,
+            `https://twitter.com/intent/tweet?url=${encodeURIComponent(url)}&text=${encodeURIComponent(title)}`,
         },
         {
           icon: FaLinkedinIn,
           link: (url, title) =>
-            `https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(
-              url
-            )}&title=${encodeURIComponent(title)}`,
+            `https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(url)}&title=${encodeURIComponent(title)}`,
         },
       ],
     },
     {
-      slug: "staying-fit-after-60",
+      slug: "residential-security-tips",
       blogPost: {
-        title: "Staying Fit After 60: Gentle Exercises That Work",
-        image: "/blogs/fitness/fitness-1.jpg",
-        author: "BY ANONDO BAARI",
-        date: "20 AUGUST, 2025",
+        title: "Residential Security: Protecting Your Home",
+        image: "/blogs/security/security-4.jpg",
+        author: "Anondo Universal Team",
+        date: "05 SEPTEMBER, 2025",
         description:
-          "Fitness after 60 doesn’t mean high intensity—it’s about consistency and safety. At Anondo Baari, we provide seniors with gentle but effective exercise routines that enhance flexibility, improve balance, and boost overall energy.",
+          "Tips and strategies for securing residential properties, including surveillance systems, trained personnel, and emergency protocols to safeguard families and assets.",
         checklist: [
-          "Morning stretches keep joints flexible.",
-          "Light yoga improves posture and breathing.",
-          "Gentle strength training helps maintain mobility.",
+          "Install smart surveillance and alarm systems.",
+          "Hire trained residential security personnel.",
+          "Establish emergency response protocols.",
         ],
         subImages: [
-          "/blogs/fitness/fitness-2.jpg",
-          "/blogs/fitness/fitness-3.jpg",
+          "/blogs/security/security-4a.jpg",
+          "/blogs/security/security-4b.jpg",
         ],
-        quote: "Movement is the best medicine for graceful aging.",
-        postTags: ["Fitness", "Wellness", "Healthy Aging"],
+        quote:
+          "Home safety is the cornerstone of peace of mind.",
+        postTags: ["Residential Security", "Home Protection", "Surveillance"],
       },
       socialIcons: [
         {
           icon: FaFacebookF,
-          link: (url) =>
-            `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
-              url
-            )}`,
+          link: (url) => `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`,
         },
         {
           icon: FaXTwitter,
           link: (url, title) =>
-            `https://twitter.com/intent/tweet?url=${encodeURIComponent(
-              url
-            )}&text=${encodeURIComponent(title)}`,
+            `https://twitter.com/intent/tweet?url=${encodeURIComponent(url)}&text=${encodeURIComponent(title)}`,
         },
         {
           icon: FaLinkedinIn,
           link: (url, title) =>
-            `https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(
-              url
-            )}&title=${encodeURIComponent(title)}`,
+            `https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(url)}&title=${encodeURIComponent(title)}`,
+        },
+      ],
+    },
+    {
+      slug: "industrial-site-security",
+      blogPost: {
+        title: "Industrial Site Security Best Practices",
+        image: "/blogs/security/security-5.jpg",
+        author: "Anondo Universal Team",
+        date: "01 SEPTEMBER, 2025",
+        description:
+          "A comprehensive guide to maintaining safety and operational continuity in factories, warehouses, and large industrial facilities through modern security protocols.",
+        checklist: [
+          "24/7 monitoring and patrolling.",
+          "Access control and perimeter security.",
+          "Emergency preparedness for industrial hazards.",
+        ],
+        subImages: [
+          "/blogs/security/security-5a.jpg",
+          "/blogs/security/security-5b.jpg",
+        ],
+        quote:
+          "Industrial security protects not just assets, but livelihoods.",
+        postTags: ["Industrial Security", "Workplace Safety", "Access Control"],
+      },
+      socialIcons: [
+        {
+          icon: FaFacebookF,
+          link: (url) => `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`,
         },
         {
-          icon: FaInstagram,
-          link: () => `https://www.instagram.com/anondobaari/`,
+          icon: FaXTwitter,
+          link: (url, title) =>
+            `https://twitter.com/intent/tweet?url=${encodeURIComponent(url)}&text=${encodeURIComponent(title)}`,
+        },
+        {
+          icon: FaLinkedinIn,
+          link: (url, title) =>
+            `https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(url)}&title=${encodeURIComponent(title)}`,
+        },
+      ],
+    },
+    {
+      slug: "technology-in-security",
+      blogPost: {
+        title: "Technology in Modern Security Services",
+        image: "/blogs/security/security-6.jpg",
+        author: "Anondo Universal Team",
+        date: "28 AUGUST, 2025",
+        description:
+          "How CCTV, biometric access, alarm systems, and AI monitoring are transforming security operations in Bangladesh, making them more effective and responsive.",
+        checklist: [
+          "AI-driven CCTV monitoring for real-time alerts.",
+          "Biometric and smart access control systems.",
+          "Integration of alarm and communication systems for quick response.",
+        ],
+        subImages: [
+          "/blogs/security/security-6a.jpg",
+          "/blogs/security/security-6b.jpg",
+        ],
+        quote:
+          "Modern security relies on technology, training, and vigilance.",
+        postTags: ["Security Technology", "AI Monitoring", "Biometric Access"],
+      },
+      socialIcons: [
+        {
+          icon: FaFacebookF,
+          link: (url) => `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`,
+        },
+        {
+          icon: FaXTwitter,
+          link: (url, title) =>
+            `https://twitter.com/intent/tweet?url=${encodeURIComponent(url)}&text=${encodeURIComponent(title)}`,
+        },
+        {
+          icon: FaLinkedinIn,
+          link: (url, title) =>
+            `https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(url)}&title=${encodeURIComponent(title)}`,
         },
       ],
     },

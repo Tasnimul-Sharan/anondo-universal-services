@@ -6,22 +6,22 @@ const products = [
   {
     id: 1,
     name: "GUARD VEST",
-    img: "/products/security-guard.jpg",
+    img: "/products/Untitled-2.png",
   },
   {
     id: 2,
     name: "METAL DETECTOR",
-    img: "/products/security-guard.jpg",
+    img: "/products/metal-detector.jpg",
   },
   {
     id: 3,
-    name: "ARCHWAY SCANNER",
-    img: "/products/security-guard.jpg",
+    name: "VEHiCHLE CHECK MIRROR",
+    img: "/products/vehicle-check-mirror.jpg",
   },
   {
     id: 4,
-    name: "ENTRY CONTROL",
-    img: "/products/security-guard.jpg",
+    name: "BODY SCANNER DOORS",
+    img: "/products/body-scanner-doors.jpg",
   },
 ];
 
@@ -38,7 +38,7 @@ export default function ProductsSection() {
 
 
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {products.map((product) => (
             <div
               key={product.id}
