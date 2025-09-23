@@ -68,14 +68,14 @@ const advantages = [
     icon: <FaStar className="text-white text-xl" />,
     title: "Trusted & Reliable",
     desc: "A proven track record of excellence with trusted security solutions nationwide.",
-    img: "/advantage/trusted.jpg", // award, star, handshake type image
+    img: "/advantage/trusted.jpeg", // award, star, handshake type image
   },
   {
     id: 3,
     icon: <FaTimesCircle className="text-white text-xl" />,
     title: "Rapid Response Team",
     desc: "Quick mobilization of highly trained teams for emergencies and urgent situations.",
-    img: "/advantage/rapid-response.jpg", // police, guard, running team
+    img: "/advantage/rapid-response.jpeg", // police, guard, running team
   },
   {
     id: 4,

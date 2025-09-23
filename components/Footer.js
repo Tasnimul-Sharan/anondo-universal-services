@@ -46,7 +46,7 @@ export default function Footer() {
 </span>
 
           </div>
-          <p className="text-sm leading-relaxed mb-6">
+          <p className="text-sm leading-relaxed mb-6 text-off_white">
             Enthusiastically mesh long-term high-impact infrastructures vis-a-vis
             service. Leverage agile frameworks to provide a robust synopsis for
             high-level overviews.
@@ -67,7 +67,7 @@ export default function Footer() {
             Quick Links
             <span className="block w-10 h-[2px] bg-primary mt-2"></span>
           </h3>
-          <ul className="space-y-3 text-sm">
+          <ul className="space-y-3 text-sm text-off_white">
             <li><Link href="/about" className="hover:text-white transition">About</Link></li>
             <li><Link href="/services" className="hover:text-white transition">Services</Link></li>
             <li><Link href="/portfolio" className="hover:text-white transition">Gallery</Link></li>
@@ -124,7 +124,7 @@ export default function Footer() {
 
       {/* Bottom Bar */}
       <div className="border-t border-gray-400 py-6 text-center md:flex md:items-center md:justify-between max-w-7xl mx-auto px-6 lg:px-12">
-        <p className="text-sm">
+        <p className="text-sm text-off_white">
           Copyright © 2025{" "}
           <span className="text-primary font-semibold">Anondo
 Universal Services</span>. All
