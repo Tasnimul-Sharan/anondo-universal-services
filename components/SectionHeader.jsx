@@ -8,7 +8,7 @@ export default function SectionHeader({ subtitle, title, details }) {
       )}
 
       {title && (
-        <h2 className="text-2xl md:text-3xl font-bold text-gray-900 uppercase mt-3">
+        <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mt-3">
           {title}
         </h2>
       )}

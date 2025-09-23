@@ -1,18 +1,23 @@
 import HeroSection from "@/components/HeroSection";
 import Head from "next/head";
 import Navbar from "@/components/Navbar";
+
 import ServicesSection from "@/components/ServicesSection";
+import QualityAssuranceSection from "@/components/QualityAssuranceSection";
+import CompetitiveAdvantageSection from "@/components/CompetitiveAdvantageSection";
+import ClientFocusSection from "@/components/ClientFocusSection";
+
 export default function ServicesPage() {
   const meta = {
     title:
-      "Services | Anondo Baari - Senior Wellness & Assisted Living in Bangladesh",
+      "Services | Anondo Universal Security Services Ltd - Professional Security Solutions",
     description:
-      "Discover Anondo Baari’s world-class services for senior citizens in Purbachal, Dhaka. We offer assisted living, 24/7 healthcare, therapeutic care, yoga, meditation, nutrition counseling, and vibrant community activities for a dignified life.",
+      "Discover Anondo Universal’s wide range of services including manned guarding, office security, industrial safety, event protection, and VIP bodyguard services. Backed by training, monitoring, and quality assurance.",
     keywords:
-      "Anondo Baari services, senior wellness Bangladesh, assisted living Dhaka, elderly care, therapeutic services, wellness programs, yoga meditation, nutrition counseling, retirement home Bangladesh",
-    author: "Anondo Baari",
-    url: "https://www.anondobari.com/services",
-    image: "https://www.anondobari.com/services/services-og.jpg",
+      "security services Bangladesh, manned guarding Dhaka, VIP security, event security, factory guards, bodyguards",
+    author: "Anondo Universal Security Services Ltd",
+    url: "https://www.anondouniversalserviceslimited.com/services",
+    image: "https://www.anondouniversalserviceslimited.com/services-og.jpg",
   };
 
   return (
@@ -33,6 +38,7 @@ export default function ServicesPage() {
         <meta name="twitter:description" content={meta.description} />
         <meta name="twitter:image" content={meta.image} />
       </Head>
+
       <Navbar hasBackground={true} />
       <HeroSection
         hero={{
@@ -40,7 +46,11 @@ export default function ServicesPage() {
           backgroundImage: "/services/services-bg.jpg",
         }}
       />
+
       <ServicesSection />
+      <QualityAssuranceSection />
+      <CompetitiveAdvantageSection />
+      <ClientFocusSection />
     </div>
   );
 }

@@ -7,7 +7,7 @@ export default function TrainingVisuals() {
   ];
 
   return (
-    <div className="mt-10 grid grid-cols-1 md:grid-cols-4 gap-4">
+    <div className="grid grid-cols-1 md:grid-cols-4 gap-6 custom-container mx-auto py-12">
       {visuals.map((v) => (
         <figure key={v.title} className="rounded-lg border p-4 bg-white/60">
           <div className="h-36 rounded-md bg-gradient-to-br from-slate-100 to-white flex items-center justify-center text-sm text-gray-500">

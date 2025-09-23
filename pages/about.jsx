@@ -8,6 +8,7 @@ import Head from "next/head";
 import FAQ from "@/components/FAQ";
 import Navbar from "@/components/Navbar";
 import VisionMissionGoals from "@/components/VisionMissionGoals";
+import FutureVision from "@/components/FutureVision";
 export default function AboutPage() {
   const meta = {
     title:
@@ -107,6 +108,7 @@ export default function AboutPage() {
       />
       <AboutUsSection />
       <VisionMissionGoals />
+      <FutureVision />
       {/* <WorkProcess /> */}
       <TeamSection />
       <Testimonials />
