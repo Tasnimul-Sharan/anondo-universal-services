@@ -11,7 +11,7 @@ export default function TrainingCurriculum() {
       </p>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <article className="p-5 border rounded-lg">
+        <article className="p-5 border rounded-lg hover:shadow-lg hover:shadow-primary/50 transition-all transform hover:-translate-y-1 duration-700">
           <h4 className="text-lg font-medium mb-3">A. Field Training</h4>
           <ul className="list-disc pl-5 text-gray-700 space-y-2">
             <li>
@@ -33,7 +33,7 @@ export default function TrainingCurriculum() {
           </ul>
         </article>
 
-        <article className="p-5 border rounded-lg">
+        <article className="p-5 border rounded-lg hover:shadow-lg hover:shadow-primary/50 transition-all transform hover:-translate-y-1 duration-700">
           <h4 className="text-lg font-medium mb-3">B. Professional Training</h4>
           <ul className="list-disc pl-5 text-gray-700 space-y-2">
             <li>
@@ -55,7 +55,7 @@ export default function TrainingCurriculum() {
           </ul>
         </article>
 
-        <article className="p-5 border rounded-lg">
+        <article className="p-5 border rounded-lg hover:shadow-lg hover:shadow-primary/50 transition-all transform hover:-translate-y-1 duration-700">
           <h4 className="text-lg font-medium mb-3">C. Theoretical Courses</h4>
           <ul className="list-disc pl-5 text-gray-700 space-y-2">
             <li>
@@ -69,7 +69,7 @@ export default function TrainingCurriculum() {
           </ul>
         </article>
 
-        <article className="p-5 border rounded-lg">
+        <article className="p-5 border rounded-lg hover:shadow-lg hover:shadow-primary/50 transition-all transform hover:-translate-y-1 duration-700">
           <h4 className="text-lg font-medium mb-3">D. Personal Development</h4>
           <ul className="list-disc pl-5 text-gray-700 space-y-2">
             <li>Behaviour, Etiquette, and Communication skills</li>

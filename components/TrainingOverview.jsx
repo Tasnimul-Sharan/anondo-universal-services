@@ -5,7 +5,7 @@ export default function TrainingOverview() {
     <section className="py-12 bg-gray-100">
       <div className="custom-container mx-auto">
         {/* <div className="text-center mb-12"> */}
-        <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 mb-8">
+        <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8">
           <h2 className="text-3xl md:text-4xl font-semibold mb-3">
             The Training Academy
           </h2>

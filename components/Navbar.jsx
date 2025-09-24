@@ -60,68 +60,69 @@ export default function Navbar() {
   ];
 
   return (
-   <header
-  className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 
+    <header
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 
     ${isScrolled ? "bg-white shadow-md" : "bg-transparent"}`}
->
-
+    >
       {/* 🔹 Full Layout (Before Scroll) */}
       {!isScrolled && (
         <>
           {/* Top Bar */}
           <div className="w-full bg-secondary text-white text-sm py-4">
             <div className="custom-container mx-auto flex justify-between items-center px-4">
-
-
               {/* Left Social */}
 
-                           <div className="flex items-center gap-2 text-gray-300 text-sm">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        fill="currentColor"
-        viewBox="0 0 24 24"
-        className="w-4 h-4 text-primary"
-      >
-        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 
+              <div className="flex items-center gap-2 text-off_white text-sm">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                  className="w-4 h-4 text-primary"
+                >
+                  <path
+                    d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 
                  9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 
-                 1.12 2.5 2.5S13.38 11.5 12 11.5z" />
-      </svg>
-      <span>Printers Building, 12-14th Floor, 5 Rajuk Avenue, Motijheel, 1000 Dhaka</span>
-    </div>
+                 1.12 2.5 2.5S13.38 11.5 12 11.5z"
+                  />
+                </svg>
+                <span>
+                  Printers Building, 12-14th Floor, 5 Rajuk Avenue, Motijheel,
+                  1000 Dhaka
+                </span>
+              </div>
               {/* Left Social */}
-<div className="flex gap-2">
-  <Link
-    href="https://facebook.com"
-    target="_blank"
-    className="w-8 h-8 flex items-center justify-center border border-gray-400 hover:bg-primary hover:border-transparent hover:text-white transition-all transform duration-500"
-  >
-    <FaFacebookF className="w-4 h-4" />
-  </Link>
-  <Link
-    href="https://twitter.com"
-    target="_blank"
-    className="w-8 h-8 flex items-center justify-center border border-gray-400 hover:bg-primary hover:border-transparent hover:text-white transition-all transform duration-500"
-  >
-    <FaXTwitter className="w-4 h-4" />
-  </Link>
-  <Link
-    href="https://linkedin.com"
-    target="_blank"
-    className="w-8 h-8 flex items-center justify-center border border-gray-400 hover:bg-primary hover:border-transparent hover:text-white transition-all transform duration-500"
-  >
-    <FaLinkedinIn className="w-4 h-4" />
-  </Link>
-  <Link
-    href="https://instagram.com"
-    target="_blank"
-    className="w-8 h-8 flex items-center justify-center border border-gray-400 hover:bg-primary hover:border-transparent hover:text-white transition-all transform duration-500"
-  >
-    <FaInstagram className="w-4 h-4" />
-  </Link>
-</div>
+              <div className="flex gap-2">
+                <Link
+                  href="https://facebook.com"
+                  target="_blank"
+                  className="w-8 h-8 flex items-center justify-center border border-gray-400 hover:bg-primary hover:border-transparent hover:text-white transition-all transform duration-500"
+                >
+                  <FaFacebookF className="w-4 h-4" />
+                </Link>
+                <Link
+                  href="https://twitter.com"
+                  target="_blank"
+                  className="w-8 h-8 flex items-center justify-center border border-gray-400 hover:bg-primary hover:border-transparent hover:text-white transition-all transform duration-500"
+                >
+                  <FaXTwitter className="w-4 h-4" />
+                </Link>
+                <Link
+                  href="https://linkedin.com"
+                  target="_blank"
+                  className="w-8 h-8 flex items-center justify-center border border-gray-400 hover:bg-primary hover:border-transparent hover:text-white transition-all transform duration-500"
+                >
+                  <FaLinkedinIn className="w-4 h-4" />
+                </Link>
+                <Link
+                  href="https://instagram.com"
+                  target="_blank"
+                  className="w-8 h-8 flex items-center justify-center border border-gray-400 hover:bg-primary hover:border-transparent hover:text-white transition-all transform duration-500"
+                >
+                  <FaInstagram className="w-4 h-4" />
+                </Link>
+              </div>
 
               {/* Right Links */}
-
             </div>
           </div>
 
@@ -150,7 +151,7 @@ export default function Navbar() {
                 <div className="flex items-center gap-3">
                   <FiClock className="text-primary text-3xl" />
                   <div>
-                    <p className="font-semibold uppercase">WORKING HOURS</p>
+                    <p className="font-semibold">Working Hours</p>
                     <p className="text-gray-600">
                       Saturday - Thursday: 10.00am to 7.00pm
                     </p>
@@ -160,7 +161,7 @@ export default function Navbar() {
                 <div className="flex items-center gap-3">
                   <FiPhoneCall className="text-primary text-3xl" />
                   <div>
-                    <p className="font-semibold uppercase">CALL US</p>
+                    <p className="font-semibold">Call US</p>
                     <p className="text-gray-600">+880 1313775333</p>
                   </div>
                 </div>
@@ -168,8 +169,10 @@ export default function Navbar() {
                 <div className="flex items-center gap-3">
                   <FiMail className="text-primary text-3xl" />
                   <div>
-                    <p className="font-semibold uppercase">MAIL US</p>
-                    <p className="text-gray-600">contact@anondouniversalserviceslimited.com</p>
+                    <p className="font-semibold">Mail US</p>
+                    <p className="text-gray-600">
+                      contact@anondouniversalserviceslimited.com
+                    </p>
                   </div>
                 </div>
               </div>
@@ -213,7 +216,6 @@ export default function Navbar() {
         </>
       )}
 
-      {/* 🔹 Small Sticky Navbar (After Scroll) */}
       <AnimatePresence>
         {isScrolled && (
           <motion.div
@@ -227,40 +229,37 @@ export default function Navbar() {
             //   stiffness: 50,
             // }}
 
-
             initial={{ opacity: 0 }}
-  animate={{ opacity: 1 }}
-  exit={{ opacity: 0, transition: { duration: 0.6 } }}
-  transition={{ duration: 0.6, ease: "easeInOut" }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0, transition: { duration: 0.6 } }}
+            transition={{ duration: 0.6, ease: "easeInOut" }}
             className="bg-white py-6 fixed top-0 left-0 w-full z-50"
 
-
-  //  initial={{ opacity: 0, y: -40, filter: "blur(10px)" }}
-  // animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-  // exit={{ opacity: 0, y: -40, filter: "blur(10px)" }}
-  // transition={{ duration: 0.6, ease: "easeOut" }}
-  // className="bg-white backdrop-blur-md py-6 fixed top-0 left-0 w-full z-50"
+            //  initial={{ opacity: 0, y: -40, filter: "blur(10px)" }}
+            // animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+            // exit={{ opacity: 0, y: -40, filter: "blur(10px)" }}
+            // transition={{ duration: 0.6, ease: "easeOut" }}
+            // className="bg-white backdrop-blur-md py-6 fixed top-0 left-0 w-full z-50"
           >
             <div className="custom-container mx-auto flex justify-between items-center px-4">
               {/* Logo */}
               <Link href="/" className="flex items-center gap-2">
-  <Image
-    src="/anondo-universal-services-logo.jpg"
-    alt="Logo"
-    width={50}
-    height={50}
-    className="object-contain transition-all duration-500"
-  />
-  <div className="flex flex-col leading-tight">
-    <span className="text-xl font-bold text-primary transition-all duration-500">
-      Anondo
-    </span>
-    <span className="text-xs tracking-widest text-gray-600 transition-all duration-500">
-      Universal Services
-    </span>
-  </div>
-</Link>
-
+                <Image
+                  src="/anondo-universal-services-logo.jpg"
+                  alt="Logo"
+                  width={50}
+                  height={50}
+                  className="object-contain transition-all duration-500"
+                />
+                <div className="flex flex-col leading-tight">
+                  <span className="text-xl font-bold text-primary transition-all duration-500">
+                    Anondo
+                  </span>
+                  <span className="text-xs tracking-widest text-gray-600 transition-all duration-500">
+                    Universal Services
+                  </span>
+                </div>
+              </Link>
 
               {/* Right Menu */}
               <ul className="hidden lg:flex gap-8 font-medium items-center">
@@ -327,8 +326,6 @@ export default function Navbar() {
     </header>
   );
 }
-
-
 
 /************************ Transparent Navbar ********************************/
 
@@ -621,8 +618,6 @@ export default function Navbar() {
 //     </header>
 //   );
 // }
-
-
 
 // "use client";
 // import { useState, useRef, useEffect } from "react";

@@ -138,7 +138,7 @@ export default function HelpSection() {
         {stats.map((stat, index) => (
           <div
             key={index}
-            className="bg-gray-100 md:p-12 p-10 rounded relative text-center 
+            className="bg-off_white hover:bg-primary hover:text-white md:p-12 p-10 rounded relative text-center 
                        transition-all duration-500 transform hover:scale-105 hover:shadow-xl group"
           >
             <h3

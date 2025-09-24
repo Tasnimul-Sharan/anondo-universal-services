@@ -17,7 +17,7 @@ export default function TrainingKeyFeatures() {
   ];
 
   return (
-    <section className="py-12 bg-off_white">
+    <section className="py-12 bg-primary/10">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 custom-container mx-auto">
         {features.map((f) => (
           <div

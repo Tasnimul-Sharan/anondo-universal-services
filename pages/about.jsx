@@ -12,73 +12,71 @@ import FutureVision from "@/components/FutureVision";
 export default function AboutPage() {
   const meta = {
     title:
-      "About Us | Anondo Baari - Senior Wellness & Assisted Living in Bangladesh",
+      "About Us | Anondo Universal Services Limited - Security & Professional Services in Bangladesh",
     description:
-      "Learn about Anondo Baari, a senior citizen wellness and living center in Purbachal, Dhaka. Discover our vision, mission, world-class facilities, wellness programs, medical support, and commitment to dignity, independence, and joy for the elderly.",
+      "Learn about Anondo Universal Services Limited (AUSL), a trusted provider of security, engineering, real estate, logistics, and business support services in Bangladesh. Discover our mission, vision, nationwide operations, and commitment to safety, efficiency, and integrity.",
     keywords:
-      "About Anondo Baari, senior wellness Bangladesh, assisted living Dhaka, elderly care Bangladesh, retirement home, wellness center for seniors, holistic healthcare, senior living community, Purbachal senior care",
-    author: "Anondo Baari",
-    url: "https://www.anondobari.com/about",
-    image: "https://www.anondobari.com/about/about-og.jpg",
+      "Anondo Universal Services Limited, AUSL Bangladesh, security services Bangladesh, armed guards, logistics services, engineering solutions, real estate Bangladesh, CCTV installation, event management Bangladesh, business support services",
+    author: "Anondo Universal Services Limited",
+    url: "https://www.anondouniversalserviceslimited.com/about",
+    image: "https://www.anondouniversalserviceslimited.com/about/about-og.jpg", // replace with your OG image
   };
 
- const faqData = {
-  title: "Frequently Asked Questions",
-  faqs: [
-    {
-      question: "What is Anondo Universal Services Limited?",
-      answer:
-        "Anondo Universal Services Limited (AUSL) is a multidisciplinary service provider specializing in safety & security, engineering & real estate, and logistics & business support solutions. We are committed to ensuring safety, efficiency, and growth for individuals, businesses, and communities.",
-    },
-    {
-      question: "Where is Anondo Universal Services Limited located?",
-      answer:
-        "Our head office is located in Bangladesh, with operations spanning residential, commercial, and industrial sectors nationwide. We also provide 24/7 support and rapid response services across the country.",
-    },
-    {
-      question: "What is the vision of AUSL?",
-      answer:
-        "To be the most trusted security and service provider in South Asia, delivering innovative, reliable, and people-focused solutions.",
-    },
-    {
-      question: "What is the mission of AUSL?",
-      answer:
-        "To ensure safety, efficiency, and peace of mind through professionalism, modern technology, and uncompromising integrity.",
-    },
-    {
-      question: "What types of services do you provide?",
-      answer:
-        "We provide a wide range of services including security guards, armed guards, caretakers, supervisors, peons, drivers, courier & cargo services, ERP & digital solutions, CCTV installation, event management, office management, digital marketing, and media & advertising services.",
-    },
-    {
-      question: "How many security professionals are employed by AUSL?",
-      answer:
-        "We have over 2000+ trained security professionals deployed nationwide, supported by supervisors, caretakers, drivers, and specialized teams.",
-    },
-    {
-      question: "How is safety and quality ensured?",
-      answer:
-        "Our personnel undergo rigorous training in crisis response, fire safety, first aid, customer service, and advanced security protocols. We operate a Central Command & Monitoring Center with 24/7 oversight and rapid response teams.",
-    },
-    {
-      question: "Do you provide customized solutions?",
-      answer:
-        "Yes, AUSL offers tailored solutions for corporate offices, industrial sites, residential complexes, events, and high-risk facilities, ensuring every client receives the protection and support they need.",
-    },
-    {
-      question: "What technology-enabled services do you offer?",
-      answer:
-        "We provide CCTV surveillance, biometric access control, remote monitoring, ERP solutions, e-commerce platforms, and integrated alarm systems for businesses and individuals.",
-    },
-   {
-  question: "How can I contact Anondo Universal Services Limited?",
-  answer:
-    "📍 Head Office: Printers Building, 12-14th Floor, 5 Rajuk Avenue, Motijheel, 1000 Dhaka.\n📞 Phone: +880 1313775333\n📧 Email: contact@anondouniversalserviceslimited.com\n🌐 Website: https://anondouniversalserviceslimited.com/",
-},
-
-  ],
-};
-
+  const faqData = {
+    title: "Frequently Asked Questions",
+    faqs: [
+      {
+        question: "What is Anondo Universal Services Limited?",
+        answer:
+          "Anondo Universal Services Limited (AUSL) is a multidisciplinary service provider in Bangladesh. We specialize in safety & security, engineering & real estate, and logistics & business support solutions. Our mission is to ensure safety, efficiency, and sustainable growth for individuals, businesses, and communities.",
+      },
+      {
+        question: "Where is Anondo Universal Services Limited located?",
+        answer:
+          "Our Head Office is at Printers Building, 12–14th Floor, 5 Rajuk Avenue, Motijheel, Dhaka–1000, Bangladesh. We operate nationwide, serving residential, commercial, and industrial clients with 24/7 support and rapid response services.",
+      },
+      {
+        question: "What is the vision of AUSL?",
+        answer:
+          "Our vision is to become the most trusted security and service provider in South Asia by delivering innovative, reliable, and people-focused solutions.",
+      },
+      {
+        question: "What is the mission of AUSL?",
+        answer:
+          "Our mission is to ensure safety, efficiency, and peace of mind through professionalism, modern technology, and uncompromising integrity.",
+      },
+      {
+        question: "What types of services do you provide?",
+        answer:
+          "AUSL offers a wide range of services, including security guards, armed guards, caretakers, supervisors, peons, drivers, courier & cargo services, ERP & digital solutions, CCTV installation, event management, office management, digital marketing, and media & advertising services.",
+      },
+      {
+        question: "How many security professionals are employed by AUSL?",
+        answer:
+          "We have more than 2,000 trained security professionals deployed across Bangladesh, supported by supervisors, caretakers, drivers, and specialized operational teams.",
+      },
+      {
+        question: "How is safety and quality ensured?",
+        answer:
+          "All AUSL personnel undergo rigorous training in crisis response, fire safety, first aid, customer service, and advanced security protocols. We also operate a Central Command & Monitoring Center with 24/7 oversight and dedicated rapid response teams to ensure uncompromising service quality.",
+      },
+      {
+        question: "Do you provide customized solutions?",
+        answer:
+          "Yes. AUSL delivers tailored security and support solutions for corporate offices, industrial sites, residential complexes, events, and high-risk facilities — ensuring each client receives the right protection and services for their needs.",
+      },
+      {
+        question: "What technology-enabled services do you offer?",
+        answer:
+          "Our technology-driven services include CCTV surveillance, biometric access control, remote monitoring, ERP solutions, e-commerce platforms, and integrated alarm systems designed for businesses and individuals.",
+      },
+      {
+        question: "How can I contact Anondo Universal Services Limited?",
+        answer:
+          "📍 Head Office: Printers Building, 12–14th Floor, 5 Rajuk Avenue, Motijheel, Dhaka–1000, Bangladesh.\n📞 Phone: +880 1313-775333\n📧 Email: contact@anondouniversalserviceslimited.com\n🌐 Website: https://anondouniversalserviceslimited.com/",
+      },
+    ],
+  };
 
   return (
     <div className="w-full relative">

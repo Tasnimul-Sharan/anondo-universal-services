@@ -13,8 +13,11 @@ import {
   FaCalendarCheck,
   FaUserShield,
   FaUserTie,
+  FaChalkboardTeacher,
+  FaArrowRight,
 } from "react-icons/fa";
 import SectionHeader from "./SectionHeader";
+import Image from "next/image";
 
 // const services = [
 //   {
@@ -75,6 +78,12 @@ const services = [
       "Specialized factory guards trained in access control, theft prevention, shift-change management, and goods verification.",
   },
   {
+    title: "30-Day Training Curriculum",
+    icon: <FaChalkboardTeacher className="w-5 h-5" />,
+    description:
+      "The program is structured around four major components — Field, Professional, Theoretical, and Personal Development.",
+  },
+  {
     title: "Money Transfer Security",
     icon: <FaMoneyBillWave className="w-5 h-5" />,
     description:
@@ -112,9 +121,9 @@ export default function Services() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 items-center">
           <div className="flex flex-col gap-10">
-            {services.slice(0, 3).map((service, i) => (
-              <div key={i} className="flex items-start gap-4 text-left">
-                <div className="p-3 border-2 border-primary rounded-md text-primary">
+            {services.slice(0, 4).map((service, i) => (
+              <div key={i} className="flex items-start gap-4 text-left group">
+                <div className="p-3 border-2 border-primary rounded-md text-primary transition-all duration-500 group-hover:bg-primary group-hover:text-white">
                   {service.icon}
                 </div>
                 <div>
@@ -122,23 +131,30 @@ export default function Services() {
                   <p className="text-gray-500 text-sm mt-2">
                     {service.description}
                   </p>
+                  <div className="relative mt-4 inline-flex items-center gap-1 text-primary text-sm font-semibold transition-all transform duration-500 group cursor-pointer">
+                    See Details <FaArrowRight className="w-3 h-3" />
+                    <span className="hover-line absolute left-0 -bottom-1 h-[2px] w-0 bg-primary transition-all duration-300 ease-out group-hover:w-full"></span>
+                  </div>
                 </div>
               </div>
             ))}
           </div>
 
           <div className="flex justify-center">
-            <img
+            <Image
               src="/services/security-guard.jpeg"
               alt="Security Guard"
-              className="w-full h-full object-cover rounded-md shadow-lg"
+              width={1200}
+              height={1600}
+              priority
+              className="w-full h-full object-cover rounded-md"
             />
           </div>
 
           <div className="flex flex-col gap-10">
-            {services.slice(3).map((service, i) => (
-              <div key={i} className="flex items-start gap-4 text-left">
-                <div className="p-3 border-2 border-primary rounded-md text-primary">
+            {services.slice(4).map((service, i) => (
+              <div key={i} className="flex items-start gap-4 text-left group">
+                <div className="p-3 border-2 border-primary rounded-md text-primary transition-all duration-500 group-hover:bg-primary group-hover:text-white">
                   {service.icon}
                 </div>
                 <div>
@@ -146,6 +162,10 @@ export default function Services() {
                   <p className="text-gray-500 text-sm mt-2">
                     {service.description}
                   </p>
+                  <div className="relative mt-4 inline-flex items-center gap-1 text-primary text-sm font-semibold transition-all transform duration-500 group cursor-pointer">
+                    See Details <FaArrowRight className="w-3 h-3" />
+                    <span className="hover-line absolute left-0 -bottom-1 h-[2px] w-0 bg-primary transition-all duration-300 ease-out group-hover:w-full"></span>
+                  </div>
                 </div>
               </div>
             ))}
