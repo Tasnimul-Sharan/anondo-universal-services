@@ -3,23 +3,23 @@ import Link from "next/link";
 
 const HeroSection = ({ hero }) => {
   return (
-    <section className="relative w-full h-[40rem] overflow-hidden flex items-center justify-center">
+    <section className="relative w-full h-[50rem] overflow-hidden flex items-center justify-center">
       <div
         className="absolute inset-0 transition bg-cover bg-center bg-no-repeat transform duration-1000 ease-out"
         style={{
           backgroundImage: `url('${hero.backgroundImage}')`,
         }}
       >
-        <div className="absolute inset-0 bg-black/40"></div>
+        <div className="absolute inset-0 bg-black/50"></div>
       </div>
-      <div className="relative z-10 text-center custom-container mx-auto md:mt-36">
+      <div className="relative z-10 text-center custom-container mx-auto md:mt-40">
         <h1 className="text-white text-4xl md:text-5xl font-bold mb-4">
           {hero.title}
         </h1>
         <div className="text-sm text-white flex items-center justify-center gap-1">
           <Link
             href="/"
-            className="text-  hover:text-primary text-lg transition transform duration-500"
+            className="text-  hover:text-primary text-lg transition-all transform duration-500"
           >
             Home
           </Link>

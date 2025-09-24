@@ -179,6 +179,9 @@ export default function ServicesSection() {
                 <h3 className="font-semibold text-lg">{service.title}</h3>
               </div>
               <p className="text-gray-600 text-sm">{service.description}</p>
+              {/* <button className="mt-5 inline-block px-4 py-2 bg-primary text-white rounded-lg text-sm font-medium hover:bg-primary/90 transition">
+                Learn More
+              </button> */}
             </div>
           ))}
         </div>

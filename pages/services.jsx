@@ -43,7 +43,7 @@ export default function ServicesPage() {
       <HeroSection
         hero={{
           title: "Services",
-          backgroundImage: "/services/services-bg.jpg",
+          backgroundImage: "/services/services-bg.jpeg",
         }}
       />
 

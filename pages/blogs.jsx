@@ -37,7 +37,7 @@ export default function BlogsPage() {
       <HeroSection
         hero={{
           title: "Blogs",
-          backgroundImage: "/blogs/blog-hero.jpg",
+          backgroundImage: "/blogs/blog-bg.jpeg",
         }}
       />
       <BlogPageSection />

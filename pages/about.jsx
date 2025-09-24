@@ -101,7 +101,7 @@ export default function AboutPage() {
         hero={{
           title: "About",
           //   subtitle: "About",
-          backgroundImage: "/about-bg.jpg",
+          backgroundImage: "/about-bg.jpeg",
         }}
       />
       <AboutUsSection />
