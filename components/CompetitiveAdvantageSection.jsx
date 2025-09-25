@@ -42,8 +42,8 @@ const advantages = [
   },
 ];
 
+// Split array into two halves for 2-column layout
 export default function CompetitiveAdvantageSection() {
-  // Split array into two halves for 2-column layout
   const midpoint = Math.ceil(advantages.length / 2);
   const leftColumn = advantages.slice(0, midpoint);
   const rightColumn = advantages.slice(midpoint);
