@@ -71,7 +71,7 @@
 //                 </div>
 
 //                 <h3 className="text-lg font-bold text-secondary mb-2 hover:text-primary transition-colors duration-500">
-//                   {blog.title}     
+//                   {blog.title}
 //                 </h3>
 
 //                 <p className="text-gray-600 text-sm">{blog.excerpt}</p>
@@ -92,8 +92,6 @@
 //   );
 // }
 
-
-
 "use client";
 import Image from "next/image";
 import Link from "next/link";
@@ -103,33 +101,33 @@ import SectionHeader from "./SectionHeader";
 const blogs = [
   {
     id: 1,
-    img: "/blogs/blog-1.jpg",
-    date: "September 20, 2025",
+    img: "/blogs/security/security-1.jpg",
+    date: "September 25, 2025",
     author: "Admin",
-    title: "Latest Security Techniques",
+    title: "Inside Our State-of-the-Art Training Academy",
     excerpt:
-      "Explore the latest advancements in security technology and strategies that ensure maximum protection for your business and property.",
-    slug: "latest-security-techniques",
+      "Take an inside look at Anondo Universal’s Training Academy — a two-acre facility equipped with dormitories, simulation areas, CCTV labs, and fitness grounds designed to prepare disciplined security professionals.",
+    slug: "training-academy-overview",
   },
   {
     id: 2,
-    img: "/blogs/blog-2.jpg",
-    date: "September 15, 2025",
+    img: "/blogs/security/security-2.jpg",
+    date: "September 20, 2025",
     author: "Admin",
-    title: "Effective Risk Management Strategies",
+    title: "Why Training Defines Reliable Security",
     excerpt:
-      "Learn how professional security services implement risk assessment and management to prevent potential threats effectively.",
-    slug: "risk-management-strategies",
+      "Unlike traditional providers, Anondo Universal ensures every guard completes a rigorous 45-day program blending physical drills, legal awareness, and personal development for complete readiness.",
+    slug: "importance-of-security-training",
   },
   {
     id: 3,
-    img: "/blogs/blog-3.jpg",
-    date: "September 10, 2025",
+    img: "/blogs/security/security-3.jpg",
+    date: "September 15, 2025",
     author: "Admin",
-    title: "Ensuring Safety in Corporate Events",
+    title: "Comprehensive Services for Every Sector",
     excerpt:
-      "Understand best practices for event security, from crowd management to VIP protection, ensuring a safe and smooth experience.",
-    slug: "corporate-event-security",
+      "From households and offices to factories, events, and financial institutions — explore how our tailored services deliver discipline, trust, and professionalism in every assignment.",
+    slug: "comprehensive-security-services",
   },
 ];
 
@@ -171,9 +169,7 @@ export default function BlogSection() {
 
                   <p className="text-gray-600 text-sm">{blog.excerpt}</p>
                 </div>
-                <div
-                  className="relative mt-4 inline-flex items-center gap-1 text-primary text-sm font-semibold transition-all transform duration-500 group"
-                >
+                <div className="relative mt-4 inline-flex items-center gap-1 text-primary text-sm font-semibold transition-all transform duration-500 group">
                   Read More <FaArrowRight />
                   <span className="hover-line absolute left-0 -bottom-1 h-[2px] w-0 bg-primary transition-all duration-300 ease-out group-hover:w-full"></span>
                 </div>

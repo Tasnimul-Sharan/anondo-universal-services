@@ -5,68 +5,90 @@ import { FaArrowRight, FaRegCalendarAlt, FaRegUser } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { useState } from "react";
 
+
 const blogs = [
   {
     id: 1,
     img: "/blogs/security/security-1.jpg",
-    date: "September 20, 2025",
+    date: "September 25, 2025",
     author: "Admin",
-    title: "Latest Security Techniques",
+    title: "Inside Our State-of-the-Art Training Academy",
     excerpt:
-      "Explore the latest advancements in security technology and strategies that ensure maximum protection for your business and property.",
-    slug: "latest-security-techniques",
+      "Take an inside look at Anondo Universal’s Training Academy — a two-acre facility equipped with dormitories, simulation areas, CCTV labs, and fitness grounds designed to prepare disciplined security professionals.",
+    slug: "training-academy-overview",
   },
   {
     id: 2,
     img: "/blogs/security/security-2.jpg",
-    date: "September 15, 2025",
+    date: "September 20, 2025",
     author: "Admin",
-    title: "Effective Risk Management Strategies",
+    title: "Why Training Defines Reliable Security",
     excerpt:
-      "Learn how professional security services implement risk assessment and management to prevent potential threats effectively.",
-    slug: "risk-management-strategies",
+      "Unlike traditional providers, Anondo Universal ensures every guard completes a rigorous 45-day program blending physical drills, legal awareness, and personal development for complete readiness.",
+    slug: "importance-of-security-training",
   },
   {
     id: 3,
     img: "/blogs/security/security-3.jpg",
-    date: "September 10, 2025",
+    date: "September 15, 2025",
     author: "Admin",
-    title: "Ensuring Safety in Corporate Events",
+    title: "Comprehensive Services for Every Sector",
     excerpt:
-      "Understand best practices for event security, from crowd management to VIP protection, ensuring a safe and smooth experience.",
-    slug: "corporate-event-security",
+      "From households and offices to factories, events, and financial institutions — explore how our tailored services deliver discipline, trust, and professionalism in every assignment.",
+    slug: "comprehensive-security-services",
   },
   {
     id: 4,
     img: "/blogs/security/security-4.jpg",
-    date: "September 5, 2025",
+    date: "September 10, 2025",
     author: "Admin",
-    title: "Residential Security: Protecting Your Home",
+    title: "Our Mission & Vision: Redefining Security in Bangladesh",
     excerpt:
-      "Tips and strategies for securing residential properties, including surveillance systems, trained personnel, and emergency protocols.",
-    slug: "residential-security-tips",
+      "Learn how Anondo Universal is setting new benchmarks in private security through uncompromising training quality, ethical values, and future-focused practices.",
+    slug: "mission-vision-anondo-universal",
   },
   {
     id: 5,
     img: "/blogs/security/security-5.jpg",
-    date: "September 1, 2025",
+    date: "September 7, 2025",
     author: "Admin",
-    title: "Industrial Site Security Best Practices",
+    title: "The 45-Day Training Curriculum Explained",
     excerpt:
-      "A comprehensive guide to maintaining safety and operational continuity in factories, warehouses, and large industrial facilities.",
-    slug: "industrial-site-security",
+      "Discover the four pillars of our training program — Field Training, Professional Skills, Theoretical Knowledge, and Personal Development — that shape disciplined and trustworthy guards.",
+    slug: "45-day-training-program",
   },
   {
     id: 6,
     img: "/blogs/security/security-6.jpg",
-    date: "August 28, 2025",
+    date: "September 3, 2025",
     author: "Admin",
-    title: "Technology in Modern Security Services",
+    title: "Future Vision: Building Tomorrow’s Security Standards",
     excerpt:
-      "How CCTV, biometric access, alarm systems, and AI monitoring are transforming security operations in Bangladesh.",
-    slug: "technology-in-security",
+      "Our roadmap includes nationwide academies, AI-based surveillance, drone monitoring, and international guard deployment to meet global security demands.",
+    slug: "future-vision-security",
+  },
+  {
+    id: 7,
+    img: "/blogs/security/security-7.jpg",
+    date: "August 30, 2025",
+    author: "Admin",
+    title: "Quality Assurance in Every Guard Deployment",
+    excerpt:
+      "Strict evaluation, surprise inspections, refresher courses, and client feedback loops ensure every guard remains disciplined, alert, and professional.",
+    slug: "quality-assurance-in-security",
+  },
+  {
+    id: 8,
+    img: "/blogs/security/security-8.jpg",
+    date: "August 25, 2025",
+    author: "Admin",
+    title: "Competitive Advantage: Why Clients Trust Us",
+    excerpt:
+      "With our own academy, professional trainers, cutting-edge practices, and a strong value system, Anondo Universal stands apart in Bangladesh’s security industry.",
+    slug: "competitive-advantage-anondo-universal",
   },
 ];
+
 
 export default function BlogPageSection() {
   return (
