@@ -5,14 +5,14 @@ import Head from "next/head";
 export default function BlogsPage() {
   const meta = {
     title:
-      "Blogs | Anondo Baari - Wellness, Senior Living & Lifestyle Insights",
+      "Blogs | Anondo Universal Services Limited - Security & Protection Insights",
     description:
-      "Read blogs and articles from Anondo Baari on senior wellness, assisted living, holistic healthcare, nutrition, yoga, community lifestyle, and elderly care in Bangladesh.",
+      "Read blogs and articles from Anondo Universal Services Limited on professional security training, risk management, residential protection, corporate event safety, industrial site security, and modern surveillance technology in Bangladesh.",
     keywords:
-      "Anondo Baari blogs, senior wellness articles, elderly care Bangladesh, assisted living Dhaka, wellness lifestyle blogs, yoga meditation tips, nutrition for seniors, retirement home insights, holistic healthcare Bangladesh",
-    author: "Anondo Baari",
-    url: "https://www.anondobari.com/blogs",
-    image: "https://www.anondobari.com/blogs/blog-og.jpg",
+      "Anondo Universal Services blogs, security training Bangladesh, risk management articles, residential protection tips, corporate event safety, industrial site security, CCTV surveillance Bangladesh, professional guards insights",
+    author: "Anondo Universal Services Limited",
+    url: "https://www.anondouniversalserviceslimited.com/blogs",
+    image: "https://www.anondouniversalserviceslimited.com/blogs/blog-og.jpg",
   };
 
   return (

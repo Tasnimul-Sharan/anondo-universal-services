@@ -10,14 +10,15 @@ import ClientFocusSection from "@/components/ClientFocusSection";
 export default function ServicesPage() {
   const meta = {
     title:
-      "Services | Anondo Universal Security Services Ltd - Professional Security Solutions",
+      "Services | Anondo Universal Services Limited - Professional Security Solutions in Bangladesh",
     description:
-      "Discover Anondo Universal’s wide range of services including manned guarding, office security, industrial safety, event protection, and VIP bodyguard services. Backed by training, monitoring, and quality assurance.",
+      "Explore Anondo Universal Services Limited’s professional security services in Bangladesh. From manned guarding, corporate event protection, residential and industrial security to CCTV surveillance, risk management, and our state-of-the-art training academy — we ensure safety with discipline and trust.",
     keywords:
-      "security services Bangladesh, manned guarding Dhaka, VIP security, event security, factory guards, bodyguards",
-    author: "Anondo Universal Security Services Ltd",
+      "Anondo Universal Services, security services Bangladesh, manned guarding, corporate event protection, residential security, industrial site safety, CCTV surveillance, risk management, security training academy",
+    author: "Anondo Universal Services Limited",
     url: "https://www.anondouniversalserviceslimited.com/services",
-    image: "https://www.anondouniversalserviceslimited.com/services-og.jpg",
+    image:
+      "https://www.anondouniversalserviceslimited.com/services/services-og.jpg",
   };
 
   return (

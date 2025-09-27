@@ -10,14 +10,15 @@ import TrainingVisuals from "@/components/TrainingVisuals";
 export default function TrainingPage() {
   const meta = {
     title:
-      "Services | Anondo Baari - Senior Wellness & Assisted Living in Bangladesh",
+      "Training | Anondo Universal Services Limited - Security Guard Training Academy in Bangladesh",
     description:
-      "Discover Anondo Baari’s world-class services for senior citizens in Purbachal, Dhaka. We offer assisted living, 24/7 healthcare, therapeutic care, yoga, meditation, nutrition counseling, and vibrant community activities for a dignified life.",
+      "Discover Anondo Universal’s state-of-the-art Security Training Academy in Bangladesh. Our 45-day intensive program covers physical drills, legal awareness, professional skills, personal development, and modern surveillance techniques to prepare disciplined and reliable security personnel.",
     keywords:
-      "Anondo Baari services, senior wellness Bangladesh, assisted living Dhaka, elderly care, therapeutic services, wellness programs, yoga meditation, nutrition counseling, retirement home Bangladesh",
-    author: "Anondo Baari",
-    url: "https://www.anondobari.com/services",
-    image: "https://www.anondobari.com/services/services-og.jpg",
+      "Anondo Universal Services training, security guard training Bangladesh, 45-day security program, security training academy, guard training Dhaka, physical drills, legal awareness, professional security skills, CCTV training, personal development",
+    author: "Anondo Universal Services Limited",
+    url: "https://www.anondouniversalserviceslimited.com/training",
+    image:
+      "https://www.anondouniversalserviceslimited.com/training/training-og.jpg",
   };
 
   return (

@@ -19,7 +19,7 @@ export default function AboutPage() {
       "Anondo Universal Services Limited, AUSL Bangladesh, security services Bangladesh, armed guards, logistics services, engineering solutions, real estate Bangladesh, CCTV installation, event management Bangladesh, business support services",
     author: "Anondo Universal Services Limited",
     url: "https://www.anondouniversalserviceslimited.com/about",
-    image: "https://www.anondouniversalserviceslimited.com/about/about-og.jpg", // replace with your OG image
+    image: "https://www.anondouniversalserviceslimited.com/about/about-og.jpg",
   };
 
   const faqData = {

@@ -17,16 +17,17 @@ import AdvantagesSection from "@/components/AdvantagesSection";
 import HelpSection from "@/components/HelpSection";
 import ProductsSection from "@/components/ProductsSection";
 export default function Home() {
-const meta = {
-  title: "Anondo Universal Security Services Limited | Trusted Security & Training in Bangladesh",
-  description:
-    "Anondo Universal Security Services Limited is a leading private security provider in Bangladesh. Offering household, corporate, industrial, event, and VIP protection services backed by a state-of-the-art training academy and professional monitoring.",
-  keywords:
-    "Anondo Universal Security, security services Bangladesh, private security Dhaka, armed guards Bangladesh, bodyguard services Dhaka, event security Bangladesh, factory security, money transfer security, residential security, professional guards Bangladesh",
-  author: "Anondo Universal Security Services Limited",
-  url: "https://www.anondouniversalserviceslimited.com/",
-  image: "https://www.anondouniversalserviceslimited.com/og-image.jpg", // replace with actual OG image
-};
+  const meta = {
+    title:
+      "Anondo Universal Security Services Limited | Trusted Security & Training in Bangladesh",
+    description:
+      "Anondo Universal Security Services Limited is a leading private security provider in Bangladesh. Offering household, corporate, industrial, event, and VIP protection services backed by a state-of-the-art training academy and professional monitoring.",
+    keywords:
+      "Anondo Universal Security, security services Bangladesh, private security Dhaka, armed guards Bangladesh, bodyguard services Dhaka, event security Bangladesh, factory security, money transfer security, residential security, professional guards Bangladesh",
+    author: "Anondo Universal Security Services Limited",
+    url: "https://www.anondouniversalserviceslimited.com/",
+    image: "https://www.anondouniversalserviceslimited.com/og-image.jpg",
+  };
 
   return (
     <div className="w-full relative">

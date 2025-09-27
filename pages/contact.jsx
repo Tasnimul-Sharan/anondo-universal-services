@@ -7,14 +7,15 @@ import Navbar from "@/components/Navbar";
 export default function ContactPage() {
   const meta = {
     title:
-      "Contact | Anondo Baari - Senior Wellness & Assisted Living in Bangladesh",
+      "Contact | Anondo Universal Services Limited - Professional Security Services in Bangladesh",
     description:
-      "Get in touch with Anondo Baari for inquiries, admissions, or visits. Located in Purbachal, Dhaka, our senior wellness and assisted living center offers world-class care, wellness programs, and community living.",
+      "Get in touch with Anondo Universal Services Limited for inquiries, service requests, or consultations. Serving Bangladesh with manned guarding, corporate event protection, residential and industrial security, CCTV surveillance, and training programs.",
     keywords:
-      "Anondo Baari contact, senior living Bangladesh, assisted living Dhaka, wellness center contact, elderly care Bangladesh, retirement home inquiry, Purbachal senior care, Anondo Baari phone, Anondo Baari email",
-    author: "Anondo Baari",
-    url: "https://www.anondobari.com/contact",
-    image: "https://www.anondobari.com/contact/contact-og.jpg",
+      "Anondo Universal contact, security services Bangladesh, manned guarding inquiry, corporate event security contact, residential security, industrial security, CCTV services, security training, Anondo Universal phone, Anondo Universal email",
+    author: "Anondo Universal Services Limited",
+    url: "https://www.anondouniversalserviceslimited.com/contact",
+    image:
+      "https://www.anondouniversalserviceslimited.com/contact/contact-og.jpg",
   };
 
   return (

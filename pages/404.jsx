@@ -31,11 +31,11 @@ export default function Custom404() {
   return (
     <section className="w-full relative">
       <Head>
-        <title>404 - Page Not Found | Anondo Baari</title>
+        <title>404 - Page Not Found | Anondo Universal Services Limited</title>
         <meta name="robots" content="noindex, nofollow" />
         <meta
           name="description"
-          content="The page you are looking for does not exist. Please return to the Anondo Baari homepage."
+          content="The page you are looking for does not exist. Please return to the Anondo Universal Services Limited homepage."
         />
       </Head>
       <Navbar />

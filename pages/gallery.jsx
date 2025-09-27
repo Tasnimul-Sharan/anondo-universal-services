@@ -4,15 +4,15 @@ import Navbar from "@/components/Navbar";
 import GalleryPageSection from "@/components/GalleryPageSection";
 export default function GalleryPage() {
   const meta = {
-    title:
-      "Gallery | Anondo Baari - Senior Living & Wellness Center in Bangladesh",
+    title: "Gallery | Anondo Universal Services Limited",
     description:
-      "Explore the Anondo Baari Gallery showcasing our senior wellness center, assisted living suites, landscaped gardens, wellness activities, dining experiences, and community life at Purbachal, Dhaka.",
+      "Explore the Anondo Universal Services Limited Gallery featuring our security training academy, professional guard deployments, corporate event coverage, residential safety operations, and modern surveillance technology in Bangladesh.",
     keywords:
-      "Anondo Baari gallery, senior living Bangladesh, assisted living images, wellness center photos, elderly care Dhaka, retirement home Bangladesh, community lifestyle, wellness activities, Purbachal senior care",
-    author: "Anondo Baari",
-    url: "https://www.anondobari.com/gallery",
-    image: "https://www.anondobari.com/gallery/gallery-og.jpg",
+      "Anondo Universal Services gallery, security services Bangladesh, guard training academy photos, professional guards images, event security gallery, residential protection photos, industrial security visuals, CCTV and surveillance Bangladesh",
+    author: "Anondo Universal Services Limited",
+    url: "https://www.anondouniversalserviceslimited.com/gallery",
+    image:
+      "https://www.anondouniversalserviceslimited.com/gallery/gallery-og.jpg",
   };
 
   return (
