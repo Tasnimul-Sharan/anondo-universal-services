@@ -52,9 +52,9 @@ export default function Navbar() {
   const menuItems = [
     { name: "Home", path: "/" },
     { name: "About Us", path: "/about" },
-    { name: "Gallery", path: "/gallery" },
     { name: "Services", path: "/services" },
     { name: "Training", path: "/training" },
+    { name: "Gallery", path: "/gallery" },
     { name: "Blogs", path: "/blogs" },
     { name: "Contact Us", path: "/contact" },
   ];

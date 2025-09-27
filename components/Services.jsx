@@ -15,6 +15,7 @@ import {
   FaUserTie,
   FaChalkboardTeacher,
   FaArrowRight,
+  FaUsers,
 } from "react-icons/fa";
 import SectionHeader from "./SectionHeader";
 import Image from "next/image";
@@ -78,10 +79,10 @@ const services = [
       "Specialized factory guards trained in access control, theft prevention, shift-change management, and goods verification.",
   },
   {
-    title: "30-Day Training Curriculum",
-    icon: <FaChalkboardTeacher className="w-5 h-5" />,
+    title: "Crowd Control",
+    icon: <FaUsers className="w-5 h-5" />,
     description:
-      "The program is structured around four major components — Field, Professional, Theoretical, and Personal Development.",
+      "Techniques to manage large gatherings safely. Preventing stampedes, violence, or disorder during events or emergencies.",
   },
   {
     title: "Money Transfer Security",

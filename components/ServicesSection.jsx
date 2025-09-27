@@ -7,6 +7,8 @@ import {
   FaUsers,
   FaUserShield,
   FaUserTie,
+  FaCalendarCheck,
+  FaVideo,
 } from "react-icons/fa";
 
 const services = [
@@ -35,7 +37,7 @@ const services = [
       "Armed escorts for banks and institutions handling cash or assets. Guards trained in convoy protection, armed defense, and instant law enforcement coordination.",
   },
   {
-    icon: <FaUsers className="w-6 h-6" />,
+    icon: <FaCalendarCheck className="w-6 h-6" />,
     title: "Event Management & Security",
     description:
       "Concerts, sports, political rallies, or corporate programs—trained teams handle crowd control, VIP protection, and emergency evacuation with CCTV monitoring.",
@@ -52,6 +54,24 @@ const services = [
     description:
       "Close protection for VIPs, executives, and public figures. Trained in defensive driving, tactical positioning, and etiquette for professional interactions.",
   },
+  {
+    title: "Crowd Control",
+    icon: <FaUsers className="w-5 h-5" />,
+    description:
+      "Techniques to manage large gatherings safely. Preventing stampedes, violence, or disorder during events or emergencies.",
+  },
+  {
+  title: "Factory Access Security",
+  icon: <FaIndustry className="w-5 h-5" />,
+  description:
+    "Specialized training to handle opening and closing hours of factories. Managing entry of workers, vehicles, and goods during peak times.",
+},
+{
+  title: "CCTV Surveillance",
+  icon: <FaVideo className="w-5 h-5" />,
+  description:
+    "Hands-on training in monitoring live CCTV feeds. Identifying abnormal activity, recording, and reporting procedures.",
+},
 ];
 
 export default function ServicesSection() {
