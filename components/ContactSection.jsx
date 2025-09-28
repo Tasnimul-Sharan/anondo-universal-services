@@ -96,19 +96,18 @@ export default function ContactSection() {
     <div>
       <h4 className="font-semibold">Our Address</h4>
       <p className="text-sm opacity-90">
-        Printers Building, 12-14th Floor, 5 Rajuk Avenue, Motijheel, 1000 Dhaka
+        Printers Building, 14th Floor, 5 Rajuk Avenue, Motijheel, 1000 Dhaka
       </p>
     </div>
   </div>
 
-  {/* Phone Card */}
   <div className="flex items-start gap-4 bg-white rounded-lg p-6 text-gray-700">
     <div className="bg-primary p-3 rounded-full text-xl text-white">
       <FiPhoneCall />
     </div>
     <div>
       <h4 className="font-semibold">Our Phone</h4>
-      <p className="text-sm opacity-90">+880 1313775333</p>
+      <p className="text-sm opacity-90">+880 1313775333, 880 1313775334</p>
     </div>
   </div>
 

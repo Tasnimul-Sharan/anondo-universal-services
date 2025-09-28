@@ -86,7 +86,7 @@ export default function Navbar() {
                   />
                 </svg>
                 <span>
-                  Printers Building, 12-14th Floor, 5 Rajuk Avenue, Motijheel,
+                  Printers Building, 14th Floor, 5 Rajuk Avenue, Motijheel,
                   1000 Dhaka
                 </span>
               </div>

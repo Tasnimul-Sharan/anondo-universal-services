@@ -9,39 +9,6 @@ import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import Button from "./Button";
 import Link from "next/link";
 
-// const sliderData = {
-//   slides: [
-//     {
-//       image: "/slider/security1.jpeg",
-//       subtitle: "Professional Security",
-//       title: "24/7 Protection Services",
-//       description:
-//         "Our highly trained guards and advanced technology ensure complete safety for your home, office, and business around the clock.",
-//       primaryButton: { text: "Services", link: "/services" },
-//       secondaryButton: { text: "Contact Us", link: "/contact" },
-//     },
-//     {
-//       image: "/slider/security2.jpeg",
-//       subtitle: "Corporate Solutions",
-//       title: "Trusted By Leading Companies",
-//       description:
-//         "We provide reliable security services for banks, offices, and corporate establishments with years of proven experience.",
-//       primaryButton: { text: "Our Clients", link: "/clients" },
-//       secondaryButton: { text: "Get Quote", link: "/quote" },
-//     },
-//     {
-//       image: "/slider/security3.jpeg",
-//       subtitle: "Smart Technology",
-//       title: "Modern Surveillance Systems",
-//       description:
-//         "From CCTV to biometric access control and digital monitoring, we integrate the latest security technology for your safety.",
-//       primaryButton: { text: "Explore Services", link: "/services" },
-//       secondaryButton: { text: "Contact Us", link: "/contact" },
-//     },
-//   ],
-// };
-
-
 const sliderData = {
   slides: [
     {
@@ -74,7 +41,6 @@ const sliderData = {
   ],
 };
 
-
 const LandingPage = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const progressBar = useRef(null);
@@ -106,28 +72,24 @@ const LandingPage = () => {
     beforeChange: (_, next) => setActiveIndex(next),
   };
 
-
   const textVariants = {
-  hidden: { opacity: 0, y: 30 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.8, ease: "easeOut" },
-  },
-};
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.8, ease: "easeOut" },
+    },
+  };
 
-const containerVariants = {
-  hidden: {},
-  visible: {
-    transition: { staggerChildren: 0.3 },
-  },
-};
-
-
+  const containerVariants = {
+    hidden: {},
+    visible: {
+      transition: { staggerChildren: 0.3 },
+    },
+  };
 
   return (
     <div className="relative w-full overflow-hidden group">
-
       <Slider ref={sliderRef} {...settings}>
         {sliderData.slides.map((slide, index) => (
           <div
@@ -184,46 +146,45 @@ const containerVariants = {
 
             </div> */}
             <motion.div
-  ref={(el) => (textRefs.current[index] = el)}
-  className="absolute inset-0 flex flex-col items-center justify-center text-center text-white z-10 px-6"
-  variants={containerVariants}
-  initial="hidden"
-  animate={activeIndex === index ? "visible" : "hidden"}
->
-  <motion.p
-    className="uppercase tracking-widest text-sm"
-    variants={textVariants}
-  >
-    {slide.subtitle}
-  </motion.p>
+              ref={(el) => (textRefs.current[index] = el)}
+              className="absolute inset-0 flex flex-col items-center justify-center text-center text-white z-10 px-6 mt-40"
+              variants={containerVariants}
+              initial="hidden"
+              animate={activeIndex === index ? "visible" : "hidden"}
+            >
+              <motion.p
+                className="uppercase tracking-widest text-sm"
+                variants={textVariants}
+              >
+                {slide.subtitle}
+              </motion.p>
 
-  <motion.h1
-    className="text-3xl md:text-6xl font-serif italic font-semibold mt-4"
-    variants={textVariants}
-  >
-    <span className="text-primary">
-      {slide.title.split(" ")[0]}
-    </span>{" "}
-    {slide.title.split(" ").slice(1).join(" ")}
-  </motion.h1>
+              <motion.h1
+                className="text-3xl md:text-6xl font-serif italic font-semibold mt-4"
+                variants={textVariants}
+              >
+                <span className="text-primary">
+                  {slide.title.split(" ")[0]}
+                </span>{" "}
+                {slide.title.split(" ").slice(1).join(" ")}
+              </motion.h1>
 
-  <motion.p
-    className="mt-4 text-base md:text-lg max-w-xl text-gray-200"
-    variants={textVariants}
-  >
-    {slide.description}
-  </motion.p>
+              <motion.p
+                className="mt-4 text-base md:text-lg max-w-xl text-gray-200"
+                variants={textVariants}
+              >
+                {slide.description}
+              </motion.p>
 
-  <motion.div className="mt-6 flex gap-4" variants={textVariants}>
-    <Link href="/services">
-      <Button variant="primary">Services</Button>
-    </Link>
-    <Link href="/contact">
-      <Button variant="outline">Contact Us</Button>
-    </Link>
-  </motion.div>
-</motion.div>
-
+              <motion.div className="mt-6 flex gap-4" variants={textVariants}>
+                <Link href="/services">
+                  <Button variant="primary">Services</Button>
+                </Link>
+                <Link href="/contact">
+                  <Button variant="outline">Contact Us</Button>
+                </Link>
+              </motion.div>
+            </motion.div>
           </div>
         ))}
       </Slider>

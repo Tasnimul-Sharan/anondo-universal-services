@@ -29,15 +29,11 @@ export default function ProductsSection() {
   return (
     <section className="py-20 bg-white">
       <div className="custom-container mx-auto">
-
-<SectionHeader
-  subtitle="Our Equipment"
-  title="Our Security Products"
-  details="Explore our wide range of advanced security products designed to ensure safety, reliability, and peace of mind for your home and business."
-/>
-
-
-
+        <SectionHeader
+          subtitle="Our Equipment"
+          title="Security Products Training"
+          details="We train security personnel on how to properly use guard vests, metal detectors, vehicle inspection mirrors, and body scanner doors."
+        />
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {products.map((product) => (
             <div
