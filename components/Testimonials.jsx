@@ -112,6 +112,7 @@
 //     </section>
 //   );
 // }
+
 "use client";
 
 import Image from "next/image";
@@ -229,15 +230,15 @@ export default function TestimonialsAndClients() {
                 </p>
 
                 <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-full overflow-hidden">
+                  <div className="w-16 h-16 relative">
                     <Image
                       src={t.img}
                       alt={t.name}
-                      width={48}
-                      height={48}
-                      className="object-cover"
+                      fill
+                      className="rounded-full object-cover"
                     />
                   </div>
+
                   <div>
                     <h4 className="font-semibold text-gray-900">{t.name}</h4>
                     <p className="text-gray-500 text-sm">{t.role}</p>
@@ -255,28 +256,6 @@ export default function TestimonialsAndClients() {
           ))}
         </Slider>
       </div>
-
-      {/* Logos Slider (under same section) */}
-
-      {/* <div className="max-w-7xl mx-auto overflow-hidden">
-        <Slider {...logoSettings}>
-          {clientLogos.map((logo, idx) => (
-            <div key={idx} className="flex justify-center px-2 sm:px-4">
-              <div className="bg-white p-4 sm:p-6 rounded-lg flex items-center justify-center w-full">
-                <div className="w-full h-24 sm:h-32 relative">
-                  <Image
-                    src={logo}
-                    alt={`Client Logo ${idx + 1}`}
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 640px) 50vw, (max-width: 1024px) 25vw, 150px"
-                  />
-                </div>
-              </div>
-            </div>
-          ))}
-        </Slider>
-      </div> */}
       <div className="max-w-7xl mx-auto overflow-hidden">
         <Slider {...logoSettings}>
           {clientLogos.map((logo, idx) => (
@@ -285,9 +264,9 @@ export default function TestimonialsAndClients() {
                 <Image
                   src={logo}
                   alt={`Client Logo ${idx + 1}`}
-                  width={160} // 40 * 4 = 160px
-                  height={96} // 24 * 4 = 96px
-                  priority // first 3 logos load hobe priority diye
+                  width={160}
+                  height={96}
+                  priority
                   className="object-cover"
                 />
               </div>

@@ -56,7 +56,6 @@ export default function Navbar() {
     { name: "Training", path: "/training" },
     { name: "Gallery", path: "/gallery" },
     { name: "Blogs", path: "/blogs" },
-    { name: "Contact Us", path: "/contact" },
   ];
 
   return (
@@ -64,7 +63,6 @@ export default function Navbar() {
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 
     ${isScrolled ? "bg-white shadow-md" : "bg-transparent"}`}
     >
-      {/* 🔹 Full Layout (Before Scroll) */}
       {!isScrolled && (
         <>
           {/* Top Bar */}
@@ -86,11 +84,10 @@ export default function Navbar() {
                   />
                 </svg>
                 <span>
-                  Printers Building, 14th Floor, 5 Rajuk Avenue, Motijheel,
-                  1000 Dhaka
+                  Printers Building, 14th Floor, 5 Rajuk Avenue, Motijheel, 1000
+                  Dhaka
                 </span>
               </div>
-              {/* Left Social */}
               <div className="flex gap-2">
                 <Link
                   href="https://facebook.com"
