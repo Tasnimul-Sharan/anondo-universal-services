@@ -196,7 +196,7 @@ export default function Navbar() {
               <div className="hidden lg:block">
                 <Link href="/contact">
                   <button className="bg-primary text-white px-6 py-2 font-bold hover:bg-secondary transition-all transform duration-500">
-                    GET FREE INQUIRY
+                    Contact US
                   </button>
                 </Link>
               </div>
@@ -275,7 +275,7 @@ export default function Navbar() {
               <div className="hidden lg:block">
                 <Link href="/contact">
                   <button className="bg-primary text-white px-6 py-2 font-bold hover:bg-secondary transition-all transform duration-500">
-                    GET FREE INQUIRY
+                    Contact US
                   </button>
                 </Link>
               </div>
@@ -315,7 +315,7 @@ export default function Navbar() {
         <div className="px-6 py-10">
           <Link href="/contact" onClick={() => setIsMenuOpen(false)}>
             <button className="w-full bg-primary text-white font-bold py-3 rounded-lg hover:bg-secondary transition">
-              GET FREE INQUIRY
+              Contact US
             </button>
           </Link>
         </div>
@@ -503,7 +503,7 @@ export default function Navbar() {
 //               <div className="hidden lg:block">
 //                 <Link href="/contact">
 //                   <button className="bg-primary text-white px-6 py-2 font-bold hover:bg-secondary transition">
-//                     GET FREE INQUIRY
+//                     Contact US
 //                   </button>
 //                 </Link>
 //               </div>
@@ -567,7 +567,7 @@ export default function Navbar() {
 //               <div className="hidden lg:block">
 //                 <Link href="/contact">
 //                   <button className="bg-primary text-white px-6 py-2 font-bold hover:bg-secondary transition">
-//                     GET FREE INQUIRY
+//                     Contact US
 //                   </button>
 //                 </Link>
 //               </div>
@@ -607,7 +607,7 @@ export default function Navbar() {
 //         <div className="px-6 py-10">
 //           <Link href="/contact" onClick={() => setIsMenuOpen(false)}>
 //             <button className="w-full bg-primary text-white font-bold py-3 rounded-lg hover:bg-secondary transition">
-//               GET FREE INQUIRY
+//               Contact US
 //             </button>
 //           </Link>
 //         </div>
@@ -805,7 +805,7 @@ export default function Navbar() {
 //               <div className="hidden lg:block">
 //                 <Link href="/contact">
 //                   <button className="bg-primary text-white px-6 py-2 font-bold hover:bg-secondary transition">
-//                     GET FREE INQUIRY
+//                     Contact US
 //                   </button>
 //                 </Link>
 //               </div>
@@ -869,7 +869,7 @@ export default function Navbar() {
 //               <div className="hidden lg:block">
 //                 <Link href="/contact">
 //                   <button className="bg-primary text-white px-6 py-2 font-bold hover:bg-secondary transition">
-//                     GET FREE INQUIRY
+//                     Contact US
 //                   </button>
 //                 </Link>
 //               </div>
@@ -909,7 +909,7 @@ export default function Navbar() {
 //         <div className="px-6 py-10">
 //           <Link href="/contact" onClick={() => setIsMenuOpen(false)}>
 //             <button className="w-full bg-primary text-white font-bold py-3 rounded-lg hover:bg-secondary transition">
-//               GET FREE INQUIRY
+//               Contact US
 //             </button>
 //           </Link>
 //         </div>
