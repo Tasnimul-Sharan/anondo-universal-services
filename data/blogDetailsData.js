@@ -23,7 +23,7 @@ export const blogDetailsData = {
       slug: "training-academy-overview",
       blogPost: {
         title: "Inside Our State-of-the-Art Training Academy",
-        image: "/blogs/security/security-1.jpg",
+        image: "/blogs/blog-1.jpeg",
         author: "Anondo Universal Team",
         date: "25 SEPTEMBER, 2025",
         description:
@@ -33,10 +33,7 @@ export const blogDetailsData = {
           "Dedicated CCTV labs and simulation areas.",
           "Professional trainers ensuring disciplined development.",
         ],
-        subImages: [
-          "/blogs/security/security-1a.jpg",
-          "/blogs/security/security-1b.jpg",
-        ],
+        subImages: ["/blogs/blog-2.jpeg", "/blogs/blog-3.jpeg"],
         quote: "Training builds discipline, discipline builds trust.",
         postTags: ["Training Academy", "Security Training", "Discipline"],
       },
@@ -68,7 +65,7 @@ export const blogDetailsData = {
       slug: "importance-of-security-training",
       blogPost: {
         title: "Why Training Defines Reliable Security",
-        image: "/blogs/security/security-2.jpg",
+        image: "/blogs/blog-2.jpeg",
         author: "Anondo Universal Team",
         date: "20 SEPTEMBER, 2025",
         description:
@@ -78,10 +75,7 @@ export const blogDetailsData = {
           "Legal rights and compliance awareness.",
           "Soft skills and professional behavior training.",
         ],
-        subImages: [
-          "/blogs/security/security-2a.jpg",
-          "/blogs/security/security-2b.jpg",
-        ],
+        subImages: ["/blogs/blog-1.jpeg", "/blogs/blog-3.jpeg"],
         quote: "A well-trained guard is the foundation of secure environments.",
         postTags: ["Security Training", "Professional Guards", "Preparedness"],
       },
@@ -113,7 +107,7 @@ export const blogDetailsData = {
       slug: "comprehensive-security-services",
       blogPost: {
         title: "Comprehensive Services for Every Sector",
-        image: "/blogs/security/security-3.jpg",
+        image: "/blogs/blog-3.jpeg",
         author: "Anondo Universal Team",
         date: "15 SEPTEMBER, 2025",
         description:
@@ -123,10 +117,7 @@ export const blogDetailsData = {
           "Event and crowd management expertise.",
           "Industrial and financial institution security.",
         ],
-        subImages: [
-          "/blogs/security/security-3a.jpg",
-          "/blogs/security/security-3b.jpg",
-        ],
+        subImages: ["/blogs/blog-1.jpeg", "/blogs/blog-2.jpeg"],
         quote: "One company, all-round security for every need.",
         postTags: ["Security Services", "Corporate Safety", "Event Security"],
       },
@@ -158,7 +149,7 @@ export const blogDetailsData = {
       slug: "mission-vision-anondo-universal",
       blogPost: {
         title: "Our Mission & Vision: Redefining Security in Bangladesh",
-        image: "/blogs/security/security-4.jpg",
+        image: "/blogs/blog-1.jpeg",
         author: "Anondo Universal Team",
         date: "10 SEPTEMBER, 2025",
         description:
@@ -168,10 +159,7 @@ export const blogDetailsData = {
           "Vision to expand nationwide academies.",
           "Commitment to ethical values and professionalism.",
         ],
-        subImages: [
-          "/blogs/security/security-4a.jpg",
-          "/blogs/security/security-4b.jpg",
-        ],
+        subImages: ["/blogs/blog-2.jpeg", "/blogs/blog-3.jpeg"],
         quote: "Our mission drives us, our vision guides us.",
         postTags: ["Mission", "Vision", "Security Standards"],
       },
@@ -203,7 +191,7 @@ export const blogDetailsData = {
       slug: "30-day-training-program",
       blogPost: {
         title: "The 30-Day Training Curriculum Explained",
-        image: "/blogs/security/security-5.jpg",
+        image: "/blogs/blog-2.jpeg",
         author: "Anondo Universal Team",
         date: "07 SEPTEMBER, 2025",
         description:
@@ -214,10 +202,7 @@ export const blogDetailsData = {
           "Theoretical understanding of law and ethics.",
           "Focus on discipline and personal growth.",
         ],
-        subImages: [
-          "/blogs/security/security-5a.jpg",
-          "/blogs/security/security-5b.jpg",
-        ],
+        subImages: ["/blogs/blog-1.jpeg", "/blogs/blog-3.jpeg"],
         quote: "Training isn’t a phase, it’s a foundation for life.",
         postTags: ["Training Program", "Skill Development", "Discipline"],
       },
@@ -249,7 +234,7 @@ export const blogDetailsData = {
       slug: "future-vision-security",
       blogPost: {
         title: "Future Vision: Building Tomorrow’s Security Standards",
-        image: "/blogs/security/security-6.jpg",
+        image: "/blogs/blog-3.jpeg",
         author: "Anondo Universal Team",
         date: "03 SEPTEMBER, 2025",
         description:
@@ -259,10 +244,7 @@ export const blogDetailsData = {
           "AI surveillance and drone deployment.",
           "International guard services for global markets.",
         ],
-        subImages: [
-          "/blogs/security/security-6a.jpg",
-          "/blogs/security/security-6b.jpg",
-        ],
+        subImages: ["/blogs/blog-1.jpeg", "/blogs/blog-2.jpeg"],
         quote: "The future of security is smart, global, and disciplined.",
         postTags: ["Future Vision", "AI Surveillance", "Global Security"],
       },
@@ -294,7 +276,7 @@ export const blogDetailsData = {
       slug: "quality-assurance-in-security",
       blogPost: {
         title: "Quality Assurance in Every Guard Deployment",
-        image: "/blogs/security/security-7.jpg",
+        image: "/blogs/blog-1.jpeg",
         author: "Anondo Universal Team",
         date: "30 AUGUST, 2025",
         description:
@@ -304,10 +286,7 @@ export const blogDetailsData = {
           "Refresher training programs.",
           "Continuous client feedback and monitoring.",
         ],
-        subImages: [
-          "/blogs/security/security-7a.jpg",
-          "/blogs/security/security-7b.jpg",
-        ],
+        subImages: ["/blogs/blog-2.jpeg", "/blogs/blog-3.jpeg"],
         quote: "Quality assurance is the heartbeat of security.",
         postTags: ["Quality Control", "Professional Guards", "Client Trust"],
       },
@@ -339,7 +318,7 @@ export const blogDetailsData = {
       slug: "competitive-advantage-anondo-universal",
       blogPost: {
         title: "Competitive Advantage: Why Clients Trust Us",
-        image: "/blogs/security/security-8.jpg",
+        image: "/blogs/blog-2.jpeg",
         author: "Anondo Universal Team",
         date: "25 AUGUST, 2025",
         description:
@@ -349,10 +328,7 @@ export const blogDetailsData = {
           "Ethical and professional value system.",
           "Adoption of modern practices and technology.",
         ],
-        subImages: [
-          "/blogs/security/security-8a.jpg",
-          "/blogs/security/security-8b.jpg",
-        ],
+        subImages: ["/blogs/blog-1.jpeg", "/blogs/blog-3.jpeg"],
         quote: "Our edge is our discipline, values, and training.",
         postTags: ["Competitive Advantage", "Security Industry", "Trust"],
       },
