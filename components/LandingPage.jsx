@@ -106,45 +106,6 @@ const LandingPage = () => {
             ></motion.div>
 
             <div className="absolute inset-0 bg-black bg-opacity-60"></div>
-            {/* <div
-              ref={(el) => (textRefs.current[index] = el)}
-              className="absolute inset-0 flex flex-col items-center justify-center text-center text-white z-10 px-6"
-            >
-              <motion.p
-                className="uppercase tracking-widest text-sm"
-                key={`subtitle-${index}-${activeIndex}`}
-              >
-                {slide.subtitle}
-              </motion.p>
-
-              <motion.h1
-                className="text-3xl md:text-6xl font-serif italic font-semibold mt-4"
-                key={`title-${index}-${activeIndex}`}
-              >
-                <span className="text-primary">
-                  {slide.title.split(" ")[0]}
-                </span>{" "}
-                {slide.title.split(" ").slice(1).join(" ")}
-              </motion.h1>
-
-              <motion.p
-                className="mt-4 text-base md:text-lg max-w-xl text-gray-200"
-                key={`desc-${index}-${activeIndex}`}
-              >
-                {slide.description}
-              </motion.p>
-
-<motion.div className="mt-6 flex gap-4">
-  <Link href="/services">
-    <Button variant="primary">services</Button>
-  </Link>
-  <Link href="/contact">
-    <Button variant="outline">Contact Us</Button>
-  </Link>
-</motion.div>
-
-
-            </div> */}
             <motion.div
               ref={(el) => (textRefs.current[index] = el)}
               className="absolute inset-0 flex flex-col items-center justify-center text-center text-white z-10 px-6 mt-40"

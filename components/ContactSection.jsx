@@ -68,77 +68,82 @@ export default function ContactSection() {
           viewport={{ once: true }}
         > */}
         <motion.div
-  className="flex flex-col justify-between rounded"
-  initial={{ opacity: 0, scale: 0.9, y: 50 }}
-  whileInView={{ opacity: 1, scale: 1, y: 0 }}
-  transition={{ duration: 0.8, ease: "easeOut" }}
-  viewport={{ once: true }}
->
+          className="flex flex-col justify-between rounded"
+          initial={{ opacity: 0, scale: 0.9, y: 50 }}
+          whileInView={{ opacity: 1, scale: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ once: true }}
+        >
           <div>
- <p className="bg-primary/20 text-primary rounded-full text-xs font-semibold px-4 py-2 uppercase tracking-wide inline-block mb-4">
-          Get in Touch
-        </p>
-<h2 className="md:text-3xl text-3xl font-bold text-secondary mb-4 leading-snug">
-  Connect with <span className="text-primary"> Anondo Universal Security </span> <br /> for reliable protection anytime
-</h2>
-<p className="text-gray-500 mb-6 max-w-xl">
-  We provide trusted security guard services for homes, offices, and businesses. 
-  Reach out to us anytime for dependable safety and professional support.
-</p>
-
+            <p className="bg-primary/20 text-primary rounded-full text-xs font-semibold px-4 py-2 uppercase tracking-wide inline-block mb-4">
+              Get in Touch
+            </p>
+            <h2 className="md:text-3xl text-3xl font-bold mb-4 leading-snug">
+              Connect with{" "}
+              <span className="text-primary"> Anondo Universal Security </span>{" "}
+              <br /> for reliable protection anytime
+            </h2>
+            <p className="text-gray-500 mb-6 max-w-xl">
+              We provide trusted security guard services for homes, offices, and
+              businesses. Reach out to us anytime for dependable safety and
+              professional support.
+            </p>
           </div>
-<div className="grid gap-6 md:grid-cols-1">
-  {/* Address Card */}
-  <div className="flex items-start gap-4 bg-white rounded-lg p-6 text-gray-700">
-    <div className="bg-primary p-3 rounded-full text-xl text-white">
-      <FiMapPin />
-    </div>
-    <div>
-      <h4 className="font-semibold">Our Address</h4>
-      <p className="text-sm opacity-90">
-        Printers Building, 14th Floor, 5 Rajuk Avenue, Motijheel, 1000 Dhaka
-      </p>
-    </div>
-  </div>
+          <div className="grid gap-6 md:grid-cols-1">
+            {/* Address Card */}
+            <div className="flex items-start gap-4 bg-white rounded-lg p-6 text-gray-700">
+              <div className="bg-primary p-3 rounded-full text-xl text-white">
+                <FiMapPin />
+              </div>
+              <div>
+                <h4 className="font-semibold">Our Address</h4>
+                <p className="text-sm opacity-90">
+                  Printers Building, 14th Floor, 5 Rajuk Avenue, Motijheel, 1000
+                  Dhaka
+                </p>
+              </div>
+            </div>
 
-  <div className="flex items-start gap-4 bg-white rounded-lg p-6 text-gray-700">
-    <div className="bg-primary p-3 rounded-full text-xl text-white">
-      <FiPhoneCall />
-    </div>
-    <div>
-      <h4 className="font-semibold">Our Phone</h4>
-      <p className="text-sm opacity-90">+880 1313775333, 880 1313775334</p>
-    </div>
-  </div>
+            <div className="flex items-start gap-4 bg-white rounded-lg p-6 text-gray-700">
+              <div className="bg-primary p-3 rounded-full text-xl text-white">
+                <FiPhoneCall />
+              </div>
+              <div>
+                <h4 className="font-semibold">Our Phone</h4>
+                <p className="text-sm opacity-90">
+                  +880 1313775333, 880 1313775334
+                </p>
+              </div>
+            </div>
 
-  {/* Email Card */}
-  <div className="flex items-start gap-4 bg-white rounded-lg p-6 text-gray-700">
-    <div className="bg-primary p-3 rounded-full text-xl text-white">
-      <FiMail />
-    </div>
-    <div>
-      <h4 className="font-semibold">Our Email</h4>
-      <p className="text-sm opacity-90">contact@anondouniversalserviceslimited.com</p>
-    </div>
-  </div>
-</div>
-
-
+            {/* Email Card */}
+            <div className="flex items-start gap-4 bg-white rounded-lg p-6 text-gray-700">
+              <div className="bg-primary p-3 rounded-full text-xl text-white">
+                <FiMail />
+              </div>
+              <div>
+                <h4 className="font-semibold">Our Email</h4>
+                <p className="text-sm opacity-90">
+                  contact@anondouniversalserviceslimited.com
+                </p>
+              </div>
+            </div>
+          </div>
         </motion.div>
-          <motion.div
-  // className="bg-white border rounded-lg px-6 py-8 flex flex-col"
-  // initial={{ opacity: 0, x: 60 }}
-  // whileInView={{ opacity: 1, x: 0 }}
-  // transition={{ duration: 0.8, ease: "easeOut" }}
-  // viewport={{ once: true }}
-  className="bg-white border rounded-lg px-6 py-8 flex flex-col"
-  initial={{ opacity: 0, scale: 0.9, y: 50 }}
-  whileInView={{ opacity: 1, scale: 1, y: 0 }}
-  transition={{ duration: 0.9, ease: "easeOut", delay: 0.2 }}
-  viewport={{ once: true }}
->
-  <form onSubmit={handleSubmit} className="space-y-6">
-  <div className="grid grid-cols-1 md:grid-cols-1 gap-6">
+        <motion.div
+          // className="bg-white border rounded-lg px-6 py-8 flex flex-col"
+          // initial={{ opacity: 0, x: 60 }}
+          // whileInView={{ opacity: 1, x: 0 }}
+          // transition={{ duration: 0.8, ease: "easeOut" }}
+          // viewport={{ once: true }}
+          className="bg-white border rounded-lg px-6 py-8 flex flex-col"
+          initial={{ opacity: 0, scale: 0.9, y: 50 }}
+          whileInView={{ opacity: 1, scale: 1, y: 0 }}
+          transition={{ duration: 0.9, ease: "easeOut", delay: 0.2 }}
+          viewport={{ once: true }}
+        >
+          <form onSubmit={handleSubmit} className="space-y-6">
+            <div className="grid grid-cols-1 md:grid-cols-1 gap-6">
               <div>
                 <label className="block text-sm font-medium mb-2">Name</label>
                 <input
@@ -193,7 +198,7 @@ export default function ContactSection() {
               />
             </div>
             <div className="relative">
-      {/* <button
+              {/* <button
         ref={buttonRef}
         type="submit"
         disabled={loading}
@@ -202,47 +207,44 @@ export default function ContactSection() {
         <FaRegPaperPlane className="text-lg" />
         {loading ? "Sending..." : "Send Message"}
       </button> */}
-      <button
-  ref={buttonRef}
-  type="submit"
-  disabled={loading}
-  className="bg-primary hover:bg-secondary text-white font-semibold rounded-md px-6 py-3 w-full transition-colors duration-500 flex items-center justify-center gap-2 group"
->
-  {/* Text */}
-  <span>{loading ? "Sending..." : "Send Message"}</span>
+              <button
+                ref={buttonRef}
+                type="submit"
+                disabled={loading}
+                className="bg-primary hover:bg-secondary text-white font-semibold rounded-md px-6 py-3 w-full transition-colors duration-500 flex items-center justify-center gap-2 group"
+              >
+                {/* Text */}
+                <span>{loading ? "Sending..." : "Send Message"}</span>
 
-  {/* Icon */}
-  <FaRegPaperPlane
-    className="text-lg transform transition-transform duration-500 group-hover:translate-x-2"
-  />
-</button>
+                {/* Icon */}
+                <FaRegPaperPlane className="text-lg transform transition-transform duration-500 group-hover:translate-x-2" />
+              </button>
 
+              {status === "success" && (
+                <motion.div
+                  className="mt-4 flex items-center gap-2 p-4 bg-green-100 border border-green-400 text-green-700 rounded-md"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6 }}
+                >
+                  <AiFillCheckCircle className="w-5 h-5" />
+                  <span>Your message has been sent successfully!</span>
+                </motion.div>
+              )}
 
-      {status === "success" && (
-        <motion.div
-          className="mt-4 flex items-center gap-2 p-4 bg-green-100 border border-green-400 text-green-700 rounded-md"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-        >
-          <AiFillCheckCircle className="w-5 h-5" />
-          <span>Your message has been sent successfully!</span>
-        </motion.div>
-      )}
-
-      {status === "error" && (
-        <motion.div
-          className="mt-4 flex items-center gap-2 p-4 bg-red-100 border border-red-400 text-red-700 rounded-md"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-        >
-          <FiXCircle className="w-5 h-5" />
-          <span>Oops! Something went wrong. Please try again.</span>
-        </motion.div>
-      )}
-    </div>
-</form>
+              {status === "error" && (
+                <motion.div
+                  className="mt-4 flex items-center gap-2 p-4 bg-red-100 border border-red-400 text-red-700 rounded-md"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6 }}
+                >
+                  <FiXCircle className="w-5 h-5" />
+                  <span>Oops! Something went wrong. Please try again.</span>
+                </motion.div>
+              )}
+            </div>
+          </form>
         </motion.div>
       </div>
     </section>
