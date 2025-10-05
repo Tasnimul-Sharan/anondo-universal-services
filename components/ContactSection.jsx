@@ -115,8 +115,6 @@ export default function ContactSection() {
                 </p>
               </div>
             </div>
-
-            {/* Email Card */}
             <div className="flex items-start gap-4 bg-white rounded-lg p-6 text-gray-700">
               <div className="bg-primary p-3 rounded-full text-xl text-white">
                 <FiMail />

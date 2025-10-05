@@ -82,11 +82,13 @@ export default function ChatBot() {
 
       {open && (
         <div
-          className={`fixed bottom-20 right-5 md:w-80 bg-white shadow-xl rounded-xl overflow-hidden border border-gray-200 z-50 
+          className={`fixed bottom-20 right-5 md:w-96 bg-white shadow-xl rounded-xl overflow-hidden border border-gray-200 z-50 
           ${closing ? "animate-slideDown" : "animate-slideUp"}`}
         >
           <div className="bg-primary text-white px-4 py-4 flex justify-between items-center">
-            <span className="font-semibold">Anondo Baari ChatBot</span>
+            <span className="font-semibold">
+              Anondo Universal Services ChatBot
+            </span>
           </div>
           <div
             ref={chatContainerRef}
