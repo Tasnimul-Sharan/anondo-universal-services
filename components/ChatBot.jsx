@@ -1,3 +1,4 @@
+"use client";
 import { useState, useRef, useEffect } from "react";
 import { IoMdSend, IoMdClose } from "react-icons/io";
 import { ChatToggleButton } from "./ChatToggleButton";
