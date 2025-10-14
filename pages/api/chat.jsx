@@ -102,7 +102,7 @@ If you don’t find the answer in the above content, reply:
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          Authorization: `Bearer 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`,
+          Authorization: `Bearer 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`,
         },
         body: JSON.stringify({
           model: "meta-llama/llama-4-scout-17b-16e-instruct",
