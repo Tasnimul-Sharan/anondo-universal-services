@@ -260,7 +260,7 @@ export default function Services() {
           {/* Middle Image */}
           <div className="flex justify-center">
             <Image
-              src="/services/security-guard.jpeg"
+              src="/services/security-guard.png"
               alt="Security Guard"
               width={1200}
               height={1280}

@@ -13,14 +13,14 @@ const recentPosts = [
     id: 1,
     title: "What Planning Process Needs?",
     date: "06 June 2018",
-    img: "/blogs/blog-1.jpg",
+    img: "/blogs/blog-1.jpeg",
     slug: "planning-process",
   },
   {
     id: 2,
     title: "Tips To Move Your Project More Forward.",
     date: "06 June 2018",
-    img: "/blogs/blog-2.jpg",
+    img: "/blogs/blog-2.jpeg",
     slug: "move-project-forward",
   },
 ];

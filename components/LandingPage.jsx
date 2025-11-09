@@ -12,7 +12,7 @@ import Link from "next/link";
 const sliderData = {
   slides: [
     {
-      image: "/slider/security1.jpeg",
+      image: "/slider/security1.jpg",
       subtitle: "Your Safety, Our Responsibility",
       title: "Professional Security Services",
       description:
@@ -21,7 +21,7 @@ const sliderData = {
       secondaryButton: { text: "Contact Us", link: "/contact" },
     },
     {
-      image: "/slider/security2.jpeg",
+      image: "/slider/security2.jpg",
       subtitle: "Trusted by Leading Businesses",
       title: "Corporate & Industrial Protection",
       description:
@@ -30,7 +30,7 @@ const sliderData = {
       secondaryButton: { text: "Get Quote", link: "/quote" },
     },
     {
-      image: "/slider/security3.jpeg",
+      image: "/slider/security3.jpg",
       subtitle: "Smart & Modern Solutions",
       title: "Technology-Enabled Surveillance",
       description:

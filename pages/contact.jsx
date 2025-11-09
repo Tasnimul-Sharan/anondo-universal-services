@@ -40,7 +40,6 @@ export default function ContactPage() {
       <HeroSection
         hero={{
           title: "Contact",
-          backgroundImage: "/contact-bg.jpeg",
         }}
       />
       <ContactSection />

@@ -44,7 +44,7 @@ export default function TrainingPage() {
       <HeroSection
         hero={{
           title: "Training",
-          backgroundImage: "/trainning-bg.jpeg",
+          // backgroundImage: "/trainning-bg.jpeg",
         }}
       />
       {/* <TrainingSections /> */}

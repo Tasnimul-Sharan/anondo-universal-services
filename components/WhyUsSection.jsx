@@ -253,12 +253,12 @@ export default function WhyUsSection() {
 
         <div className="relative">
           <Image
-            src="/security-1.jpeg"
+            src="/security-1.png"
             alt="Security Guard"
             width={1200}
             height={1200}
             priority
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover rounded-md"
           />
         </div>
       </div>
