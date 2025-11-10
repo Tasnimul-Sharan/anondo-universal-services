@@ -45,7 +45,7 @@ export default function AboutSecuritySection() {
         {/* Left Image */}
         <div className="relative w-full h-96 lg:h-[32rem] flex-1">
           <Image
-            src="/about.jpeg"
+            src="/about.jpg"
             alt="Professional Security Guard"
             fill
             className="object-cover rounded-md"

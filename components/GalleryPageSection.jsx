@@ -54,11 +54,6 @@ export default function GalleryPageSection() {
       title: "Gallery Image 8",
       desc: "Description of image 8",
     },
-    {
-      img: "/gallery/gallery9.jpg",
-      title: "Gallery Image 9",
-      desc: "Description of image 9",
-    },
   ];
 
   const subtitle = "Our Works";

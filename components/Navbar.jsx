@@ -66,7 +66,8 @@ export default function Navbar() {
       {!isScrolled && (
         <>
           {/* Top Bar */}
-          <div className="w-full bg-secondary text-white text-sm py-4">
+          {/* <div className="w-full bg-secondary text-white text-sm py-4"> */}
+          <div className="hidden lg:block w-full bg-secondary text-white text-sm py-4">
             <div className="custom-container mx-auto flex justify-between items-center px-4">
               {/* Left Social */}
 
@@ -92,28 +93,28 @@ export default function Navbar() {
                 <Link
                   href="https://facebook.com"
                   target="_blank"
-                  className="w-8 h-8 flex items-center justify-center border border-gray-400 hover:bg-primary hover:border-transparent hover:text-white transition-all transform duration-500"
+                  className="w-8 h-8 flex items-center justify-center rounded border border-gray-400 hover:bg-primary hover:border-transparent hover:text-white transition-all transform duration-500"
                 >
                   <FaFacebookF className="w-4 h-4" />
                 </Link>
                 <Link
                   href="https://twitter.com"
                   target="_blank"
-                  className="w-8 h-8 flex items-center justify-center border border-gray-400 hover:bg-primary hover:border-transparent hover:text-white transition-all transform duration-500"
+                  className="w-8 h-8 flex items-center justify-center rounded border border-gray-400 hover:bg-primary hover:border-transparent hover:text-white transition-all transform duration-500"
                 >
                   <FaXTwitter className="w-4 h-4" />
                 </Link>
                 <Link
                   href="https://linkedin.com"
                   target="_blank"
-                  className="w-8 h-8 flex items-center justify-center border border-gray-400 hover:bg-primary hover:border-transparent hover:text-white transition-all transform duration-500"
+                  className="w-8 h-8 flex items-center justify-center rounded border border-gray-400 hover:bg-primary hover:border-transparent hover:text-white transition-all transform duration-500"
                 >
                   <FaLinkedinIn className="w-4 h-4" />
                 </Link>
                 <Link
                   href="https://instagram.com"
                   target="_blank"
-                  className="w-8 h-8 flex items-center justify-center border border-gray-400 hover:bg-primary hover:border-transparent hover:text-white transition-all transform duration-500"
+                  className="w-8 h-8 flex items-center justify-center rounded border border-gray-400 hover:bg-primary hover:border-transparent hover:text-white transition-all transform duration-500"
                 >
                   <FaInstagram className="w-4 h-4" />
                 </Link>
@@ -123,8 +124,7 @@ export default function Navbar() {
             </div>
           </div>
 
-          {/* Middle Bar */}
-          <div className="w-full bg-white py-4 border-b border-gray-200">
+          <div className="hidden lg:block w-full bg-white py-4 border-b border-gray-200">
             <div className="custom-container mx-auto flex flex-col lg:flex-row justify-between items-center px-4 gap-6">
               {/* Logo */}
               <Link href="/" className="flex items-center gap-3">
@@ -144,7 +144,7 @@ export default function Navbar() {
               </Link>
 
               {/* Info Section */}
-              <div className="flex flex-col sm:flex-row gap-8 text-sm">
+              <div className="hidden lg:flex flex-col sm:flex-row gap-8 text-sm">
                 {/* Working Hours */}
                 <div className="flex items-center gap-3">
                   <div className="bg-primary/10 text-primary p-3 rounded-full">
@@ -187,7 +187,7 @@ export default function Navbar() {
 
           {/* Navigation Menu */}
           <nav className="bg-white relative z-50">
-            <div className="custom-container mx-auto flex justify-between items-center px-4 h-16">
+            <div className="custom-container mx-auto hidden lg:flex justify-between items-center h-16">
               {/* Menu Items */}
               <ul className="hidden lg:flex gap-8 font-medium items-center">
                 {menuItems.map((item, index) => (
@@ -204,15 +204,36 @@ export default function Navbar() {
               {/* Inquiry Button */}
               <div className="hidden lg:block">
                 <Link href="/contact">
-                  <button className="bg-primary text-white px-6 py-2 font-bold hover:bg-secondary transition-all transform duration-500">
+                  <button className="bg-primary text-white px-6 py-2 rounded font-bold hover:bg-secondary transition-all transform duration-500">
                     Contact US
                   </button>
                 </Link>
               </div>
 
+            </div>
+            <div className="custom-container mx-auto flex justify-between items-center py-6 lg:hidden ">
+              {/* Logo */}
+              <Link href="/" className="flex items-center gap-2">
+                <Image
+                  src="/anondo-universal-services-logo.jpg"
+                  alt="Logo"
+                  width={60}
+                  height={60}
+                  className="object-cover transition-all duration-500"
+                />
+                <div className="flex flex-col leading-tight">
+                  <span className="text-2xl font-bold text-primary transition-all duration-500">
+                    Anondo
+                  </span>
+                  <span className="text-xs tracking-widest text-gray-600 transition-all duration-500">
+                    Universal Services
+                  </span>
+                </div>
+              </Link>
+
               {/* Mobile Menu Toggle */}
               <button
-                className="lg:hidden z-50 text-3xl text-primary"
+                className=" z-50 text-3xl text-primary"
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
               >
                 {isMenuOpen ? <HiOutlineX /> : <HiOutlineMenu />}
@@ -225,26 +246,19 @@ export default function Navbar() {
       <AnimatePresence>
         {isScrolled && (
           <motion.div
-            // initial={{ opacity: 0 }}
-            // animate={{ opacity: 1 }}
-            // exit={{ opacity: 0, transition: { duration: 0.6 } }}
-            // transition={{ duration: 0.6, ease: "easeInOut" }}
-            // className="bg-white py-6 fixed top-0 left-0 w-full z-50"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0, transition: { duration: 0.6 } }}
+            transition={{ duration: 0.6, ease: "easeInOut" }}
+            className="bg-white py-6 fixed top-0 left-0 w-full z-50"
 
             //  initial={{ opacity: 0, y: -40, filter: "blur(10px)" }}
             // animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
             // exit={{ opacity: 0, y: -40, filter: "blur(10px)" }}
             // transition={{ duration: 0.6, ease: "easeOut" }}
             // className="bg-white backdrop-blur-md py-6 fixed top-0 left-0 w-full z-50"
-
-            initial={{ opacity: 0, y: -80 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -80 }}
-            transition={{ type: "spring", stiffness: 80, damping: 12 }}
-            className="bg-white/70 backdrop-blur-xl py-6 fixed top-0 left-0 w-full z-50 border-b border-gray-200"
           >
             <div className="custom-container mx-auto flex justify-between items-center">
-              {/* Logo */}
               <Link href="/" className="flex items-center gap-2">
                 <Image
                   src="/anondo-universal-services-logo.jpg"
@@ -298,17 +312,29 @@ export default function Navbar() {
       </AnimatePresence>
 
       {/* 🔹 Single Mobile Menu (Common) */}
+      {/* ✅ Mobile FULL SCREEN MENU */}
       <div
         ref={menuRef}
-        className="lg:hidden fixed top-0 left-0 bg-white text-black z-40 overflow-y-auto flex flex-col justify-start"
+        className="lg:hidden fixed top-0 left-0 bg-white text-black z-40 overflow-y-auto flex flex-col"
         style={{ width: 0, height: 0, opacity: 0 }}
       >
-        <ul className="flex flex-col justify-start items-start px-6 space-y-8 pt-12 text-xl font-semibold w-full">
+        {/* CLOSE BUTTON INSIDE MENU */}
+        <div className="flex justify-end px-6 py-6">
+          <button
+            className="text-3xl text-primary"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            <HiOutlineX />
+          </button>
+        </div>
+
+        {/* MENU ITEMS */}
+        <ul className="flex flex-col px-6 space-y-6 text-lg font-semibold w-full">
           {menuItems.map((item, index) => (
             <li key={index} className="relative group">
               <Link
                 href={item.path}
-                className="block transition-colors duration-500 group-hover:text-primary"
+                className="block py-2 transition-all duration-500 group-hover:text-primary"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {item.name}
@@ -317,12 +343,99 @@ export default function Navbar() {
             </li>
           ))}
         </ul>
-        <div className="px-6 py-10">
-          <Link href="/contact" onClick={() => setIsMenuOpen(false)}>
-            <button className="w-full bg-primary text-white font-bold py-3 rounded-lg hover:bg-secondary transition">
-              Contact US
-            </button>
-          </Link>
+
+        <div className="p-6 flex flex-col min-h-full">
+          <div className="border-t pt-6">
+            {/* Contact Info (mobile only) */}
+            <div className="space-y-4">
+              <div className="flex items-start gap-3">
+                <div className="bg-primary/10 text-primary p-2 rounded-full">
+                  <FiClock className="text-xl" />
+                </div>
+                <div>
+                  <p className="font-semibold">Working Hours</p>
+                  <p className="text-sm text-gray-600">
+                    Sat - Thu: 10.00am to 7.00pm
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-3">
+                <div className="bg-primary/10 text-primary p-2 rounded-full">
+                  <FiPhoneCall className="text-xl" />
+                </div>
+                <div>
+                  <p className="font-semibold">Call Us</p>
+                  <a
+                    href="tel:+8801313775333"
+                    className="text-sm text-gray-600 block mt-0.5"
+                  >
+                    +880 1313775333
+                  </a>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-3">
+                <div className="bg-primary/10 text-primary p-2 rounded-full">
+                  <FiMail className="text-xl" />
+                </div>
+                <div>
+                  <p className="font-semibold">Mail Us</p>
+                  <a
+                    href="mailto:contact@anondouniversalserviceslimited.com"
+                    className="text-sm text-gray-600 block mt-0.5"
+                  >
+                    contact@anondouniversalserviceslimited.com
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div className="mt-6">
+              <Link href="/contact" onClick={() => setIsMenuOpen(false)}>
+                <button className="w-full bg-primary text-white py-3 rounded-md font-bold">
+                  Contact US
+                </button>
+              </Link>
+            </div>
+
+            {/* Socials */}
+            <div className="mt-6 flex gap-3">
+              <Link
+                href="https://facebook.com"
+                target="_blank"
+                className="p-2 border rounded"
+              >
+                <FaFacebookF />
+              </Link>
+              <Link
+                href="https://twitter.com"
+                target="_blank"
+                className="p-2 border rounded"
+              >
+                <FaXTwitter />
+              </Link>
+              <Link
+                href="https://linkedin.com"
+                target="_blank"
+                className="p-2 border rounded"
+              >
+                <FaLinkedinIn />
+              </Link>
+              <Link
+                href="https://instagram.com"
+                target="_blank"
+                className="p-2 border rounded"
+              >
+                <FaInstagram />
+              </Link>
+            </div>
+          </div>
+
+          {/* optional small footer */}
+          <div className="mt-auto pt-6 text-xs text-gray-400">
+            © {new Date().getFullYear()} Anondo Universal Services
+          </div>
         </div>
       </div>
     </header>

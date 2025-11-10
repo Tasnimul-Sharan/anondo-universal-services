@@ -49,10 +49,7 @@ export default function Home() {
       </Head>
       <Navbar />
       <LandingPage />
-      {/* <AboutUsSection /> */}
       <Services />
-      {/* <ProductsSection /> */}
-      {/* <AdvantagesSection /> */}
       <HelpSection />
       <WhyUsSection />
       <TeamSection />
