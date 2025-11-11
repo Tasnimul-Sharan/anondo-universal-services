@@ -7,7 +7,7 @@ import SectionHeader from "./SectionHeader";
 const blogs = [
   {
     id: 1,
-    img: "/blogs/blog-1.jpeg",
+    img: "/blogs/blog-1.jpg",
     date: "September 25, 2025",
     author: "Admin",
     title: "Inside Our State-of-the-Art Training Academy",
@@ -17,7 +17,7 @@ const blogs = [
   },
   {
     id: 2,
-    img: "/blogs/blog-2.jpeg",
+    img: "/blogs/blog-2.jpg",
     date: "September 20, 2025",
     author: "Admin",
     title: "Why Training Defines Reliable Security",
@@ -27,7 +27,7 @@ const blogs = [
   },
   {
     id: 3,
-    img: "/blogs/blog-3.jpeg",
+    img: "/blogs/blog-3.jpg",
     date: "September 15, 2025",
     author: "Admin",
     title: "Comprehensive Services for Every Sector",

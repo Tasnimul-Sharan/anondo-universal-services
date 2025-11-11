@@ -37,7 +37,7 @@ export default function GalleryPage() {
       <HeroSection
         hero={{
           title: "Gallery",
-          // backgroundImage: "/gallery/gallery-bg.jpeg",
+          // backgroundImage: "/gallery/gallery-bg.jpg",
         }}
       />
       <GalleryPageSection />

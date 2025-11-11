@@ -70,7 +70,7 @@ export default function BlogDetailsDataPage() {
       <HeroSection
         hero={{
           title: blog.blogPost.title,
-          backgroundImage: "/blogs/blog-bg.jpeg",
+          backgroundImage: "/blogs/blog-bg.jpg",
         }}
       />
       <BlogDetails blogsData={blog} />

@@ -8,7 +8,7 @@ import { useState } from "react";
 const blogs = [
   {
     id: 1,
-    img: "/blogs/blog-1.jpeg",
+    img: "/blogs/blog-1.jpg",
     date: "September 25, 2025",
     author: "Admin",
     title: "Inside Our State-of-the-Art Training Academy",
@@ -18,7 +18,7 @@ const blogs = [
   },
   {
     id: 2,
-    img: "/blogs/blog-2.jpeg",
+    img: "/blogs/blog-2.jpg",
     date: "September 20, 2025",
     author: "Admin",
     title: "Why Training Defines Reliable Security",
@@ -28,7 +28,7 @@ const blogs = [
   },
   {
     id: 3,
-    img: "/blogs/blog-3.jpeg",
+    img: "/blogs/blog-3.jpg",
     date: "September 15, 2025",
     author: "Admin",
     title: "Comprehensive Services for Every Sector",
@@ -38,7 +38,7 @@ const blogs = [
   },
   {
     id: 4,
-    img: "/blogs/blog-1.jpeg",
+    img: "/blogs/blog-4.jpg",
     date: "September 10, 2025",
     author: "Admin",
     title: "Our Mission & Vision: Redefining Security in Bangladesh",
@@ -48,7 +48,7 @@ const blogs = [
   },
   {
     id: 5,
-    img: "/blogs/blog-2.jpeg",
+    img: "/blogs/blog-5.jpg",
     date: "September 7, 2025",
     author: "Admin",
     title: "The 30-Day Training Curriculum Explained",
@@ -58,7 +58,7 @@ const blogs = [
   },
   {
     id: 6,
-    img: "/blogs/blog-3.jpeg",
+    img: "/blogs/blog-6.jpg",
     date: "September 3, 2025",
     author: "Admin",
     title: "Future Vision: Building Tomorrow’s Security Standards",
@@ -68,7 +68,7 @@ const blogs = [
   },
   {
     id: 7,
-    img: "/blogs/blog-1.jpeg",
+    img: "/blogs/blog-7.jpg",
     date: "August 30, 2025",
     author: "Admin",
     title: "Quality Assurance in Every Guard Deployment",
@@ -78,7 +78,7 @@ const blogs = [
   },
   {
     id: 8,
-    img: "/blogs/blog-2.jpeg",
+    img: "/blogs/blog-8.jpg",
     date: "August 25, 2025",
     author: "Admin",
     title: "Competitive Advantage: Why Clients Trust Us",

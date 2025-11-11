@@ -22,14 +22,14 @@
 // //     icon: <FaStar className="text-white text-xl" />,
 // //     title: "Trusted & Reliable",
 // //     desc: "A proven track record of excellence with trusted security solutions nationwide.",
-// //     img: "/advantage/trusted.jpeg", // award, star, handshake type image
+// //     img: "/advantage/trusted.jpg", // award, star, handshake type image
 // //   },
 // //   {
 // //     id: 3,
 // //     icon: <FaTimesCircle className="text-white text-xl" />,
 // //     title: "Rapid Response Team",
 // //     desc: "Quick mobilization of highly trained teams for emergencies and urgent situations.",
-// //     img: "/advantage/rapid-response.jpeg", // police, guard, running team
+// //     img: "/advantage/rapid-response.jpg", // police, guard, running team
 // //   },
 // //   {
 // //     id: 4,
@@ -43,7 +43,7 @@
 // //     icon: <FaUserTie className="text-white text-xl" />,
 // //     title: "Professional Workforce",
 // //     desc: "Disciplined, well-trained personnel dedicated to safeguarding people and assets.",
-// //     img: "/advantage/workforce.jpeg", // guards, officers in uniform
+// //     img: "/advantage/workforce.jpg", // guards, officers in uniform
 // //   },
 // //   {
 // //     id: 6,
@@ -67,14 +67,14 @@
 //     icon: <FaStar className="text-white text-xl" />,
 //     title: "Trusted & Reliable Service",
 //     desc: "With a proven track record across residential, corporate, and industrial sectors, we deliver security solutions that clients can depend on.",
-//     img: "/advantage/trusted.jpeg",
+//     img: "/advantage/trusted.jpg",
 //   },
 //   {
 //     id: 3,
 //     icon: <FaTimesCircle className="text-white text-xl" />,
 //     title: "Rapid Emergency Response",
 //     desc: "Highly trained teams are on standby for swift deployment during emergencies, ensuring safety, risk minimization, and peace of mind.",
-//     img: "/advantage/rapid-response.jpeg",
+//     img: "/advantage/rapid-response.jpg",
 //   },
 //   {
 //     id: 4,
@@ -88,7 +88,7 @@
 //     icon: <FaUserTie className="text-white text-xl" />,
 //     title: "Professional & Trained Workforce",
 //     desc: "Our disciplined personnel undergo rigorous training in safety, etiquette, legal compliance, and modern security practices to serve every client effectively.",
-//     img: "/advantage/workforce.jpeg",
+//     img: "/advantage/workforce.jpg",
 //   },
 //   {
 //     id: 6,

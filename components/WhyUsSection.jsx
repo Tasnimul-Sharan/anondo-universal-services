@@ -136,7 +136,7 @@
 
 //         <div className="relative">
 //           <Image
-//             src="/security-1.jpeg"
+//             src="/security-1.jpg"
 //             alt="Security Guard"
 //             width={700}
 //             height={500}

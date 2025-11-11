@@ -187,7 +187,7 @@ export const servicesDetailsData = {
           "Fire and disaster safety protocols.",
           "Resident tracking and wellness monitoring through smart wristbands.",
         ],
-        subImages: ["/services/security1.jpeg", "/services/security2.jpg"],
+        subImages: ["/services/security1.jpg", "/services/security2.jpg"],
         quote: "Safety is not optional—it’s essential.",
         postTags: ["Security", "Safety", "Technology"],
       },

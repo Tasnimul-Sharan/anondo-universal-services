@@ -104,7 +104,7 @@
 
 //           <div className="flex justify-center">
 //             <Image
-//               src="/services/security-guard.jpeg"
+//               src="/services/security-guard.jpg"
 //               alt="Security Guard"
 //               width={1200}
 //               height={1600}
