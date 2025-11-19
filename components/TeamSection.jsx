@@ -9,7 +9,7 @@ const teamMembers = [
   {
     name: "Abdul Kabir",
     role: "Chief Security Officer",
-    img: "/team/team1.jpg",
+    img: "/teams/team1.jpg",
     socials: {
       facebook: "https://facebook.com/",
       linkedin: "https://linkedin.com/",
@@ -19,7 +19,7 @@ const teamMembers = [
   {
     name: "Saiful Alam",
     role: "Operations Manager",
-    img: "/team/team2.jpg",
+    img: "/teams/team2.jpg",
     socials: {
       facebook: "https://facebook.com/",
       linkedin: "https://linkedin.com/",
@@ -29,7 +29,7 @@ const teamMembers = [
   {
     name: "Mahmudul Hasan",
     role: "Senior Security Supervisor",
-    img: "/team/team3.jpg",
+    img: "/teams/team3.jpg",
     socials: {
       facebook: "https://facebook.com/",
       linkedin: "https://linkedin.com/",
@@ -39,7 +39,7 @@ const teamMembers = [
   {
     name: "Salman Rahman",
     role: "Client Relations Manager",
-    img: "/team/team4.jpg",
+    img: "/teams/team4.jpg",
     socials: {
       facebook: "https://facebook.com/",
       linkedin: "https://linkedin.com/",
@@ -69,6 +69,7 @@ export default function TeamSection() {
                 alt={member.name}
                 width={1200}
                 height={1200}
+                priority
                 className="w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 flex items-center justify-center gap-4 transition duration-500">

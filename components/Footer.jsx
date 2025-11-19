@@ -11,17 +11,17 @@ import {
 const recentPosts = [
   {
     id: 1,
-    title: "What Planning Process Needs?",
+    title: "Inside Our State of the Art Training Academy",
     date: "06 June 2018",
     img: "/blogs/blog-1.jpg",
-    slug: "planning-process",
+    slug: "training-academy-overview",
   },
   {
     id: 2,
-    title: "Tips To Move Your Project More Forward.",
+    title: "Why Training Defines Reliable Security",
     date: "06 June 2018",
     img: "/blogs/blog-2.jpg",
-    slug: "move-project-forward",
+    slug: "importance-of-security-training",
   },
 ];
 
