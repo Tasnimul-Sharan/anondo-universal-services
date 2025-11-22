@@ -9,7 +9,7 @@ const teamMembers = [
   {
     name: "Abdul Kabir",
     role: "Chief Security Officer",
-    img: "/teams/team1.jpg",
+    img: "/teams/team1.JPG",
     socials: {
       facebook: "https://facebook.com/",
       linkedin: "https://linkedin.com/",
@@ -29,7 +29,7 @@ const teamMembers = [
   {
     name: "Mahmudul Hasan",
     role: "Senior Security Supervisor",
-    img: "/teams/team3.jpg",
+    img: "/teams/team3.JPG",
     socials: {
       facebook: "https://facebook.com/",
       linkedin: "https://linkedin.com/",
@@ -39,7 +39,7 @@ const teamMembers = [
   {
     name: "Salman Rahman",
     role: "Client Relations Manager",
-    img: "/teams/team4.jpg",
+    img: "/teams/team4.JPG",
     socials: {
       facebook: "https://facebook.com/",
       linkedin: "https://linkedin.com/",

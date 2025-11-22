@@ -44,16 +44,16 @@ export default function GalleryPageSection() {
       title: "Gallery Image 6",
       desc: "Description of image 6",
     },
-    {
-      img: "/gallery/gallery7.jpg",
-      title: "Gallery Image 7",
-      desc: "Description of image 7",
-    },
-    {
-      img: "/gallery/gallery8.jpg",
-      title: "Gallery Image 8",
-      desc: "Description of image 8",
-    },
+    // {
+    //   img: "/gallery/gallery7.jpg",
+    //   title: "Gallery Image 7",
+    //   desc: "Description of image 7",
+    // },
+    // {
+    //   img: "/gallery/gallery8.jpg",
+    //   title: "Gallery Image 8",
+    //   desc: "Description of image 8",
+    // },
   ];
 
   const subtitle = "Our Works";

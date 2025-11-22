@@ -52,7 +52,7 @@ export default function Home() {
       <Services />
       <HelpSection />
       <WhyUsSection />
-      {/* <TeamSection /> */}
+      <TeamSection />
       <Gallery />
       <Testimonials />
       <ContactSection />

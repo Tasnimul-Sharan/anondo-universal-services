@@ -23,6 +23,26 @@ const products = [
     name: "BODY SCANNER DOORS",
     img: "/products/body-scanner-doors.jpg",
   },
+  {
+    id: 5,
+    name: "BATON",
+    img: "/products/baton.jpg",
+  },
+  {
+    id: 6,
+    name: "FIREBALL EQUIPMENT",
+    img: "/products/fireball-equipment.jpg",
+  },
+  {
+    id: 7,
+    name: "FIRE EXTINGUISHER",
+    img: "/products/fire-extinguisher.jpg",
+  },
+  // {
+  //   id: 8,
+  //   name: "BODY SCANNER DOORS",
+  //   img: "/products/body-scanner-doors.jpg",
+  // },
 ];
 
 export default function ProductsSection() {
