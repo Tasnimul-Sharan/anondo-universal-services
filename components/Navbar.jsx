@@ -201,7 +201,6 @@ export default function Navbar() {
                 ))}
               </ul>
 
-              {/* Inquiry Button */}
               <div className="hidden lg:block">
                 <Link href="/contact">
                   <button className="bg-primary text-white px-6 py-2 rounded font-bold hover:bg-secondary transition-all transform duration-500">
@@ -212,7 +211,6 @@ export default function Navbar() {
 
             </div>
             <div className="custom-container mx-auto flex justify-between items-center py-6 lg:hidden ">
-              {/* Logo */}
               <Link href="/" className="flex items-center gap-2">
                 <Image
                   src="/anondo-universal-services-logo.jpg"
@@ -276,8 +274,6 @@ export default function Navbar() {
                   </span>
                 </div>
               </Link>
-
-              {/* Right Menu */}
               <ul className="hidden lg:flex gap-8 font-medium items-center">
                 {menuItems.map((item, index) => (
                   <li
@@ -290,16 +286,13 @@ export default function Navbar() {
                 ))}
               </ul>
 
-              {/* Inquiry Button */}
               <div className="hidden lg:block">
                 <Link href="/contact">
-                  <button className="bg-primary text-white px-6 py-2 font-bold hover:bg-secondary transition-all transform duration-500">
+                  <button className="bg-primary text-white px-6 py-2 font-bold rounded hover:bg-secondary transition-all transform duration-500">
                     Contact US
                   </button>
                 </Link>
               </div>
-
-              {/* Mobile Menu Toggle */}
               <button
                 className="lg:hidden z-50 text-3xl text-primary"
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -311,14 +304,11 @@ export default function Navbar() {
         )}
       </AnimatePresence>
 
-      {/* 🔹 Single Mobile Menu (Common) */}
-      {/* ✅ Mobile FULL SCREEN MENU */}
       <div
         ref={menuRef}
         className="lg:hidden fixed top-0 left-0 bg-white text-black z-40 overflow-y-auto flex flex-col"
         style={{ width: 0, height: 0, opacity: 0 }}
       >
-        {/* CLOSE BUTTON INSIDE MENU */}
         <div className="flex justify-end px-6 py-6">
           <button
             className="text-3xl text-primary"
@@ -328,7 +318,6 @@ export default function Navbar() {
           </button>
         </div>
 
-        {/* MENU ITEMS */}
         <ul className="flex flex-col px-6 space-y-6 text-lg font-semibold w-full">
           {menuItems.map((item, index) => (
             <li key={index} className="relative group">
@@ -346,7 +335,6 @@ export default function Navbar() {
 
         <div className="p-6 flex flex-col min-h-full">
           <div className="border-t pt-6">
-            {/* Contact Info (mobile only) */}
             <div className="space-y-4">
               <div className="flex items-start gap-3">
                 <div className="bg-primary/10 text-primary p-2 rounded-full">
@@ -399,7 +387,6 @@ export default function Navbar() {
               </Link>
             </div>
 
-            {/* Socials */}
             <div className="mt-6 flex gap-3">
               <Link
                 href="https://facebook.com"
@@ -432,7 +419,6 @@ export default function Navbar() {
             </div>
           </div>
 
-          {/* optional small footer */}
           <div className="mt-auto pt-6 text-xs text-gray-400">
             © {new Date().getFullYear()} Anondo Universal Services
           </div>
