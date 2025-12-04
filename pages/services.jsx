@@ -39,11 +39,11 @@ export default function ServicesPage() {
         <meta name="twitter:description" content={meta.description} />
         <meta name="twitter:image" content={meta.image} />
       </Head>
-
-      <Navbar hasBackground={true} />
       <HeroSection
         hero={{
           title: "Services",
+          background: "/hero/service-bg.jpg",
+          breadcrumb: [{ label: "Home", href: "/" }, { label: "Services" }],
         }}
       />
 

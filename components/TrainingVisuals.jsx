@@ -23,6 +23,11 @@ export default function TrainingVisuals() {
       caption: "Trainer instructing recruits on metal detector use",
       img: "/training/trainer.jpg",
     },
+    {
+      title: "Field Practice",
+      caption: "Recruits practicing real-time field operations",
+      img: "/training/practice1.jpg",
+    },
   ];
 
   return (
@@ -32,12 +37,13 @@ export default function TrainingVisuals() {
           key={v.title}
           className="rounded-lg border p-4 bg-white/60 shadow-sm hover:shadow-md transition-all transform duration-1000"
         >
-          <div className="relative w-full h-40 md:h-96 rounded-md overflow-hidden">
+          <div className="relative w-full rounded-md overflow-hidden">
             <Image
               src={v.img}
               alt={v.title}
-              fill
-              className="object-cover hover:scale-110 transition-all transform duration-1000 ease-[cubic-bezier(0.19,1,0.22,1)]"
+              width={1920}
+              height={1080}
+              className="object-cover hover:scale-110 w-full h-full transition-all transform duration-1000 ease-[cubic-bezier(0.19,1,0.22,1)]"
             />
           </div>
           <figcaption className="text-gray-600 text-base mt-3 text-center">

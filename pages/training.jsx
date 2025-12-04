@@ -1,7 +1,6 @@
 import HeroSection from "@/components/HeroSection";
 import Head from "next/head";
 import Navbar from "@/components/Navbar";
-import TrainingSections from "@/components/TrainingSections";
 import TrainingOverview from "@/components/TrainingOverview";
 import TrainingKeyFeatures from "@/components/TrainingKeyFeatures";
 import TrainingCurriculum from "@/components/TrainingCurriculum";
@@ -40,14 +39,13 @@ export default function TrainingPage() {
         <meta name="twitter:description" content={meta.description} />
         <meta name="twitter:image" content={meta.image} />
       </Head>
-      <Navbar hasBackground={true} />
       <HeroSection
         hero={{
           title: "Training",
-          // backgroundImage: "/trainning-bg.jpg",
+          background: "/hero/training-bg.jpg",
+          breadcrumb: [{ label: "Home", href: "/" }, { label: "Training" }],
         }}
       />
-      {/* <TrainingSections /> */}
       <TrainingOverview />
       <ProductsSection />
       <TrainingKeyFeatures />

@@ -38,11 +38,11 @@ const products = [
     name: "FIRE EXTINGUISHER",
     img: "/products/fire-extinguisher.jpg",
   },
-  // {
-  //   id: 8,
-  //   name: "BODY SCANNER DOORS",
-  //   img: "/products/body-scanner-doors.jpg",
-  // },
+  {
+    id: 8,
+    name: "Police Hand Traffic Light",
+    img: "/products/trafic-light.jpg",
+  },
 ];
 
 export default function ProductsSection() {

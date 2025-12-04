@@ -33,11 +33,11 @@ export default function BlogsPage() {
         <meta name="twitter:description" content={meta.description} />
         <meta name="twitter:image" content={meta.image} />
       </Head>
-      <Navbar hasBackground={true} />
       <HeroSection
         hero={{
           title: "Blogs",
-          // backgroundImage: "/blogs/blog-bg.jpg",
+          background: "/hero/blogs-bg.jpg",
+          breadcrumb: [{ label: "Home", href: "/" }, { label: "Blogs" }],
         }}
       />
       <BlogPageSection />

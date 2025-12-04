@@ -66,11 +66,11 @@ export default function BlogDetailsDataPage() {
         <meta name="twitter:description" content={meta.description} />
         <meta name="twitter:image" content={meta.image} />
       </Head>
-      <Navbar hasBackground={true} />
       <HeroSection
         hero={{
           title: blog.blogPost.title,
-          backgroundImage: "/blogs/blog-bg.jpg",
+          background: blog.blogPost.image,
+          // breadcrumb: [{ label: "Home", href: "/" }, { label: "About Us" }],
         }}
       />
       <BlogDetails blogsData={blog} />

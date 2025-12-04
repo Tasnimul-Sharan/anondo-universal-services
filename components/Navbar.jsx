@@ -176,9 +176,7 @@ export default function Navbar() {
                   </div>
                   <div>
                     <p className="font-semibold">Mail Us</p>
-                    <p className="text-gray-600">
-                      contact@anondouniversalserviceslimited.com
-                    </p>
+                    <p className="text-gray-600">anondo.ausl@gmail.com</p>
                   </div>
                 </div>
               </div>
@@ -208,7 +206,6 @@ export default function Navbar() {
                   </button>
                 </Link>
               </div>
-
             </div>
             <div className="custom-container mx-auto flex justify-between items-center py-6 lg:hidden ">
               <Link href="/" className="flex items-center gap-2">

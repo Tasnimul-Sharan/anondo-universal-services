@@ -96,12 +96,14 @@ export default function AboutPage() {
         <meta name="twitter:description" content={meta.description} />
         <meta name="twitter:image" content={meta.image} />
       </Head>
-      <Navbar hasBackground={true} />
       <HeroSection
         hero={{
-          title: "About",
+          title: "About Us",
+          background: "/hero/about-bg.jpg",
+          breadcrumb: [{ label: "Home", href: "/" }, { label: "About Us" }],
         }}
       />
+
       <AboutUsSection />
       <VisionMissionGoals />
       <FutureVision />

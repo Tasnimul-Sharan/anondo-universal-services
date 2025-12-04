@@ -36,10 +36,10 @@ export default function ContactPage() {
         <meta name="twitter:description" content={meta.description} />
         <meta name="twitter:image" content={meta.image} />
       </Head>
-      <Navbar hasBackground={true} />
       <HeroSection
         hero={{
           title: "Contact",
+          background: "/hero/contact-bg.jpg",
         }}
       />
       <ContactSection />

@@ -39,7 +39,7 @@ const teamMembers = [
   {
     name: "Salman Rahman",
     role: "Client Relations Manager",
-    img: "/teams/team4.JPG",
+    img: "/teams/team4.jpg",
     socials: {
       facebook: "https://facebook.com/",
       linkedin: "https://linkedin.com/",
