@@ -7,6 +7,7 @@ import TrainingCurriculum from "@/components/TrainingCurriculum";
 import TrainingCTA from "@/components/TrainingCTA";
 import TrainingVisuals from "@/components/TrainingVisuals";
 import ProductsSection from "@/components/ProductsSection";
+import TrainingVideo from "@/components/TrainingVideo";
 export default function TrainingPage() {
   const meta = {
     title:
@@ -50,6 +51,7 @@ export default function TrainingPage() {
       <ProductsSection />
       <TrainingKeyFeatures />
       <TrainingCurriculum />
+      <TrainingVideo />
       <TrainingVisuals />
       <TrainingCTA />
     </div>

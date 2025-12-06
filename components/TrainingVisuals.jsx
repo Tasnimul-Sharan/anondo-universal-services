@@ -4,21 +4,6 @@ import Image from "next/image";
 export default function TrainingVisuals() {
   const visuals = [
     {
-      title: "Parade Squad",
-      caption: "A guard squad in parade formation",
-      img: "/training/parade.jpg",
-    },
-    {
-      title: "Self-defence",
-      caption: "Practical self-defence training session",
-      img: "/training/defence.JPG",
-    },
-    {
-      title: "CCTV Room",
-      caption: "CCTV monitoring control room",
-      img: "/training/cctv.png",
-    },
-    {
       title: "Trainer",
       caption: "Trainer instructing recruits on metal detector use",
       img: "/training/trainer.jpg",
@@ -27,6 +12,37 @@ export default function TrainingVisuals() {
       title: "Field Practice",
       caption: "Recruits practicing real-time field operations",
       img: "/training/practice1.jpg",
+    },
+    {
+      title: "Parade Squad",
+      caption: "A guard squad in parade formation",
+      img: "/training/parade.jpg",
+    },
+    {
+      title: "CCTV Room",
+      caption: "CCTV monitoring control room",
+      img: "/training/cctv.png",
+    },
+    {
+      title: "Running",
+      caption: "Recruits improving stamina through daily running drills",
+      img: "/training/running.jpg",
+    },
+    {
+      title: "Push-Ups",
+      caption: "Strength-building push-up sessions during physical training",
+      img: "/training/pushups.jpg",
+    },
+    {
+      title: "Rope Climbing",
+      caption:
+        "Rope climbing practice to build endurance and upper body strength",
+      img: "/training/rope-climbing.jpg",
+    },
+    {
+      title: "Self-defence",
+      caption: "Practical self-defence training session",
+      img: "/training/self-defence.jpg",
     },
   ];
 
