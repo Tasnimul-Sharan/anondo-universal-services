@@ -60,6 +60,7 @@ export default function TrainingVisuals() {
               width={1920}
               height={1080}
               className="object-cover hover:scale-110 w-full h-full transition-all transform duration-1000 ease-[cubic-bezier(0.19,1,0.22,1)]"
+              priority
             />
           </div>
           <figcaption className="text-gray-600 text-base mt-3 text-center">

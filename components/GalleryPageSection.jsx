@@ -44,16 +44,36 @@ export default function GalleryPageSection() {
       title: "Gallery Image 6",
       desc: "Description of image 6",
     },
-    // {
-    //   img: "/gallery/gallery7.jpg",
-    //   title: "Gallery Image 7",
-    //   desc: "Description of image 7",
-    // },
-    // {
-    //   img: "/gallery/gallery8.jpg",
-    //   title: "Gallery Image 8",
-    //   desc: "Description of image 8",
-    // },
+    {
+      img: "/gallery/gallery7.jpg",
+      title: "Gallery Image 7",
+      desc: "Description of image 7",
+    },
+    {
+      img: "/gallery/gallery8.jpg",
+      title: "Gallery Image 8",
+      desc: "Description of image 8",
+    },
+    {
+      img: "/gallery/gallery9.jpg",
+      title: "Gallery Image 9",
+      desc: "Description of image 9",
+    },
+    {
+      img: "/gallery/gallery10.jpg",
+      title: "Gallery Image 10",
+      desc: "Description of image 10",
+    },
+    {
+      img: "/gallery/gallery11.jpg",
+      title: "Gallery Image 11",
+      desc: "Description of image 11",
+    },
+    {
+      img: "/gallery/gallery12.jpg",
+      title: "Gallery Image 12",
+      desc: "Description of image 12",
+    },
   ];
 
   const subtitle = "Our Works";
