@@ -44,6 +44,30 @@ export default function TrainingVisuals() {
       caption: "Practical self-defence training session",
       img: "/training/self-defence.jpg",
     },
+    {
+      title: "Fire Extinguisher Training",
+      caption:
+      "Hands-on training on using different types of fire extinguishers",
+      img: "/training/fire-extinguisher.jpg",
+    },
+    {
+      title: "Personal Development",
+      caption:
+      "Sessions focused on communication, discipline, and confidence building",
+      img: "/training/personal-development.jpg",
+    },
+    {
+      title: "Health Exercise",
+      caption:
+        "Daily health exercises designed to improve overall fitness, flexibility, and well-being",
+      img: "/training/health-exercise.jpg",
+    },
+    {
+      title: "Belly Fat Reduction",
+      caption:
+        "Daily abdominal workouts focused on reducing belly fat and improving core strength",
+      img: "/training/belly-fat-exercise.jpg",
+    },
   ];
 
   return (
