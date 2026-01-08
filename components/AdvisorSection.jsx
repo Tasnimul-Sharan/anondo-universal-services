@@ -7,17 +7,18 @@ export default function AdvisorSection() {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Advisor Image */}
           <div className="flex justify-center">
-            <div className="relative w-72 h-80 rounded-2xl overflow-hidden shadow-lg">
+            <div className="relative w-96 rounded-2xl overflow-hidden">
               <Image
-                src="/advisor.jpg" // <-- image path
+                src="/advisor.png" // <-- image path
                 alt="Advisor - Anondo Universal Services Limited"
-                fill
-                className="object-cover"
+                width={540}
+                height={604}
+                className="object-cover w-full h-full"
               />
             </div>
           </div>
 
-          {/* Advisor Message */}
+          {/* Advisor Message */}   
           <div>
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
               Message from Our Advisor

@@ -35,16 +35,16 @@ export default function ServicesDetailsPage() {
   }
 
   const meta = {
-    title: `${service.services.title} | Anondo Baari - Senior Wellness & Assisted Living in Bangladesh`,
+    title: `${service.services.title} | Anondo Universal Security Services – Professional Security Services in Bangladesh`,
     description:
       service.services.description ||
-      `Learn more about our ${service.services.title} at Anondo Baari. Located in Purbachal, Dhaka, we provide holistic senior wellness including assisted living, 24/7 healthcare, yoga, meditation, nutrition counseling, and compassionate care in a vibrant community.`,
-    keywords: `${service.services.title}, Anondo Baari services, senior wellness Bangladesh, assisted living Dhaka, elderly care, therapeutic programs, yoga meditation, nutrition counseling, holistic wellness center, retirement home Bangladesh`,
-    author: "Anondo Baari",
-    url: `https://www.anondobari.com/services/${service.slug}`,
+      `Learn more about our ${service.services.title} services by Anondo Universal Security Services. We provide disciplined, trained, and reliable security solutions including household, office, factory, event, money transfer, CCTV surveillance, crowd control, and VIP protection across Bangladesh.`,
+    keywords: `${service.services.title}, Anondo Universal Security Services, private security company Bangladesh, household security, office security, factory security, event security, money transfer security, CCTV surveillance, crowd control, bodyguard services`,
+    author: "Anondo Universal Security Services",
+    url: `https://www.anondouniversalserviceslimited.com/services/${service.slug}`,
     image:
       service.services.image ||
-      "https://www.anondobari.com/services/services-og.jpg",
+      "https://www.anondouniversalserviceslimited.com/services/services-og.jpg",
   };
 
   return (

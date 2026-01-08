@@ -104,7 +104,6 @@ export default function Footer() {
           </ul>
         </div>
 
-        {/* Recent Posts */}
         <div>
           <h3 className="text-white font-semibold text-lg mb-6 relative">
             Recent Posts
@@ -145,18 +144,14 @@ export default function Footer() {
             Phone: <span className="text-white">+880 1313775333</span>
           </p>
           <p className="text-sm">
-            Email:{" "}
-            <span className="text-primary">
-              contact@anondouniversalserviceslimited.com
-            </span>
+            Email: <span className="text-primary">anondo.ausl@gmail.com</span>
           </p>
         </div>
       </div>
 
-      {/* Bottom Bar */}
       <div className="border-t border-gray-400 py-6 text-center md:flex md:items-center md:justify-between max-w-7xl mx-auto px-6 lg:px-12">
         <p className="text-sm text-off_white">
-          Copyright © 2025{" "}
+          Copyright © {new Date().getFullYear()}{" "}
           <span className="text-primary font-semibold">
             Anondo Universal Services
           </span>

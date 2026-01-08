@@ -8,7 +8,6 @@ import { FaQuoteLeft, FaRegCheckCircle, FaReply } from "react-icons/fa";
 export default function BlogDetails({ blogsData }) {
   const { blogPost, socialIcons } = blogsData;
 
-
   return (
     <div className="max-w-6xl mx-auto md:px-0 px-6 space-y-8 py-20">
       <Image

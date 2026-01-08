@@ -6,14 +6,14 @@ import { FaCheckCircle } from "react-icons/fa";
 export default function ServicesDetails({ service }) {
   return (
     <section className="py-24 max-w-6xl mx-auto md:px-0 px-6">
-      <div className="relative w-full h-[50rem] mb-8">
+      {/* <div className="relative w-full h-[50rem] mb-8">
         <Image
           src={service.services.image}
           alt={service.services.title}
           fill
           className="object-cover rounded-lg"
         />
-      </div>
+      </div> */}
       <div className="mb-12">
         {/* <h2 className="text-3xl font-bold text-secondary mb-4">
           {service.services.title}
@@ -36,7 +36,7 @@ export default function ServicesDetails({ service }) {
         </blockquote>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      {/* <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {service.services.subImages.slice(0, 2).map((img, idx) => (
           <div key={idx} className="relative w-full md:h-[400px] h-12">
             <Image
@@ -47,7 +47,7 @@ export default function ServicesDetails({ service }) {
             />
           </div>
         ))}
-      </div>
+      </div> */}
     </section>
   );
 }
