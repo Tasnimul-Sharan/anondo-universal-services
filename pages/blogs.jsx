@@ -1,6 +1,5 @@
 import BlogPageSection from "@/components/BlogPageSection";
 import HeroSection from "@/components/HeroSection";
-import Navbar from "@/components/Navbar";
 import Head from "next/head";
 export default function BlogsPage() {
   const meta = {

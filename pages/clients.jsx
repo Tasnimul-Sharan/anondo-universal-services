@@ -1,20 +1,18 @@
-"use client";
-import ContactSection from "@/components/ContactSection";
 import HeroSection from "@/components/HeroSection";
 import Head from "next/head";
-import EventMap from "@/components/EventMap";
-export default function ContactPage() {
+import Navbar from "@/components/Navbar";
+import GalleryPageSection from "@/components/GalleryPageSection";
+import OurClientSection from "@/components/OurClientSection";
+export default function OurClientPage() {
   const meta = {
-    title:
-      "Contact | Anondo Universal Services Limited - Professional Security Services in Bangladesh",
+    title: "Our Clients | Anondo Universal Services Limited",
     description:
-      "Get in touch with Anondo Universal Services Limited for inquiries, service requests, or consultations. Serving Bangladesh with manned guarding, corporate event protection, residential and industrial security, CCTV surveillance, and training programs.",
+      "Discover the organizations and corporate partners that trust Anondo Universal Services Limited for professional security solutions, trained personnel deployment, and advanced surveillance services across Bangladesh.",
     keywords:
-      "Anondo Universal contact, security services Bangladesh, manned guarding inquiry, corporate event security contact, residential security, industrial security, CCTV services, security training, Anondo Universal phone, Anondo Universal email",
+      "Anondo Universal Services clients, security company clients Bangladesh, corporate security partners, trusted security service provider Bangladesh, industrial security clients, residential security partnerships",
     author: "Anondo Universal Services Limited",
-    url: "https://www.anondouniversalserviceslimited.com/contact",
-    image:
-      "https://www.anondouniversalserviceslimited.com/contact/contact-og.jpg",
+    url: "https://www.anondouniversalserviceslimited.com/our-clients",
+    image: "https://www.anondouniversalserviceslimited.com/og/clients-og.jpg",
   };
 
   return (
@@ -37,12 +35,12 @@ export default function ContactPage() {
       </Head>
       <HeroSection
         hero={{
-          title: "Contact",
-          background: "/hero/contact-bg.jpg",
+          title: "Our Clients",
+          background: "/hero/clients-bg.jpg",
+          breadcrumb: [{ label: "Home", href: "/" }, { label: "Our Clients" }],
         }}
       />
-      <ContactSection />
-      <EventMap />
+      <OurClientSection />
     </div>
   );
 }
