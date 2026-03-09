@@ -5,7 +5,6 @@ import { RiLoader2Fill } from "react-icons/ri";
 import HeroSection from "@/components/HeroSection";
 import { blogDetailsData } from "@/data/blogDetailsData";
 import BlogDetails from "@/components/BlogDetails";
-import Navbar from "@/components/Navbar";
 
 export default function BlogDetailsDataPage() {
   const router = useRouter();
@@ -35,17 +34,18 @@ export default function BlogDetailsDataPage() {
   }
 
   const meta = {
-    title: `${blog.blogPost.title} | Anondo Baari Blog`,
+    title: `${blog.blogPost.title} | Anondo Universal Services Limited`,
     description:
       blog.blogPost.description ||
-      `Read "${blog.blogPost.title}" – an insightful article from Anondo Baari on senior care, wellness, healthy aging, and holistic living.`,
+      `Read "${blog.blogPost.title}" – an insightful article from Anondo Universal Services Limited about professional security services, training programs, and industry insights in Bangladesh.`,
     keywords: `${blog.blogPost.postTags.join(
-      ", "
-    )}, Anondo Baari blog, senior wellness Bangladesh, healthy aging tips, elderly care, wellness lifestyle`,
-    author: blog.blogPost.author || "Anondo Baari",
-    url: `https://www.anondobari.com/blog/${blog.slug}`,
+      ", ",
+    )}, Anondo Universal Services blog, security services Bangladesh, security training, professional guards`,
+    author: blog.blogPost.author || "Anondo Universal Services Limited",
+    url: `https://www.anondouniversalserviceslimited.com/blogs/${blog.slug}`,
     image:
-      blog.blogPost.image || "https://www.anondobari.com/blogs/blogs-og.jpg",
+      blog.blogPost.image ||
+      "https://www.anondouniversalserviceslimited.com/blogs/blogs-og.jpg",
   };
 
   return (
