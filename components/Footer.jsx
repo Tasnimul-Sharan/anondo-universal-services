@@ -53,18 +53,50 @@ export default function Footer() {
           </p>
 
           {/* Social Icons */}
-          <div className="flex space-x-4 text-gray-400">
-            <Link href="#">
+          {/* <div className="flex space-x-4 text-gray-400">
+            <Link href="https://twitter.com" target="_blank">
               <FaTwitter className="hover:text-white transition" />
             </Link>
-            <Link href="#">
+            <Link href="https://www.facebook.com/AnondoUniversalServices.ltd" target="_blank">
               <FaFacebookF className="hover:text-white transition" />
             </Link>
-            <Link href="#">
+            <Link href="https://www.linkedin.com/company/anondo-universal-services-ltd/" target="_blank">
               <FaLinkedinIn className="hover:text-white transition" />
             </Link>
-            <Link href="#">
+            <Link href="https://www.instagram.com/anondo.universal.services/" target="_blank">
               <FaInstagram className="hover:text-white transition" />
+            </Link>
+          </div> */}
+          {/* Social Icons */}
+          <div className="flex space-x-3">
+            <Link
+              href="https://www.facebook.com/AnondoUniversalServices.ltd"
+              target="_blank"
+              className="group"
+            >
+              <div
+                className="w-10 h-10 flex items-center justify-center rounded-full border border-white/20 bg-primary/20 text-white  
+    group-hover:bg-primary group-hover:text-white group-hover:border-primary 
+    transform group-hover:-translate-y-1 group-hover:scale-110 
+    transition-all duration-300 ease-in-out"
+              >
+                <FaFacebookF />
+              </div>
+            </Link>
+
+            <Link
+              href="https://www.linkedin.com/company/anondo-universal-services-ltd/"
+              target="_blank"
+              className="group"
+            >
+              <div
+                className="w-10 h-10 flex items-center justify-center rounded-full border border-white/20 bg-primary/20 text-white 
+    group-hover:bg-primary group-hover:text-white group-hover:border-primary 
+    transform group-hover:-translate-y-1 group-hover:scale-110 
+    transition-all duration-300 ease-in-out"
+              >
+                <FaLinkedinIn />
+              </div>
             </Link>
           </div>
         </div>

@@ -36,7 +36,13 @@ export default function Navbar() {
       gsap.fromTo(
         items,
         { x: "-100%", opacity: 0 },
-        { x: "0%", opacity: 1, duration: 0.6, stagger: 0.1, ease: "power4.out" }
+        {
+          x: "0%",
+          opacity: 1,
+          duration: 0.6,
+          stagger: 0.1,
+          ease: "power4.out",
+        },
       );
     } else {
       gsap.to(menu, {
@@ -92,33 +98,33 @@ export default function Navbar() {
               </div>
               <div className="flex gap-2">
                 <Link
-                  href="https://facebook.com"
+                  href="https://www.facebook.com/AnondoUniversalServices.ltd"
                   target="_blank"
                   className="w-8 h-8 flex items-center justify-center rounded border border-gray-400 hover:bg-primary hover:border-transparent hover:text-white transition-all transform duration-500"
                 >
                   <FaFacebookF className="w-4 h-4" />
                 </Link>
-                <Link
+                {/* <Link
                   href="https://twitter.com"
                   target="_blank"
                   className="w-8 h-8 flex items-center justify-center rounded border border-gray-400 hover:bg-primary hover:border-transparent hover:text-white transition-all transform duration-500"
                 >
                   <FaXTwitter className="w-4 h-4" />
-                </Link>
+                </Link> */}
                 <Link
-                  href="https://linkedin.com"
+                  href="https://www.linkedin.com/company/anondo-universal-services-ltd/"
                   target="_blank"
                   className="w-8 h-8 flex items-center justify-center rounded border border-gray-400 hover:bg-primary hover:border-transparent hover:text-white transition-all transform duration-500"
                 >
                   <FaLinkedinIn className="w-4 h-4" />
                 </Link>
-                <Link
+                {/* <Link
                   href="https://instagram.com"
                   target="_blank"
                   className="w-8 h-8 flex items-center justify-center rounded border border-gray-400 hover:bg-primary hover:border-transparent hover:text-white transition-all transform duration-500"
                 >
                   <FaInstagram className="w-4 h-4" />
-                </Link>
+                </Link> */}
               </div>
 
               {/* Right Links */}
@@ -425,3 +431,497 @@ export default function Navbar() {
     </header>
   );
 }
+
+// // import { useState, useRef, useEffect } from "react";
+// // import Image from "next/image";
+// // import Link from "next/link";
+// // import gsap from "gsap";
+// // import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
+// // import { FiClock, FiPhoneCall, FiMail } from "react-icons/fi";
+// // import { HiOutlineMenu, HiOutlineX } from "react-icons/hi";
+
+// // export default function Navbar() {
+// //   const [isMenuOpen, setIsMenuOpen] = useState(false);
+// //   const [isScrolled, setIsScrolled] = useState(false);
+
+// //   const menuRef = useRef(null);
+// //   const topbarRef = useRef(null);
+// //   const navbarRef = useRef(null);
+
+// //   const menuItems = [
+// //     { name: "Home", path: "/" },
+// //     { name: "About Us", path: "/about" },
+// //     { name: "Our Clients", path: "/clients" },
+// //     { name: "Services", path: "/services" },
+// //     { name: "Training", path: "/training" },
+// //     { name: "Gallery", path: "/gallery" },
+// //     { name: "Blogs", path: "/blogs" },
+// //   ];
+
+// //   // ===== Scroll Detection =====
+// //   useEffect(() => {
+// //     const handleScroll = () => {
+// //       setIsScrolled(window.scrollY > 80);
+// //     };
+// //     window.addEventListener("scroll", handleScroll);
+// //     return () => window.removeEventListener("scroll", handleScroll);
+// //   }, []);
+
+// //   // ===== Topbar + Navbar Sync Animation =====
+// //   useEffect(() => {
+// //     if (!topbarRef.current || !navbarRef.current) return;
+
+// //     const topbarHeight = topbarRef.current.offsetHeight;
+
+// //     const tl = gsap.timeline();
+
+// //     if (isScrolled) {
+// //       tl.to(topbarRef.current, {
+// //         y: "-100%",
+// //         duration: 0.3,
+// //         ease: "power2.out",
+// //       }).to(
+// //         navbarRef.current,
+// //         {
+// //           y: `-${topbarHeight}px`,
+// //           boxShadow: "0 10px 30px rgba(0,0,0,0.08)",
+// //           duration: 0.3,
+// //           ease: "power2.out",
+// //         },
+// //         "<",
+// //       );
+// //     } else {
+// //       tl.to(topbarRef.current, {
+// //         y: "0%",
+// //         duration: 0.3,
+// //       }).to(
+// //         navbarRef.current,
+// //         {
+// //           y: "0px",
+// //           boxShadow: "none",
+// //           duration: 0.3,
+// //         },
+// //         "<",
+// //       );
+// //     }
+// //   }, [isScrolled]);
+
+// //   // ===== Mobile Menu Animation =====
+// //   useEffect(() => {
+// //     if (!menuRef.current) return;
+
+// //     if (isMenuOpen) {
+// //       gsap.to(menuRef.current, {
+// //         x: "0%",
+// //         duration: 0.5,
+// //         ease: "power3.out",
+// //       });
+// //     } else {
+// //       gsap.to(menuRef.current, {
+// //         x: "100%",
+// //         duration: 0.4,
+// //         ease: "power3.inOut",
+// //       });
+// //     }
+// //   }, [isMenuOpen]);
+
+// //   return (
+// //     <header className="fixed top-0 left-0 w-full z-50">
+// //       {/* ===== TOP BAR ===== */}
+// //       <div
+// //         ref={topbarRef}
+// //         className="hidden lg:block bg-secondary text-white text-sm py-3"
+// //       >
+// //         <div className="custom-container mx-auto flex justify-between items-center px-4">
+// //           <div className="flex items-center gap-6">
+// //             <span>📍 Printers Building, Motijheel, Dhaka</span>
+// //             <span className="flex items-center gap-2">
+// //               <FiClock /> Sat - Thu: 10.00am - 7.00pm
+// //             </span>
+// //             <span className="flex items-center gap-2">
+// //               <FiPhoneCall /> +880 1313775333
+// //             </span>
+// //             <span className="flex items-center gap-2">
+// //               <FiMail /> anondo.ausl@gmail.com
+// //             </span>
+// //           </div>
+
+// //           <div className="flex gap-3">
+// //             <FaFacebookF />
+// //             <FaLinkedinIn />
+// //             <FaInstagram />
+// //           </div>
+// //         </div>
+// //       </div>
+
+// //       {/* ===== MAIN NAVBAR ===== */}
+// //       <div
+// //         ref={navbarRef}
+// //         className="bg-white transition-all duration-500 py-5"
+// //       >
+// //         <div className="custom-container mx-auto flex items-center justify-between px-4">
+// //           {/* LOGO */}
+// //           <Link href="/" className="flex items-center gap-3">
+// //             <Image
+// //               src="/anondo-universal-services-logo.jpg"
+// //               alt="Logo"
+// //               width={50}
+// //               height={50}
+// //             />
+// //             <div>
+// //               <h1 className="text-xl font-bold text-primary leading-none">
+// //                 Anondo
+// //               </h1>
+// //               <p className="text-xs text-gray-600 tracking-widest">
+// //                 Universal Services
+// //               </p>
+// //             </div>
+// //           </Link>
+
+// //           {/* DESKTOP MENU */}
+// //           <ul className="hidden lg:flex gap-8 font-medium">
+// //             {menuItems.map((item, i) => (
+// //               <li key={i} className="relative group">
+// //                 <Link
+// //                   href={item.path}
+// //                   className="font-semibold hover:text-primary transition"
+// //                 >
+// //                   {item.name}
+// //                 </Link>
+// //                 <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-primary transition-all duration-300 group-hover:w-full"></span>
+// //               </li>
+// //             ))}
+// //           </ul>
+
+// //           {/* RIGHT */}
+// //           <div className="flex items-center gap-4">
+// //             <Link href="/contact" className="hidden lg:block">
+// //               <button className="bg-primary text-white px-6 py-2 rounded-md font-semibold hover:bg-secondary transition">
+// //                 Contact Us
+// //               </button>
+// //             </Link>
+
+// //             <button
+// //               className="lg:hidden text-3xl text-primary"
+// //               onClick={() => setIsMenuOpen(!isMenuOpen)}
+// //             >
+// //               {isMenuOpen ? <HiOutlineX /> : <HiOutlineMenu />}
+// //             </button>
+// //           </div>
+// //         </div>
+// //       </div>
+
+// //       {/* ===== MOBILE MENU ===== */}
+// //       <div
+// //         ref={menuRef}
+// //         className="fixed top-0 right-0 w-full h-full bg-white z-40 flex flex-col"
+// //         style={{ transform: "translateX(100%)" }}
+// //       >
+// //         {/* CLOSE */}
+// //         <div className="flex justify-end p-6">
+// //           <HiOutlineX
+// //             className="text-3xl text-primary cursor-pointer"
+// //             onClick={() => setIsMenuOpen(false)}
+// //           />
+// //         </div>
+
+// //         {/* MENU ITEMS */}
+// //         <ul className="flex flex-col px-6 space-y-6 text-lg font-semibold">
+// //           {menuItems.map((item, i) => (
+// //             <li key={i}>
+// //               <Link
+// //                 href={item.path}
+// //                 onClick={() => setIsMenuOpen(false)}
+// //                 className="hover:text-primary"
+// //               >
+// //                 {item.name}
+// //               </Link>
+// //             </li>
+// //           ))}
+// //         </ul>
+
+// //         {/* TOPBAR DATA INSIDE MOBILE */}
+// //         <div className="p-6 mt-6 border-t space-y-4 text-sm">
+// //           <div>📍 Printers Building, Motijheel, Dhaka</div>
+
+// //           <div className="flex items-center gap-2">
+// //             <FiClock /> Sat - Thu: 10.00am - 7.00pm
+// //           </div>
+
+// //           <div className="flex items-center gap-2">
+// //             <FiPhoneCall />
+// //             <a href="tel:+8801313775333">+880 1313775333</a>
+// //           </div>
+
+// //           <div className="flex items-center gap-2">
+// //             <FiMail />
+// //             <a href="mailto:anondo.ausl@gmail.com">anondo.ausl@gmail.com</a>
+// //           </div>
+// //         </div>
+
+// //         {/* BUTTON */}
+// //         <div className="p-6">
+// //           <Link href="/contact" onClick={() => setIsMenuOpen(false)}>
+// //             <button className="w-full bg-primary text-white py-3 rounded-md font-bold">
+// //               Contact Us
+// //             </button>
+// //           </Link>
+// //         </div>
+
+// //         {/* SOCIAL */}
+// //         <div className="px-6 flex gap-3">
+// //           <FaFacebookF />
+// //           <FaLinkedinIn />
+// //           <FaInstagram />
+// //         </div>
+
+// //         <div className="mt-auto p-6 text-xs text-gray-400">
+// //           © {new Date().getFullYear()} Anondo Universal Services
+// //         </div>
+// //       </div>
+// //     </header>
+// //   );
+// // }
+
+// "use client";
+// import Image from "next/image";
+// import Link from "next/link";
+// import gsap from "gsap";
+// import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
+// import { FiClock, FiPhoneCall, FiMail } from "react-icons/fi";
+// import { HiOutlineMenu, HiOutlineX } from "react-icons/hi";
+
+// export default function Navbar() {
+//   const [isMenuOpen, setIsMenuOpen] = useState(false);
+//   const [isScrolled, setIsScrolled] = useState(false);
+
+//   const topbarRef = useRef(null);
+//   const navbarRef = useRef(null);
+//   const menuRef = useRef(null);
+
+//   const menuItems = [
+//     { name: "Home", path: "/" },
+//     { name: "About Us", path: "/about" },
+//     { name: "Our Clients", path: "/clients" },
+//     { name: "Services", path: "/services" },
+//     { name: "Training", path: "/training" },
+//     { name: "Gallery", path: "/gallery" },
+//     { name: "Blogs", path: "/blogs" },
+//   ];
+
+//   // ===== SCROLL DETECTION =====
+//   useEffect(() => {
+//     const handleScroll = () => {
+//       setIsScrolled(window.scrollY > 80);
+//     };
+//     window.addEventListener("scroll", handleScroll);
+//     return () => window.removeEventListener("scroll", handleScroll);
+//   }, []);
+
+//   // ===== TOPBAR + NAVBAR ANIMATION =====
+//   useEffect(() => {
+//     if (!topbarRef.current || !navbarRef.current) return;
+
+//     const topbarHeight = topbarRef.current.offsetHeight;
+
+//     if (isScrolled) {
+//       gsap.to(topbarRef.current, {
+//         y: "-100%",
+//         duration: 0.3,
+//         ease: "power2.out",
+//       });
+
+//       gsap.to(navbarRef.current, {
+//         y: `-${topbarHeight}px`,
+//         boxShadow: "0 10px 25px rgba(0,0,0,0.08)",
+//         duration: 0.3,
+//         ease: "power2.out",
+//       });
+//     } else {
+//       gsap.to(topbarRef.current, {
+//         y: "0%",
+//         duration: 0.3,
+//       });
+
+//       gsap.to(navbarRef.current, {
+//         y: "0px",
+//         boxShadow: "none",
+//         duration: 0.3,
+//       });
+//     }
+//   }, [isScrolled]);
+
+//   // ===== MOBILE MENU =====
+//   useEffect(() => {
+//     if (!menuRef.current) return;
+
+//     if (isMenuOpen) {
+//       gsap.to(menuRef.current, {
+//         x: "0%",
+//         duration: 0.5,
+//         ease: "power3.out",
+//       });
+//     } else {
+//       gsap.to(menuRef.current, {
+//         x: "100%",
+//         duration: 0.4,
+//         ease: "power3.inOut",
+//       });
+//     }
+//   }, [isMenuOpen]);
+
+//   return (
+//     <header className="fixed top-0 left-0 w-full z-50">
+//       {/* ===== TOP BAR ===== */}
+//       <div
+//         ref={topbarRef}
+//         className="hidden lg:block bg-secondary text-white text-sm py-3"
+//       >
+//         <div className="custom-container mx-auto flex justify-between items-center px-4">
+//           <div className="flex items-center gap-6">
+//             <span>📍 Printers Building, Motijheel, Dhaka</span>
+
+//             <span className="flex items-center gap-2">
+//               <FiClock /> Sat - Thu: 10.00am - 7.00pm
+//             </span>
+
+//             <span className="flex items-center gap-2">
+//               <FiPhoneCall /> +880 1313775333
+//             </span>
+
+//             <span className="flex items-center gap-2">
+//               <FiMail /> anondo.ausl@gmail.com
+//             </span>
+//           </div>
+
+//           <div className="flex gap-3">
+//             <FaFacebookF />
+//             <FaLinkedinIn />
+//             <FaInstagram />
+//           </div>
+//         </div>
+//       </div>
+
+//       {/* ===== MAIN NAVBAR ===== */}
+//       <div
+//         ref={navbarRef}
+//         className="bg-white transition-all duration-500 py-5"
+//       >
+//         <div className="custom-container mx-auto flex items-center justify-between px-4">
+//           {/* LOGO */}
+//           <Link href="/" className="flex items-center gap-3">
+//             <Image
+//               src="/anondo-universal-services-logo.jpg"
+//               alt="Logo"
+//               width={50}
+//               height={50}
+//             />
+//             <div>
+//               <h1 className="text-xl font-bold text-primary">Anondo</h1>
+//               <p className="text-xs text-gray-600 tracking-widest">
+//                 Universal Services
+//               </p>
+//             </div>
+//           </Link>
+
+//           {/* DESKTOP MENU */}
+//           <ul className="hidden lg:flex gap-8 font-medium">
+//             {menuItems.map((item, i) => (
+//               <li key={i} className="relative group">
+//                 <Link
+//                   href={item.path}
+//                   className="font-semibold hover:text-primary transition"
+//                 >
+//                   {item.name}
+//                 </Link>
+//                 <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-primary transition-all duration-300 group-hover:w-full"></span>
+//               </li>
+//             ))}
+//           </ul>
+
+//           {/* RIGHT */}
+//           <div className="flex items-center gap-4">
+//             <Link href="/contact" className="hidden lg:block">
+//               <button className="bg-primary text-white px-6 py-2 rounded-md font-semibold hover:bg-secondary transition">
+//                 Contact Us
+//               </button>
+//             </Link>
+
+//             <button
+//               className="lg:hidden text-3xl text-primary"
+//               onClick={() => setIsMenuOpen(!isMenuOpen)}
+//             >
+//               {isMenuOpen ? <HiOutlineX /> : <HiOutlineMenu />}
+//             </button>
+//           </div>
+//         </div>
+//       </div>
+
+//       {/* ===== MOBILE MENU ===== */}
+//       <div
+//         ref={menuRef}
+//         className="fixed top-0 right-0 w-full h-full bg-white z-40 flex flex-col"
+//         style={{ transform: "translateX(100%)" }}
+//       >
+//         <div className="flex justify-end p-6">
+//           <HiOutlineX
+//             className="text-3xl text-primary cursor-pointer"
+//             onClick={() => setIsMenuOpen(false)}
+//           />
+//         </div>
+
+//         <ul className="flex flex-col px-6 space-y-6 text-lg font-semibold">
+//           {menuItems.map((item, i) => (
+//             <li key={i}>
+//               <Link
+//                 href={item.path}
+//                 onClick={() => setIsMenuOpen(false)}
+//                 className="hover:text-primary"
+//               >
+//                 {item.name}
+//               </Link>
+//             </li>
+//           ))}
+//         </ul>
+
+//         <div className="p-6 mt-6 border-t space-y-4 text-sm">
+//           <div>📍 Printers Building, Motijheel, Dhaka</div>
+
+//           <div className="flex items-center gap-2">
+//             <FiClock /> Sat - Thu: 10.00am - 7.00pm
+//           </div>
+
+//           <div className="flex items-center gap-2">
+//             <FiPhoneCall />
+//             <a href="tel:+8801313775333">+880 1313775333</a>
+//           </div>
+
+//           <div className="flex items-center gap-2">
+//             <FiMail />
+//             <a href="mailto:anondo.ausl@gmail.com">
+//               anondo.ausl@gmail.com
+//             </a>
+//           </div>
+//         </div>
+
+//         <div className="p-6">
+//           <Link href="/contact" onClick={() => setIsMenuOpen(false)}>
+//             <button className="w-full bg-primary text-white py-3 rounded-md font-bold">
+//               Contact Us
+//             </button>
+//           </Link>
+//         </div>
+
+//         <div className="px-6 flex gap-3">
+//           <FaFacebookF />
+//           <FaLinkedinIn />
+//           <FaInstagram />
+//         </div>
+
+//         <div className="mt-auto p-6 text-xs text-gray-400">
+//           © {new Date().getFullYear()} Anondo Universal Services
+//         </div>
+//       </div>
+//     </header>
+//   );
+// }
