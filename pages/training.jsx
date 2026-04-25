@@ -1,6 +1,5 @@
 import HeroSection from "@/components/HeroSection";
 import Head from "next/head";
-import Navbar from "@/components/Navbar";
 import TrainingOverview from "@/components/TrainingOverview";
 import TrainingKeyFeatures from "@/components/TrainingKeyFeatures";
 import TrainingCurriculum from "@/components/TrainingCurriculum";
