@@ -1,59 +1,17 @@
 "use client";
-import { useState, useRef, useEffect } from "react";
+
+import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import gsap from "gsap";
-import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
-import { FiClock, FiPhoneCall, FiMail } from "react-icons/fi";
-import { FaXTwitter } from "react-icons/fa6";
+import { FaFacebookF, FaLinkedinIn } from "react-icons/fa";
+import { FiClock, FiMail, FiMapPin, FiPhoneCall } from "react-icons/fi";
 import { HiOutlineMenu, HiOutlineX } from "react-icons/hi";
-import { motion, AnimatePresence } from "framer-motion";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const menuRef = useRef(null);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 80);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  useEffect(() => {
-    const menu = menuRef.current;
-    const items = menu?.querySelectorAll("li");
-    if (isMenuOpen) {
-      gsap.to(menu, {
-        width: "100vw",
-        height: "100vh",
-        opacity: 1,
-        duration: 0.8,
-        ease: "power4.out",
-      });
-      gsap.fromTo(
-        items,
-        { x: "-100%", opacity: 0 },
-        {
-          x: "0%",
-          opacity: 1,
-          duration: 0.6,
-          stagger: 0.1,
-          ease: "power4.out",
-        },
-      );
-    } else {
-      gsap.to(menu, {
-        width: 0,
-        height: 0,
-        opacity: 0,
-        duration: 0.6,
-        ease: "power4.inOut",
-      });
-    }
-  }, [isMenuOpen]);
 
   const menuItems = [
     { name: "Home", path: "/" },
@@ -65,256 +23,206 @@ export default function Navbar() {
     { name: "Blogs", path: "/blogs" },
   ];
 
+  const socialLinks = [
+    {
+      label: "Facebook",
+      href: "https://www.facebook.com/AnondoUniversalServices.ltd",
+      icon: FaFacebookF,
+    },
+    {
+      label: "LinkedIn",
+      href: "https://www.linkedin.com/company/anondo-universal-services-ltd/",
+      icon: FaLinkedinIn,
+    },
+  ];
+
+  const topbarItems = [
+    {
+      text: "Printers Building, 14th Floor, 5 Rajuk Avenue, Motijheel, 1000 Dhaka",
+      icon: FiMapPin,
+    },
+    {
+      text: "+880 1313775333",
+      icon: FiPhoneCall,
+      href: "tel:+8801313775333",
+    },
+    {
+      text: "anondo.ausl@gmail.com",
+      icon: FiMail,
+      href: "mailto:anondo.ausl@gmail.com",
+    },
+  ];
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 80);
+    };
+
+    handleScroll();
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  useEffect(() => {
+    const menu = menuRef.current;
+    if (!menu) return;
+
+    const items = menu.querySelectorAll("li");
+
+    if (isMenuOpen) {
+      gsap.to(menu, {
+        width: "100vw",
+        height: "100vh",
+        opacity: 1,
+        duration: 0.65,
+        ease: "power4.out",
+      });
+      gsap.fromTo(
+        items,
+        { x: "-100%", opacity: 0 },
+        {
+          x: "0%",
+          opacity: 1,
+          duration: 0.5,
+          stagger: 0.08,
+          ease: "power4.out",
+        },
+      );
+    } else {
+      gsap.to(menu, {
+        width: 0,
+        height: 0,
+        opacity: 0,
+        duration: 0.45,
+        ease: "power4.inOut",
+      });
+    }
+  }, [isMenuOpen]);
+
   return (
-    <header
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-500
-    ${isScrolled ? "bg-white shadow-md" : "bg-transparent"}`}
-    >
-      {!isScrolled && (
-        <>
-          {/* Top Bar */}
-          {/* <div className="w-full bg-secondary text-white text-sm py-4"> */}
-          <div className="hidden lg:block w-full bg-secondary text-white text-sm py-4">
-            <div className="custom-container mx-auto flex justify-between items-center px-4">
-              {/* Left Social */}
+    <header className="fixed top-0 left-0 z-50 w-full bg-white shadow-sm">
+      <div
+        className={`hidden w-full overflow-hidden bg-secondary text-white transition-[max-height,opacity,transform] duration-500 ease-in-out lg:block ${
+          isScrolled
+            ? "pointer-events-none max-h-0 -translate-y-full opacity-0"
+            : "max-h-24 translate-y-0 opacity-100"
+        }`}
+      >
+        <div className="mx-auto custom-container flex min-h-11 w-full items-center justify-between gap-5 px-6 py-4 text-[12px] font-normal leading-none xl:text-[13px]">
+          <div className="flex min-w-0 flex-1 flex-wrap items-center gap-x-5 gap-y-2 2xl:flex-nowrap">
+            {topbarItems.map(({ text, icon: Icon, href }) => {
+              const content = (
+                <>
+                  <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-md bg-white/10 text-primary">
+                    <Icon className="h-3.5 w-3.5" />
+                  </span>
+                  <span className="whitespace-nowrap text-white/95">
+                    {text}
+                  </span>
+                </>
+              );
 
-              <div className="flex items-center gap-2 text-off_white text-sm">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
-                  className="w-4 h-4 text-primary"
+              return href ? (
+                <a
+                  key={text}
+                  href={href}
+                  className="flex min-w-0 items-center gap-2 text-base transition hover:text-primary"
                 >
-                  <path
-                    d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0
-                 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5
-                 1.12 2.5 2.5S13.38 11.5 12 11.5z"
-                  />
-                </svg>
-                <span>
-                  Printers Building, 14th Floor, 5 Rajuk Avenue, Motijheel, 1000
-                  Dhaka
-                </span>
-              </div>
-              <div className="flex gap-2">
-                <Link
-                  href="https://www.facebook.com/AnondoUniversalServices.ltd"
-                  target="_blank"
-                  className="w-8 h-8 flex items-center justify-center rounded border border-gray-400 hover:bg-primary hover:border-transparent hover:text-white transition-all transform duration-500"
-                >
-                  <FaFacebookF className="w-4 h-4" />
-                </Link>
-                {/* <Link
-                  href="https://twitter.com"
-                  target="_blank"
-                  className="w-8 h-8 flex items-center justify-center rounded border border-gray-400 hover:bg-primary hover:border-transparent hover:text-white transition-all transform duration-500"
-                >
-                  <FaXTwitter className="w-4 h-4" />
-                </Link> */}
-                <Link
-                  href="https://www.linkedin.com/company/anondo-universal-services-ltd/"
-                  target="_blank"
-                  className="w-8 h-8 flex items-center justify-center rounded border border-gray-400 hover:bg-primary hover:border-transparent hover:text-white transition-all transform duration-500"
-                >
-                  <FaLinkedinIn className="w-4 h-4" />
-                </Link>
-                {/* <Link
-                  href="https://instagram.com"
-                  target="_blank"
-                  className="w-8 h-8 flex items-center justify-center rounded border border-gray-400 hover:bg-primary hover:border-transparent hover:text-white transition-all transform duration-500"
-                >
-                  <FaInstagram className="w-4 h-4" />
-                </Link> */}
-              </div>
-
-              {/* Right Links */}
-            </div>
+                  {content}
+                </a>
+              ) : (
+                <div key={text} className="flex min-w-0 items-center gap-2 text-sm">
+                  {content}
+                </div>
+              );
+            })}
           </div>
 
-          <div className="hidden lg:block w-full bg-white py-4 border-b border-gray-200">
-            <div className="custom-container mx-auto flex flex-col lg:flex-row justify-between items-center px-4 gap-6">
-              {/* Logo */}
-              <Link href="/" className="flex items-center gap-3">
-                <Image
-                  src="/anondo-universal-services-logo.jpg"
-                  alt="Logo"
-                  width={60}
-                  height={60}
-                  className="object-cover"
-                />
-                <div className="text-left">
-                  <h1 className="text-2xl font-bold text-primary">Anondo</h1>
-                  <p className="text-xs tracking-widest text-gray-600">
-                    Universal Services
-                  </p>
-                </div>
-              </Link>
-
-              {/* Info Section */}
-              <div className="hidden lg:flex flex-col sm:flex-row gap-8 text-sm">
-                {/* Working Hours */}
-                <div className="flex items-center gap-3">
-                  <div className="bg-primary/10 text-primary p-3 rounded-full">
-                    <FiClock className="text-2xl" />
-                  </div>
-                  <div>
-                    <p className="font-semibold">Working Hours</p>
-                    <p className="text-gray-600">
-                      Saturday - Thursday: 10.00am to 7.00pm
-                    </p>
-                  </div>
-                </div>
-
-                {/* Phone */}
-                <div className="flex items-center gap-3">
-                  <div className="bg-primary/10 text-primary p-3 rounded-full">
-                    <FiPhoneCall className="text-2xl" />
-                  </div>
-                  <div>
-                    <p className="font-semibold">Call Us</p>
-                    <p className="text-gray-600">+880 1313775333</p>
-                  </div>
-                </div>
-
-                {/* Mail */}
-                <div className="flex items-center gap-3">
-                  <div className="bg-primary/10 text-primary p-3 rounded-full">
-                    <FiMail className="text-2xl" />
-                  </div>
-                  <div>
-                    <p className="font-semibold">Mail Us</p>
-                    <p className="text-gray-600">anondo.ausl@gmail.com</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Navigation Menu */}
-          <nav className="bg-white relative z-50">
-            <div className="custom-container mx-auto hidden lg:flex justify-between items-center h-16">
-              {/* Menu Items */}
-              <ul className="hidden lg:flex gap-8 font-medium items-center">
-                {menuItems.map((item, index) => (
-                  <li
-                    key={index}
-                    className="relative group cursor-pointer hover:text-primary font-semibold transition"
-                  >
-                    <Link href={item.path}>{item.name}</Link>
-                    <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-primary transition-all duration-500 group-hover:w-full"></span>
-                  </li>
-                ))}
-              </ul>
-
-              <div className="hidden lg:block">
-                <Link href="/contact">
-                  <button className="bg-primary text-white px-6 py-2 rounded font-bold hover:bg-secondary transition-all transform duration-500">
-                    Contact US
-                  </button>
-                </Link>
-              </div>
-            </div>
-            <div className="custom-container mx-auto flex justify-between items-center py-6 lg:hidden ">
-              <Link href="/" className="flex items-center gap-2">
-                <Image
-                  src="/anondo-universal-services-logo.jpg"
-                  alt="Logo"
-                  width={60}
-                  height={60}
-                  className="object-cover transition-all duration-500"
-                />
-                <div className="flex flex-col leading-tight">
-                  <span className="text-2xl font-bold text-primary transition-all duration-500">
-                    Anondo
-                  </span>
-                  <span className="text-xs tracking-widest text-gray-600 transition-all duration-500">
-                    Universal Services
-                  </span>
-                </div>
-              </Link>
-
-              {/* Mobile Menu Toggle */}
-              <button
-                className=" z-50 text-3xl text-primary"
-                onClick={() => setIsMenuOpen(!isMenuOpen)}
+          <div className="flex shrink-0 items-center gap-2 pl-2">
+            {socialLinks.map(({ label, href, icon: Icon }) => (
+              <Link
+                key={label}
+                href={href}
+                target="_blank"
+                aria-label={label}
+                className="flex h-8 w-8 items-center justify-center rounded-md border border-white/20 bg-white/10 text-white transition-all duration-300 hover:border-primary hover:bg-primary"
               >
-                {isMenuOpen ? <HiOutlineX /> : <HiOutlineMenu />}
-              </button>
+                <Icon className="h-4 w-4" />
+              </Link>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <nav
+        className={`w-full border-b border-gray-100 bg-white transition-all duration-500 ease-in-out ${
+          isScrolled ? "py-3 shadow-[0_12px_32px_rgba(15,23,42,0.08)]" : "py-4"
+        }`}
+      >
+        <div className="custom-container mx-auto flex w-full items-center justify-between gap-8 px-6">
+          <Link href="/" className="group flex shrink-0 items-center gap-3">
+            <span className="flex h-16 w-20 items-center justify-center rounded-md bg-white shadow-sm transition duration-500">
+              <Image
+                src="/anondo-universal-services-logo.jpg"
+                alt="Anondo Universal Services Logo"
+                width={1200}
+                height={1200}
+                className="h-20 w-20 object-cover"
+                priority
+              />
+            </span>
+            <div className="leading-tight">
+              <span className="block text-[26px] font-extrabold leading-none text-primary">
+                Anondo
+              </span>
+              <span className="mt-1 block text-sm font-medium leading-none text-gray-600">
+                Universal Services
+              </span>
             </div>
-          </nav>
-        </>
-      )}
+          </Link>
 
-      <AnimatePresence>
-        {isScrolled && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0, transition: { duration: 0.6 } }}
-            transition={{ duration: 0.6, ease: "easeInOut" }}
-            className="bg-white py-6 fixed top-0 left-0 w-full z-50"
+          <div className="hidden items-center justify-end gap-6 lg:flex">
+            <ul className="flex items-center gap-5 font-medium xl:gap-7">
+              {menuItems.map((item) => (
+                <li
+                  key={item.path}
+                  className="group relative cursor-pointer whitespace-nowrap py-2 text-[15px] font-semibold text-gray-900 transition hover:text-primary"
+                >
+                  <Link href={item.path}>{item.name}</Link>
+                  <span className="absolute bottom-0 left-0 h-[2px] w-0 rounded bg-primary transition-all duration-500 group-hover:w-full" />
+                </li>
+              ))}
+            </ul>
 
-            //  initial={{ opacity: 0, y: -40, filter: "blur(10px)" }}
-            // animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-            // exit={{ opacity: 0, y: -40, filter: "blur(10px)" }}
-            // transition={{ duration: 0.6, ease: "easeOut" }}
-            // className="bg-white backdrop-blur-md py-6 fixed top-0 left-0 w-full z-50"
+            <Link
+              href="/contact"
+              className="whitespace-nowrap rounded-md bg-primary px-5 py-3 text-sm font-bold text-white shadow-[0_10px_24px_rgba(242,140,40,0.25)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-secondary hover:shadow-[0_12px_26px_rgba(30,115,190,0.22)]"
+            >
+              Contact US
+            </Link>
+          </div>
+
+          <button
+            type="button"
+            aria-label="Toggle menu"
+            className="text-3xl text-primary lg:hidden"
+            onClick={() => setIsMenuOpen((open) => !open)}
           >
-            <div className="custom-container mx-auto flex justify-between items-center">
-              <Link href="/" className="flex items-center gap-2">
-                <Image
-                  src="/anondo-universal-services-logo.jpg"
-                  alt="Logo"
-                  width={60}
-                  height={60}
-                  className="object-cover transition-all duration-500"
-                />
-                <div className="flex flex-col leading-tight">
-                  <span className="text-2xl font-bold text-primary transition-all duration-500">
-                    Anondo
-                  </span>
-                  <span className="text-xs tracking-widest text-gray-600 transition-all duration-500">
-                    Universal Services
-                  </span>
-                </div>
-              </Link>
-              <ul className="hidden lg:flex gap-8 font-medium items-center">
-                {menuItems.map((item, index) => (
-                  <li
-                    key={index}
-                    className="relative group cursor-pointer hover:text-primary font-semibold transition"
-                  >
-                    <Link href={item.path}>{item.name}</Link>
-                    <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-primary transition-all duration-500 group-hover:w-full"></span>
-                  </li>
-                ))}
-              </ul>
-
-              <div className="hidden lg:block">
-                <Link href="/contact">
-                  <button className="bg-primary text-white px-6 py-2 font-bold rounded hover:bg-secondary transition-all transform duration-500">
-                    Contact US
-                  </button>
-                </Link>
-              </div>
-              <button
-                className="lg:hidden z-50 text-3xl text-primary"
-                onClick={() => setIsMenuOpen(!isMenuOpen)}
-              >
-                {isMenuOpen ? <HiOutlineX /> : <HiOutlineMenu />}
-              </button>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+            {isMenuOpen ? <HiOutlineX /> : <HiOutlineMenu />}
+          </button>
+        </div>
+      </nav>
 
       <div
         ref={menuRef}
-        className="lg:hidden fixed top-0 left-0 bg-white text-black z-40 overflow-y-auto flex flex-col"
+        className="fixed left-0 top-0 z-40 flex flex-col overflow-y-auto bg-white text-black lg:hidden"
         style={{ width: 0, height: 0, opacity: 0 }}
       >
         <div className="flex justify-end px-6 py-6">
           <button
+            type="button"
+            aria-label="Close menu"
             className="text-3xl text-primary"
             onClick={() => setIsMenuOpen(false)}
           >
@@ -322,45 +230,46 @@ export default function Navbar() {
           </button>
         </div>
 
-        <ul className="flex flex-col px-6 space-y-6 text-lg font-semibold w-full">
-          {menuItems.map((item, index) => (
-            <li key={index} className="relative group">
+        <ul className="flex w-full flex-col space-y-6 px-6 text-lg font-semibold">
+          {menuItems.map((item) => (
+            <li key={item.path} className="group relative">
               <Link
                 href={item.path}
-                className="block py-2 transition-all duration-500 group-hover:text-primary"
+                className="block py-2 transition-all duration-300 group-hover:text-primary"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {item.name}
               </Link>
-              <span className="absolute bottom-0 left-0 h-[2px] bg-primary w-0 transition-all duration-500 group-hover:w-full"></span>
+              <span className="absolute bottom-0 left-0 h-[2px] w-0 bg-primary transition-all duration-500 group-hover:w-full" />
             </li>
           ))}
         </ul>
 
-        <div className="p-6 flex flex-col min-h-full">
+        <div className="flex min-h-full flex-col p-6">
           <div className="border-t pt-6">
             <div className="space-y-4">
               <div className="flex items-start gap-3">
-                <div className="bg-primary/10 text-primary p-2 rounded-full">
-                  <FiClock className="text-xl" />
+                <div className="rounded-full bg-primary/10 p-2 text-primary">
+                  <FiMapPin className="text-xl" />
                 </div>
                 <div>
-                  <p className="font-semibold">Working Hours</p>
-                  <p className="text-sm text-gray-600">
-                    Sat - Thu: 10.00am to 7.00pm
+                  <p className="font-semibold">Our Address</p>
+                  <p className="mt-0.5 text-sm text-gray-600">
+                    Printers Building, 14th Floor, 5 Rajuk Avenue, Motijheel,
+                    1000 Dhaka
                   </p>
                 </div>
               </div>
 
               <div className="flex items-start gap-3">
-                <div className="bg-primary/10 text-primary p-2 rounded-full">
+                <div className="rounded-full bg-primary/10 p-2 text-primary">
                   <FiPhoneCall className="text-xl" />
                 </div>
                 <div>
                   <p className="font-semibold">Call Us</p>
                   <a
                     href="tel:+8801313775333"
-                    className="text-sm text-gray-600 block mt-0.5"
+                    className="mt-0.5 block text-sm text-gray-600"
                   >
                     +880 1313775333
                   </a>
@@ -368,560 +277,49 @@ export default function Navbar() {
               </div>
 
               <div className="flex items-start gap-3">
-                <div className="bg-primary/10 text-primary p-2 rounded-full">
+                <div className="rounded-full bg-primary/10 p-2 text-primary">
                   <FiMail className="text-xl" />
                 </div>
                 <div>
                   <p className="font-semibold">Mail Us</p>
                   <a
-                    href="mailto:contact@anondouniversalserviceslimited.com"
-                    className="text-sm text-gray-600 block mt-0.5"
+                    href="mailto:anondo.ausl@gmail.com"
+                    className="mt-0.5 block text-sm text-gray-600"
                   >
-                    contact@anondouniversalserviceslimited.com
+                    anondo.ausl@gmail.com
                   </a>
                 </div>
               </div>
             </div>
 
-            <div className="mt-6">
-              <Link href="/contact" onClick={() => setIsMenuOpen(false)}>
-                <button className="w-full bg-primary text-white py-3 rounded-md font-bold">
-                  Contact US
-                </button>
-              </Link>
-            </div>
+            <Link
+              href="/contact"
+              className="mt-6 block w-full rounded-md bg-primary py-3 text-center font-bold text-white"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Contact US
+            </Link>
 
             <div className="mt-6 flex gap-3">
-              <Link
-                href="https://facebook.com"
-                target="_blank"
-                className="p-2 border rounded"
-              >
-                <FaFacebookF />
-              </Link>
-              <Link
-                href="https://twitter.com"
-                target="_blank"
-                className="p-2 border rounded"
-              >
-                <FaXTwitter />
-              </Link>
-              <Link
-                href="https://linkedin.com"
-                target="_blank"
-                className="p-2 border rounded"
-              >
-                <FaLinkedinIn />
-              </Link>
-              <Link
-                href="https://instagram.com"
-                target="_blank"
-                className="p-2 border rounded"
-              >
-                <FaInstagram />
-              </Link>
+              {socialLinks.map(({ label, href, icon: Icon }) => (
+                <Link
+                  key={label}
+                  href={href}
+                  target="_blank"
+                  aria-label={label}
+                  className="rounded border p-2 text-gray-700 transition hover:border-primary hover:text-primary"
+                >
+                  <Icon />
+                </Link>
+              ))}
             </div>
           </div>
 
           <div className="mt-auto pt-6 text-xs text-gray-400">
-            © {new Date().getFullYear()} Anondo Universal Services
+            Copyright {new Date().getFullYear()} Anondo Universal Services
           </div>
         </div>
       </div>
     </header>
   );
 }
-
-// // import { useState, useRef, useEffect } from "react";
-// // import Image from "next/image";
-// // import Link from "next/link";
-// // import gsap from "gsap";
-// // import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
-// // import { FiClock, FiPhoneCall, FiMail } from "react-icons/fi";
-// // import { HiOutlineMenu, HiOutlineX } from "react-icons/hi";
-
-// // export default function Navbar() {
-// //   const [isMenuOpen, setIsMenuOpen] = useState(false);
-// //   const [isScrolled, setIsScrolled] = useState(false);
-
-// //   const menuRef = useRef(null);
-// //   const topbarRef = useRef(null);
-// //   const navbarRef = useRef(null);
-
-// //   const menuItems = [
-// //     { name: "Home", path: "/" },
-// //     { name: "About Us", path: "/about" },
-// //     { name: "Our Clients", path: "/clients" },
-// //     { name: "Services", path: "/services" },
-// //     { name: "Training", path: "/training" },
-// //     { name: "Gallery", path: "/gallery" },
-// //     { name: "Blogs", path: "/blogs" },
-// //   ];
-
-// //   // ===== Scroll Detection =====
-// //   useEffect(() => {
-// //     const handleScroll = () => {
-// //       setIsScrolled(window.scrollY > 80);
-// //     };
-// //     window.addEventListener("scroll", handleScroll);
-// //     return () => window.removeEventListener("scroll", handleScroll);
-// //   }, []);
-
-// //   // ===== Topbar + Navbar Sync Animation =====
-// //   useEffect(() => {
-// //     if (!topbarRef.current || !navbarRef.current) return;
-
-// //     const topbarHeight = topbarRef.current.offsetHeight;
-
-// //     const tl = gsap.timeline();
-
-// //     if (isScrolled) {
-// //       tl.to(topbarRef.current, {
-// //         y: "-100%",
-// //         duration: 0.3,
-// //         ease: "power2.out",
-// //       }).to(
-// //         navbarRef.current,
-// //         {
-// //           y: `-${topbarHeight}px`,
-// //           boxShadow: "0 10px 30px rgba(0,0,0,0.08)",
-// //           duration: 0.3,
-// //           ease: "power2.out",
-// //         },
-// //         "<",
-// //       );
-// //     } else {
-// //       tl.to(topbarRef.current, {
-// //         y: "0%",
-// //         duration: 0.3,
-// //       }).to(
-// //         navbarRef.current,
-// //         {
-// //           y: "0px",
-// //           boxShadow: "none",
-// //           duration: 0.3,
-// //         },
-// //         "<",
-// //       );
-// //     }
-// //   }, [isScrolled]);
-
-// //   // ===== Mobile Menu Animation =====
-// //   useEffect(() => {
-// //     if (!menuRef.current) return;
-
-// //     if (isMenuOpen) {
-// //       gsap.to(menuRef.current, {
-// //         x: "0%",
-// //         duration: 0.5,
-// //         ease: "power3.out",
-// //       });
-// //     } else {
-// //       gsap.to(menuRef.current, {
-// //         x: "100%",
-// //         duration: 0.4,
-// //         ease: "power3.inOut",
-// //       });
-// //     }
-// //   }, [isMenuOpen]);
-
-// //   return (
-// //     <header className="fixed top-0 left-0 w-full z-50">
-// //       {/* ===== TOP BAR ===== */}
-// //       <div
-// //         ref={topbarRef}
-// //         className="hidden lg:block bg-secondary text-white text-sm py-3"
-// //       >
-// //         <div className="custom-container mx-auto flex justify-between items-center px-4">
-// //           <div className="flex items-center gap-6">
-// //             <span>📍 Printers Building, Motijheel, Dhaka</span>
-// //             <span className="flex items-center gap-2">
-// //               <FiClock /> Sat - Thu: 10.00am - 7.00pm
-// //             </span>
-// //             <span className="flex items-center gap-2">
-// //               <FiPhoneCall /> +880 1313775333
-// //             </span>
-// //             <span className="flex items-center gap-2">
-// //               <FiMail /> anondo.ausl@gmail.com
-// //             </span>
-// //           </div>
-
-// //           <div className="flex gap-3">
-// //             <FaFacebookF />
-// //             <FaLinkedinIn />
-// //             <FaInstagram />
-// //           </div>
-// //         </div>
-// //       </div>
-
-// //       {/* ===== MAIN NAVBAR ===== */}
-// //       <div
-// //         ref={navbarRef}
-// //         className="bg-white transition-all duration-500 py-5"
-// //       >
-// //         <div className="custom-container mx-auto flex items-center justify-between px-4">
-// //           {/* LOGO */}
-// //           <Link href="/" className="flex items-center gap-3">
-// //             <Image
-// //               src="/anondo-universal-services-logo.jpg"
-// //               alt="Logo"
-// //               width={50}
-// //               height={50}
-// //             />
-// //             <div>
-// //               <h1 className="text-xl font-bold text-primary leading-none">
-// //                 Anondo
-// //               </h1>
-// //               <p className="text-xs text-gray-600 tracking-widest">
-// //                 Universal Services
-// //               </p>
-// //             </div>
-// //           </Link>
-
-// //           {/* DESKTOP MENU */}
-// //           <ul className="hidden lg:flex gap-8 font-medium">
-// //             {menuItems.map((item, i) => (
-// //               <li key={i} className="relative group">
-// //                 <Link
-// //                   href={item.path}
-// //                   className="font-semibold hover:text-primary transition"
-// //                 >
-// //                   {item.name}
-// //                 </Link>
-// //                 <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-primary transition-all duration-300 group-hover:w-full"></span>
-// //               </li>
-// //             ))}
-// //           </ul>
-
-// //           {/* RIGHT */}
-// //           <div className="flex items-center gap-4">
-// //             <Link href="/contact" className="hidden lg:block">
-// //               <button className="bg-primary text-white px-6 py-2 rounded-md font-semibold hover:bg-secondary transition">
-// //                 Contact Us
-// //               </button>
-// //             </Link>
-
-// //             <button
-// //               className="lg:hidden text-3xl text-primary"
-// //               onClick={() => setIsMenuOpen(!isMenuOpen)}
-// //             >
-// //               {isMenuOpen ? <HiOutlineX /> : <HiOutlineMenu />}
-// //             </button>
-// //           </div>
-// //         </div>
-// //       </div>
-
-// //       {/* ===== MOBILE MENU ===== */}
-// //       <div
-// //         ref={menuRef}
-// //         className="fixed top-0 right-0 w-full h-full bg-white z-40 flex flex-col"
-// //         style={{ transform: "translateX(100%)" }}
-// //       >
-// //         {/* CLOSE */}
-// //         <div className="flex justify-end p-6">
-// //           <HiOutlineX
-// //             className="text-3xl text-primary cursor-pointer"
-// //             onClick={() => setIsMenuOpen(false)}
-// //           />
-// //         </div>
-
-// //         {/* MENU ITEMS */}
-// //         <ul className="flex flex-col px-6 space-y-6 text-lg font-semibold">
-// //           {menuItems.map((item, i) => (
-// //             <li key={i}>
-// //               <Link
-// //                 href={item.path}
-// //                 onClick={() => setIsMenuOpen(false)}
-// //                 className="hover:text-primary"
-// //               >
-// //                 {item.name}
-// //               </Link>
-// //             </li>
-// //           ))}
-// //         </ul>
-
-// //         {/* TOPBAR DATA INSIDE MOBILE */}
-// //         <div className="p-6 mt-6 border-t space-y-4 text-sm">
-// //           <div>📍 Printers Building, Motijheel, Dhaka</div>
-
-// //           <div className="flex items-center gap-2">
-// //             <FiClock /> Sat - Thu: 10.00am - 7.00pm
-// //           </div>
-
-// //           <div className="flex items-center gap-2">
-// //             <FiPhoneCall />
-// //             <a href="tel:+8801313775333">+880 1313775333</a>
-// //           </div>
-
-// //           <div className="flex items-center gap-2">
-// //             <FiMail />
-// //             <a href="mailto:anondo.ausl@gmail.com">anondo.ausl@gmail.com</a>
-// //           </div>
-// //         </div>
-
-// //         {/* BUTTON */}
-// //         <div className="p-6">
-// //           <Link href="/contact" onClick={() => setIsMenuOpen(false)}>
-// //             <button className="w-full bg-primary text-white py-3 rounded-md font-bold">
-// //               Contact Us
-// //             </button>
-// //           </Link>
-// //         </div>
-
-// //         {/* SOCIAL */}
-// //         <div className="px-6 flex gap-3">
-// //           <FaFacebookF />
-// //           <FaLinkedinIn />
-// //           <FaInstagram />
-// //         </div>
-
-// //         <div className="mt-auto p-6 text-xs text-gray-400">
-// //           © {new Date().getFullYear()} Anondo Universal Services
-// //         </div>
-// //       </div>
-// //     </header>
-// //   );
-// // }
-
-// "use client";
-// import Image from "next/image";
-// import Link from "next/link";
-// import gsap from "gsap";
-// import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
-// import { FiClock, FiPhoneCall, FiMail } from "react-icons/fi";
-// import { HiOutlineMenu, HiOutlineX } from "react-icons/hi";
-
-// export default function Navbar() {
-//   const [isMenuOpen, setIsMenuOpen] = useState(false);
-//   const [isScrolled, setIsScrolled] = useState(false);
-
-//   const topbarRef = useRef(null);
-//   const navbarRef = useRef(null);
-//   const menuRef = useRef(null);
-
-//   const menuItems = [
-//     { name: "Home", path: "/" },
-//     { name: "About Us", path: "/about" },
-//     { name: "Our Clients", path: "/clients" },
-//     { name: "Services", path: "/services" },
-//     { name: "Training", path: "/training" },
-//     { name: "Gallery", path: "/gallery" },
-//     { name: "Blogs", path: "/blogs" },
-//   ];
-
-//   // ===== SCROLL DETECTION =====
-//   useEffect(() => {
-//     const handleScroll = () => {
-//       setIsScrolled(window.scrollY > 80);
-//     };
-//     window.addEventListener("scroll", handleScroll);
-//     return () => window.removeEventListener("scroll", handleScroll);
-//   }, []);
-
-//   // ===== TOPBAR + NAVBAR ANIMATION =====
-//   useEffect(() => {
-//     if (!topbarRef.current || !navbarRef.current) return;
-
-//     const topbarHeight = topbarRef.current.offsetHeight;
-
-//     if (isScrolled) {
-//       gsap.to(topbarRef.current, {
-//         y: "-100%",
-//         duration: 0.3,
-//         ease: "power2.out",
-//       });
-
-//       gsap.to(navbarRef.current, {
-//         y: `-${topbarHeight}px`,
-//         boxShadow: "0 10px 25px rgba(0,0,0,0.08)",
-//         duration: 0.3,
-//         ease: "power2.out",
-//       });
-//     } else {
-//       gsap.to(topbarRef.current, {
-//         y: "0%",
-//         duration: 0.3,
-//       });
-
-//       gsap.to(navbarRef.current, {
-//         y: "0px",
-//         boxShadow: "none",
-//         duration: 0.3,
-//       });
-//     }
-//   }, [isScrolled]);
-
-//   // ===== MOBILE MENU =====
-//   useEffect(() => {
-//     if (!menuRef.current) return;
-
-//     if (isMenuOpen) {
-//       gsap.to(menuRef.current, {
-//         x: "0%",
-//         duration: 0.5,
-//         ease: "power3.out",
-//       });
-//     } else {
-//       gsap.to(menuRef.current, {
-//         x: "100%",
-//         duration: 0.4,
-//         ease: "power3.inOut",
-//       });
-//     }
-//   }, [isMenuOpen]);
-
-//   return (
-//     <header className="fixed top-0 left-0 w-full z-50">
-//       {/* ===== TOP BAR ===== */}
-//       <div
-//         ref={topbarRef}
-//         className="hidden lg:block bg-secondary text-white text-sm py-3"
-//       >
-//         <div className="custom-container mx-auto flex justify-between items-center px-4">
-//           <div className="flex items-center gap-6">
-//             <span>📍 Printers Building, Motijheel, Dhaka</span>
-
-//             <span className="flex items-center gap-2">
-//               <FiClock /> Sat - Thu: 10.00am - 7.00pm
-//             </span>
-
-//             <span className="flex items-center gap-2">
-//               <FiPhoneCall /> +880 1313775333
-//             </span>
-
-//             <span className="flex items-center gap-2">
-//               <FiMail /> anondo.ausl@gmail.com
-//             </span>
-//           </div>
-
-//           <div className="flex gap-3">
-//             <FaFacebookF />
-//             <FaLinkedinIn />
-//             <FaInstagram />
-//           </div>
-//         </div>
-//       </div>
-
-//       {/* ===== MAIN NAVBAR ===== */}
-//       <div
-//         ref={navbarRef}
-//         className="bg-white transition-all duration-500 py-5"
-//       >
-//         <div className="custom-container mx-auto flex items-center justify-between px-4">
-//           {/* LOGO */}
-//           <Link href="/" className="flex items-center gap-3">
-//             <Image
-//               src="/anondo-universal-services-logo.jpg"
-//               alt="Logo"
-//               width={50}
-//               height={50}
-//             />
-//             <div>
-//               <h1 className="text-xl font-bold text-primary">Anondo</h1>
-//               <p className="text-xs text-gray-600 tracking-widest">
-//                 Universal Services
-//               </p>
-//             </div>
-//           </Link>
-
-//           {/* DESKTOP MENU */}
-//           <ul className="hidden lg:flex gap-8 font-medium">
-//             {menuItems.map((item, i) => (
-//               <li key={i} className="relative group">
-//                 <Link
-//                   href={item.path}
-//                   className="font-semibold hover:text-primary transition"
-//                 >
-//                   {item.name}
-//                 </Link>
-//                 <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-primary transition-all duration-300 group-hover:w-full"></span>
-//               </li>
-//             ))}
-//           </ul>
-
-//           {/* RIGHT */}
-//           <div className="flex items-center gap-4">
-//             <Link href="/contact" className="hidden lg:block">
-//               <button className="bg-primary text-white px-6 py-2 rounded-md font-semibold hover:bg-secondary transition">
-//                 Contact Us
-//               </button>
-//             </Link>
-
-//             <button
-//               className="lg:hidden text-3xl text-primary"
-//               onClick={() => setIsMenuOpen(!isMenuOpen)}
-//             >
-//               {isMenuOpen ? <HiOutlineX /> : <HiOutlineMenu />}
-//             </button>
-//           </div>
-//         </div>
-//       </div>
-
-//       {/* ===== MOBILE MENU ===== */}
-//       <div
-//         ref={menuRef}
-//         className="fixed top-0 right-0 w-full h-full bg-white z-40 flex flex-col"
-//         style={{ transform: "translateX(100%)" }}
-//       >
-//         <div className="flex justify-end p-6">
-//           <HiOutlineX
-//             className="text-3xl text-primary cursor-pointer"
-//             onClick={() => setIsMenuOpen(false)}
-//           />
-//         </div>
-
-//         <ul className="flex flex-col px-6 space-y-6 text-lg font-semibold">
-//           {menuItems.map((item, i) => (
-//             <li key={i}>
-//               <Link
-//                 href={item.path}
-//                 onClick={() => setIsMenuOpen(false)}
-//                 className="hover:text-primary"
-//               >
-//                 {item.name}
-//               </Link>
-//             </li>
-//           ))}
-//         </ul>
-
-//         <div className="p-6 mt-6 border-t space-y-4 text-sm">
-//           <div>📍 Printers Building, Motijheel, Dhaka</div>
-
-//           <div className="flex items-center gap-2">
-//             <FiClock /> Sat - Thu: 10.00am - 7.00pm
-//           </div>
-
-//           <div className="flex items-center gap-2">
-//             <FiPhoneCall />
-//             <a href="tel:+8801313775333">+880 1313775333</a>
-//           </div>
-
-//           <div className="flex items-center gap-2">
-//             <FiMail />
-//             <a href="mailto:anondo.ausl@gmail.com">
-//               anondo.ausl@gmail.com
-//             </a>
-//           </div>
-//         </div>
-
-//         <div className="p-6">
-//           <Link href="/contact" onClick={() => setIsMenuOpen(false)}>
-//             <button className="w-full bg-primary text-white py-3 rounded-md font-bold">
-//               Contact Us
-//             </button>
-//           </Link>
-//         </div>
-
-//         <div className="px-6 flex gap-3">
-//           <FaFacebookF />
-//           <FaLinkedinIn />
-//           <FaInstagram />
-//         </div>
-
-//         <div className="mt-auto p-6 text-xs text-gray-400">
-//           © {new Date().getFullYear()} Anondo Universal Services
-//         </div>
-//       </div>
-//     </header>
-//   );
-// }

@@ -2,11 +2,9 @@ import AboutUsSection from "@/components/AboutUsSection";
 import HeroSection from "@/components/HeroSection";
 import TeamSection from "@/components/TeamSection";
 import Testimonials from "@/components/Testimonials";
-import WorkProcess from "@/components/WorkProcess";
 import WhyUsSection from "@/components/WhyUsSection";
 import Head from "next/head";
 import FAQ from "@/components/FAQ";
-import Navbar from "@/components/Navbar";
 import VisionMissionGoals from "@/components/VisionMissionGoals";
 import FutureVision from "@/components/FutureVision";
 export default function AboutPage() {
@@ -107,8 +105,7 @@ export default function AboutPage() {
       <AboutUsSection />
       <VisionMissionGoals />
       <FutureVision />
-      {/* <WorkProcess /> */}
-      <TeamSection />
+      {/* <TeamSection /> */}
       <Testimonials />
       <WhyUsSection />
       <FAQ faqData={faqData} />

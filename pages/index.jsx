@@ -3,19 +3,11 @@ import BlogSection from "@/components/BlogSection";
 import ContactSection from "@/components/ContactSection";
 import Gallery from "@/components/Gallery";
 import Testimonials from "@/components/Testimonials";
-import WorkProcess from "@/components/WorkProcess";
 import WhyUsSection from "@/components/WhyUsSection";
 import Head from "next/head";
-import { useEffect, useState } from "react";
-// import Services from "@/components/Services";
 import LandingPage from "@/components/LandingPage";
-import SuitesSection from "@/components/SuitesSection";
-import Navbar from "@/components/Navbar";
-import TeamSection from "@/components/TeamSection";
 import Services from "@/components/Services";
-import AdvantagesSection from "@/components/AdvantagesSection";
 import HelpSection from "@/components/HelpSection";
-import ProductsSection from "@/components/ProductsSection";
 import AdvisorSection from "@/components/AdvisorSection";
 export default function Home() {
   const meta = {
@@ -48,13 +40,11 @@ export default function Home() {
         <meta name="twitter:description" content={meta.description} />
         <meta name="twitter:image" content={meta.image} />
       </Head>
-      <Navbar />
       <LandingPage />
       <Services />
       <HelpSection />
       <WhyUsSection />
       <AdvisorSection />
-      {/* <TeamSection /> */}
       <Gallery />
       <Testimonials />
       <ContactSection />

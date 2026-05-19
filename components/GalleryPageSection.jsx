@@ -10,74 +10,43 @@ import Slideshow from "yet-another-react-lightbox/plugins/slideshow";
 import "yet-another-react-lightbox/styles.css";
 import "yet-another-react-lightbox/plugins/thumbnails.css";
 import "yet-another-react-lightbox/plugins/captions.css";
-import { FiEye } from "react-icons/fi";
+import { FiCalendar, FiEye } from "react-icons/fi";
+
+const getGalleryDate = (index) => {
+  if ([2, 3, 4].includes(index)) return "09 November 2025";
+  if (index === 5) return "20 November 2025";
+  if (index === 6) return "24 November 2025";
+  if ([7, 12, 34, 35, 36].includes(index)) return "02 December 2025";
+  if ([1, 8, 9, 10, 11].includes(index)) return "06 December 2025";
+  if ([25, 27, 28].includes(index)) return "27 November 2025";
+  if (index === 26) return "29 November 2025";
+  return "19 May 2026";
+};
+
+const galleryImages = Array.from({ length: 36 }, (_, index) => {
+  const imageNumber = index + 1;
+
+  return {
+    img: `/gallery/gallery${imageNumber}.jpg`,
+    date: getGalleryDate(imageNumber),
+  };
+});
+
+const socialActivities = Array.from({ length: 4 }, (_, index) => {
+  const imageNumber = index + 1;
+
+  return {
+    img: `/gallery/social/social${imageNumber}.jpg`,
+    date: "19 May 2026",
+  };
+});
 
 export default function GalleryPageSection() {
-  const gallery = [
-    {
-      img: "/gallery/gallery1.jpg",
-      title: "Gallery Image 1",
-      desc: "Description of image 1",
-    },
-    {
-      img: "/gallery/gallery2.jpg",
-      title: "Gallery Image 2",
-      desc: "Description of image 2",
-    },
-    {
-      img: "/gallery/gallery3.jpg",
-      title: "Gallery Image 3",
-      desc: "Description of image 3",
-    },
-    {
-      img: "/gallery/gallery4.jpg",
-      title: "Gallery Image 4",
-      desc: "Description of image 4",
-    },
-    {
-      img: "/gallery/gallery5.jpg",
-      title: "Gallery Image 5",
-      desc: "Description of image 5",
-    },
-    {
-      img: "/gallery/gallery6.jpg",
-      title: "Gallery Image 6",
-      desc: "Description of image 6",
-    },
-    {
-      img: "/gallery/gallery7.jpg",
-      title: "Gallery Image 7",
-      desc: "Description of image 7",
-    },
-    {
-      img: "/gallery/gallery8.jpg",
-      title: "Gallery Image 8",
-      desc: "Description of image 8",
-    },
-    {
-      img: "/gallery/gallery9.jpg",
-      title: "Gallery Image 9",
-      desc: "Description of image 9",
-    },
-    {
-      img: "/gallery/gallery10.jpg",
-      title: "Gallery Image 10",
-      desc: "Description of image 10",
-    },
-    {
-      img: "/gallery/gallery11.jpg",
-      title: "Gallery Image 11",
-      desc: "Description of image 11",
-    },
-    {
-      img: "/gallery/gallery12.jpg",
-      title: "Gallery Image 12",
-      desc: "Description of image 12",
-    },
+  const sections = [
+    { title: "Explore Our Gallery", images: galleryImages },
+    { title: "Social Activities", images: socialActivities },
   ];
-
-  const subtitle = "Our Works";
-  const title = "Explore Our Gallery";
+  const allImages = sections.flatMap((section) => section.images);
 
   const [isOpen, setIsOpen] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -87,36 +56,63 @@ export default function GalleryPageSection() {
     setIsOpen(true);
   };
 
+  let imageOffset = 0;
+
   return (
     <div className="custom-container mx-auto py-16">
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-6">
-        {gallery.map((item, idx) => (
-          <div
-            key={idx}
-            onClick={() => handleOpen(idx)}
-            className="relative overflow-hidden rounded-md group cursor-pointer"
-          >
-            <Image
-              src={item.img}
-              alt={`gallery-${idx}`}
-              width={1200}
-              height={1200}
-              className="w-full h-full object-cover transition-all transform duration-1000 ease-in group-hover:scale-125"
-              onClick={() => handleOpen(idx)}
-            />
+      <div className="space-y-16">
+        {sections.map((section) => {
+          const sectionOffset = imageOffset;
+          imageOffset += section.images.length;
 
-            <div className="absolute inset-0 flex items-end justify-center p-4">
-              <button
-                className="opacity-0 translate-y-6 group-hover:opacity-100 group-hover:translate-y-0
-                transition-all duration-500 ease-out bg-primary text-white px-6 py-4 rounded-md
-                flex items-center gap-2"
-              >
-                <FiEye className="text-lg" />
-                View Image
-              </button>
-            </div>
-          </div>
-        ))}
+          return (
+            <section key={section.title}>
+              <div className="mb-8 text-left">
+                <h2 className="text-3xl font-bold text-secondary">
+                  {section.title}
+                </h2>
+                <span className="mt-3 block h-[3px] w-16 rounded bg-primary" />
+              </div>
+
+              <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                {section.images.map((item, idx) => {
+                  const lightboxIndex = sectionOffset + idx;
+
+                  return (
+                    <div
+                      key={item.img}
+                      onClick={() => handleOpen(lightboxIndex)}
+                      className="group relative aspect-[4/3] cursor-pointer overflow-hidden rounded-md bg-gray-100"
+                    >
+                      <Image
+                        src={item.img}
+                        alt={item.date}
+                        width={1200}
+                        height={900}
+                        className="h-full w-full object-cover transition-all duration-1000 ease-in group-hover:scale-110"
+                      />
+
+                      <div className="absolute left-4 top-4 flex items-center gap-2 rounded bg-black/55 px-3 py-2 text-sm font-semibold text-white backdrop-blur-sm">
+                        <FiCalendar className="text-primary" />
+                        {item.date}
+                      </div>
+
+                      <div className="absolute inset-0 flex items-end justify-center bg-black/0 p-4 transition duration-500 group-hover:bg-black/35">
+                        <button
+                          className="flex translate-y-6 items-center gap-2 rounded-md bg-primary px-6 py-4 text-white opacity-0 transition-all duration-500 ease-out group-hover:translate-y-0 group-hover:opacity-100"
+                          type="button"
+                        >
+                          <FiEye className="text-lg" />
+                          View Image
+                        </button>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            </section>
+          );
+        })}
       </div>
 
       {isOpen && (
@@ -124,10 +120,9 @@ export default function GalleryPageSection() {
           open={isOpen}
           close={() => setIsOpen(false)}
           index={currentIndex}
-          slides={gallery.map((g) => ({
-            src: g.img,
-            title: g.title,
-            description: g.desc,
+          slides={allImages.map((image) => ({
+            src: image.img,
+            title: image.date,
           }))}
           plugins={[Thumbnails, Captions, Zoom, Fullscreen, Slideshow]}
           thumbnails={{ position: "bottom", width: 100, height: 70 }}

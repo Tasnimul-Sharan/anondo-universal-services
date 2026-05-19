@@ -2,8 +2,9 @@
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { FaUserTie, FaHeadset } from "react-icons/fa";
+import Link from "next/link";
 
-export default function AboutSecuritySection() {
+export default function  AboutSecuritySection() {
   const sectionRef = useRef(null);
   const [count, setCount] = useState(0);
   const [startCount, setStartCount] = useState(false);
@@ -14,7 +15,7 @@ export default function AboutSecuritySection() {
       ([entry]) => {
         if (entry.isIntersecting) setStartCount(true);
       },
-      { threshold: 0.3 }
+      { threshold: 0.3 },
     );
 
     if (sectionRef.current) observer.observe(sectionRef.current);
@@ -45,7 +46,7 @@ export default function AboutSecuritySection() {
         {/* Left Image */}
         <div className="relative w-full h-96 lg:h-[32rem] flex-1">
           <Image
-            src="/about.jpg"
+            src="/about1.jpg"
             alt="Professional Security Guard"
             fill
             className="object-cover rounded-md"
@@ -58,7 +59,7 @@ export default function AboutSecuritySection() {
             About Us
           </p>
 
-          <h2 className="md:text-4xl text-2xl font-bold mb-4 leading-tight text-secondary">
+          <h2 className="md:text-4xl text-2xl font-bold mb-4 leading-tight">
             Professional Security <br className="hidden md:inline" /> Services
             You Can Trust
           </h2>
@@ -106,10 +107,11 @@ export default function AboutSecuritySection() {
             </div>
           </div>
 
-          {/* CTA Button */}
-          <button className="bg-primary hover:bg-secondary text-white px-6 py-3 rounded font-semibold transition-all duration-500">
-            Contact Us
-          </button>
+          <Link href="/contact">
+            <button className="bg-primary hover:bg-secondary text-white px-6 py-3 rounded font-semibold transition-all duration-500">
+              Contact Us
+            </button>
+          </Link>
         </div>
       </div>
     </section>

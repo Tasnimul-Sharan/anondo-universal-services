@@ -1,12 +1,8 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import {
-  FaFacebookF,
-  FaTwitter,
-  FaLinkedinIn,
-  FaInstagram,
-} from "react-icons/fa";
+import { FaFacebookF, FaLinkedinIn } from "react-icons/fa";
+import { FiMail, FiMapPin, FiPhoneCall } from "react-icons/fi";
 
 const recentPosts = [
   {
@@ -51,23 +47,6 @@ export default function Footer() {
             vis-a-vis service. Leverage agile frameworks to provide a robust
             synopsis for high-level overviews.
           </p>
-
-          {/* Social Icons */}
-          {/* <div className="flex space-x-4 text-gray-400">
-            <Link href="https://twitter.com" target="_blank">
-              <FaTwitter className="hover:text-white transition" />
-            </Link>
-            <Link href="https://www.facebook.com/AnondoUniversalServices.ltd" target="_blank">
-              <FaFacebookF className="hover:text-white transition" />
-            </Link>
-            <Link href="https://www.linkedin.com/company/anondo-universal-services-ltd/" target="_blank">
-              <FaLinkedinIn className="hover:text-white transition" />
-            </Link>
-            <Link href="https://www.instagram.com/anondo.universal.services/" target="_blank">
-              <FaInstagram className="hover:text-white transition" />
-            </Link>
-          </div> */}
-          {/* Social Icons */}
           <div className="flex space-x-3">
             <Link
               href="https://www.facebook.com/AnondoUniversalServices.ltd"
@@ -172,16 +151,41 @@ export default function Footer() {
             Contact Us
             <span className="block w-10 h-[2px] bg-primary mt-2"></span>
           </h3>
-          <p className="text-sm mb-2">
-            Phone: <span className="text-white">+880 1313775333</span>
-          </p>
-          <p className="text-sm">
-            Email: <span className="text-primary">anondo.ausl@gmail.com</span>
-          </p>
+          <div className="space-y-4 text-sm">
+            <div className="flex items-start gap-3">
+              <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-md bg-primary/20 text-primary">
+                <FiMapPin className="text-lg" />
+              </span>
+              <p className="leading-relaxed text-white">
+                Printers Building, 14th Floor, 5 Rajuk Avenue, Motijheel, 1000
+                Dhaka
+              </p>
+            </div>
+
+            <a
+              href="tel:+8801313775333"
+              className="flex items-center gap-3 transition hover:text-primary"
+            >
+              <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-md bg-primary/20 text-primary">
+                <FiPhoneCall className="text-lg" />
+              </span>
+              <span className="text-white">+880 1313775333</span>
+            </a>
+
+            <a
+              href="mailto:anondo.ausl@gmail.com"
+              className="flex items-center gap-3 transition hover:text-primary"
+            >
+              <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-md bg-primary/20 text-primary">
+                <FiMail className="text-lg" />
+              </span>
+              <span className="text-primary">anondo.ausl@gmail.com</span>
+            </a>
+          </div>
         </div>
       </div>
 
-      <div className="border-t border-gray-400 py-6 text-center md:flex md:items-center md:justify-between max-w-7xl mx-auto px-6 lg:px-12">
+      <div className="border-t border-gray-400 py-6 text-center md:flex md:items-center md:justify-center max-w-7xl mx-auto px-6 lg:px-12">
         <p className="text-sm text-off_white">
           Copyright © {new Date().getFullYear()}{" "}
           <span className="text-primary font-semibold">
@@ -189,14 +193,6 @@ export default function Footer() {
           </span>
           . All rights reserved.
         </p>
-        <div className="flex items-center gap-6 text-sm mt-4 md:mt-0">
-          <Link href="/privacy-policy" className="hover:text-white transition">
-            Privacy Policy
-          </Link>
-          <Link href="/terms" className="hover:text-white transition">
-            Terms & Condition
-          </Link>
-        </div>
       </div>
     </footer>
   );

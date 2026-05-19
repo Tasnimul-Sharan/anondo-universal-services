@@ -32,21 +32,31 @@ export default function ContactSection() {
 
     try {
       const form = new FormData();
-      Object.entries(formData).forEach(([key, value]) =>
-        form.append(key, value)
+
+      form.append("access_key", "f5849607-42ce-47cc-a7c3-64e29f78badd");
+
+      form.append(
+        "subject",
+        "New Contact Message from Anondo Universal Security",
       );
 
-      const res = await fetch("https://formspree.io/f/xpwlnqjv", {
+      // Form fields
+      Object.entries(formData).forEach(([key, value]) => {
+        form.append(key, value);
+      });
+
+      const res = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
-        headers: { Accept: "application/json" },
         body: form,
       });
 
-      if (res.ok) {
+      const data = await res.json();
+
+      if (data.success) {
         setStatus("success");
         setFormData({ name: "", email: "", phone: "", message: "" });
       } else {
-        throw new Error("Submission failed");
+        throw new Error(data.message || "Submission failed");
       }
     } catch (err) {
       setStatus("error");
@@ -59,14 +69,6 @@ export default function ContactSection() {
   return (
     <section className="relative py-20 bg-primary/5">
       <div className="max-w-7xl mx-auto px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch">
-        {/* Left Side */}
-        {/* <motion.div
-          className="flex flex-col justify-between rounded"
-          initial={{ opacity: 0, x: -60 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          viewport={{ once: true }}
-        > */}
         <motion.div
           className="flex flex-col justify-between rounded"
           initial={{ opacity: 0, scale: 0.9, y: 50 }}
@@ -129,11 +131,6 @@ export default function ContactSection() {
           </div>
         </motion.div>
         <motion.div
-          // className="bg-white border rounded-lg px-6 py-8 flex flex-col"
-          // initial={{ opacity: 0, x: 60 }}
-          // whileInView={{ opacity: 1, x: 0 }}
-          // transition={{ duration: 0.8, ease: "easeOut" }}
-          // viewport={{ once: true }}
           className="bg-white border rounded-lg px-6 py-8 flex flex-col"
           initial={{ opacity: 0, scale: 0.9, y: 50 }}
           whileInView={{ opacity: 1, scale: 1, y: 0 }}
@@ -196,25 +193,13 @@ export default function ContactSection() {
               />
             </div>
             <div className="relative">
-              {/* <button
-        ref={buttonRef}
-        type="submit"
-        disabled={loading}
-        className="bg-primary hover:bg-secondary text-white font-semibold rounded-md px-6 py-3 w-full transition-colors transform duration-500 flex items-center justify-center gap-2"
-      >
-        <FaRegPaperPlane className="text-lg" />
-        {loading ? "Sending..." : "Send Message"}
-      </button> */}
               <button
                 ref={buttonRef}
                 type="submit"
                 disabled={loading}
                 className="bg-primary hover:bg-secondary text-white font-semibold rounded-md px-6 py-3 w-full transition-colors duration-500 flex items-center justify-center gap-2 group"
               >
-                {/* Text */}
                 <span>{loading ? "Sending..." : "Send Message"}</span>
-
-                {/* Icon */}
                 <FaRegPaperPlane className="text-lg transform transition-transform duration-500 group-hover:translate-x-2" />
               </button>
 

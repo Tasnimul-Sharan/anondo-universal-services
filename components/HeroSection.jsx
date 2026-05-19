@@ -44,7 +44,7 @@ const HeroSection = ({ hero }) => {
   } = hero;
 
   return (
-    <section className="relative w-full h-[50rem] overflow-hidden flex items-center justify-center">
+    <section className="relative w-full h-[40rem] overflow-hidden flex items-center justify-center">
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat transition duration-1000 ease-out"
         style={{
