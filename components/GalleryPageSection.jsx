@@ -3,42 +3,29 @@ import { useState } from "react";
 import Image from "next/image";
 import Lightbox from "yet-another-react-lightbox";
 import Thumbnails from "yet-another-react-lightbox/plugins/thumbnails";
-import Captions from "yet-another-react-lightbox/plugins/captions";
 import Zoom from "yet-another-react-lightbox/plugins/zoom";
 import Fullscreen from "yet-another-react-lightbox/plugins/fullscreen";
 import Slideshow from "yet-another-react-lightbox/plugins/slideshow";
 import "yet-another-react-lightbox/styles.css";
 import "yet-another-react-lightbox/plugins/thumbnails.css";
-import "yet-another-react-lightbox/plugins/captions.css";
-import { FiCalendar, FiEye } from "react-icons/fi";
+import { FiEye } from "react-icons/fi";
 
-const getGalleryDate = (index) => {
-  if ([2, 3, 4].includes(index)) return "09 November 2025";
-  if (index === 5) return "20 November 2025";
-  if (index === 6) return "24 November 2025";
-  if ([7, 12, 34, 35, 36].includes(index)) return "02 December 2025";
-  if ([37, 38, 39].includes(index)) return "02 April 2026";
-  if ([1, 8, 9, 10, 11].includes(index)) return "06 December 2025";
-  if ([25, 27, 28].includes(index)) return "27 November 2025";
-  if (index === 26) return "29 November 2025";
-  return "19 May 2026";
-};
+const galleryImageNumbers = [
+  2, 3, 4, 5, 7, 8, 10, 11, 12, 13, 15, 16, 17, 19, 21, 22, 25, 26, 31, 32,
+  33, 34, 36,
+];
 
-const galleryImages = Array.from({ length: 39 }, (_, index) => {
-  const imageNumber = index + 1;
-
-  return {
-    img: `/gallery/gallery${imageNumber}.jpg`,
-    date: getGalleryDate(imageNumber),
-  };
-});
+const galleryImages = galleryImageNumbers.map((imageNumber) => ({
+  img: `/gallery/gallery${imageNumber}.jpg`,
+  alt: `Gallery image ${imageNumber}`,
+}));
 
 const socialActivities = Array.from({ length: 6 }, (_, index) => {
   const imageNumber = index + 1;
 
   return {
     img: `/gallery/social/social${imageNumber}.jpg`,
-    date: "19 May 2026",
+    alt: `Social activity ${imageNumber}`,
   };
 });
 
@@ -87,16 +74,11 @@ export default function GalleryPageSection() {
                     >
                       <Image
                         src={item.img}
-                        alt={item.date}
+                        alt={item.alt}
                         width={1200}
                         height={900}
                         className="h-full w-full object-cover transition-all duration-1000 ease-in group-hover:scale-110"
                       />
-
-                      <div className="absolute left-4 top-4 flex items-center gap-2 rounded bg-black/55 px-3 py-2 text-sm font-semibold text-white backdrop-blur-sm">
-                        <FiCalendar className="text-primary" />
-                        {item.date}
-                      </div>
 
                       <div className="absolute inset-0 flex items-end justify-center bg-black/0 p-4 transition duration-500 group-hover:bg-black/35">
                         <button
@@ -123,11 +105,10 @@ export default function GalleryPageSection() {
           index={currentIndex}
           slides={allImages.map((image) => ({
             src: image.img,
-            title: image.date,
+            alt: image.alt,
           }))}
-          plugins={[Thumbnails, Captions, Zoom, Fullscreen, Slideshow]}
+          plugins={[Thumbnails, Zoom, Fullscreen, Slideshow]}
           thumbnails={{ position: "bottom", width: 100, height: 70 }}
-          captions={{ descriptionTextAlign: "center" }}
           zoom={{ maxZoomPixelRatio: 3, scrollToZoom: true }}
           slideshow={{ autoplay: false, delay: 4000 }}
         />
