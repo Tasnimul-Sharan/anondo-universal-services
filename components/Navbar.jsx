@@ -132,7 +132,10 @@ export default function Navbar() {
                   {content}
                 </a>
               ) : (
-                <div key={text} className="flex min-w-0 items-center gap-2 text-sm">
+                <div
+                  key={text}
+                  className="flex min-w-0 items-center gap-2 text-sm"
+                >
                   {content}
                 </div>
               );
@@ -271,7 +274,7 @@ export default function Navbar() {
                     href="tel:+8801313775333"
                     className="mt-0.5 block text-sm text-gray-600"
                   >
-                    +880 1313775333
+                    +880 1331-115500
                   </a>
                 </div>
               </div>

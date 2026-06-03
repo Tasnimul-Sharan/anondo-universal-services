@@ -169,7 +169,7 @@ export default function Footer() {
               <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-md bg-primary/20 text-primary">
                 <FiPhoneCall className="text-lg" />
               </span>
-              <span className="text-white">+880 1313775333</span>
+              <span className="text-white">+880 1331-115500</span>
             </a>
 
             <a

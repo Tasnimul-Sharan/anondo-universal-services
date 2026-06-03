@@ -113,7 +113,7 @@ export default function ContactSection() {
               <div>
                 <h4 className="font-semibold">Our Phone</h4>
                 <p className="text-sm opacity-90">
-                  +880 1313775333, 880 1313775334
+                  +880 1331-115500, +880 1331-115511, +880 1324-711849
                 </p>
               </div>
             </div>
