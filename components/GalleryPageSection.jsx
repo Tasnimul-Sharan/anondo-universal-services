@@ -17,13 +17,14 @@ const getGalleryDate = (index) => {
   if (index === 5) return "20 November 2025";
   if (index === 6) return "24 November 2025";
   if ([7, 12, 34, 35, 36].includes(index)) return "02 December 2025";
+  if ([37, 38, 39].includes(index)) return "02 April 2026";
   if ([1, 8, 9, 10, 11].includes(index)) return "06 December 2025";
   if ([25, 27, 28].includes(index)) return "27 November 2025";
   if (index === 26) return "29 November 2025";
   return "19 May 2026";
 };
 
-const galleryImages = Array.from({ length: 36 }, (_, index) => {
+const galleryImages = Array.from({ length: 39 }, (_, index) => {
   const imageNumber = index + 1;
 
   return {
@@ -32,7 +33,7 @@ const galleryImages = Array.from({ length: 36 }, (_, index) => {
   };
 });
 
-const socialActivities = Array.from({ length: 4 }, (_, index) => {
+const socialActivities = Array.from({ length: 6 }, (_, index) => {
   const imageNumber = index + 1;
 
   return {
