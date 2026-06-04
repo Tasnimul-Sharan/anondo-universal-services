@@ -1,33 +1,3 @@
-// import Image from "next/image";
-// import React from "react";
-
-// const TrainingOutcome = () => {
-//   return (
-//     <div>
-//       <div className="mt-6 p-4 bg-slate-50 rounded-lg">
-//         <h5 className="font-semibold">Training Outcome</h5>
-//         <p className="text-gray-700 mt-2">
-//           Graduates emerge as physically fit, legally aware, professionally
-//           skilled, and ethically grounded guards — ready to inspire trust and
-//           confidence.
-//         </p>
-//         {/* Outcome Image */}
-//       </div>
-//       <div className="mt-4">
-//         <Image
-//           src="/images/training-outcome.jpg"
-//           width={1200}
-//           height={600}
-//           alt="Training Outcome Image"
-//           className="rounded-xl w-full h-auto object-cover shadow-lg"
-//         />
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default TrainingOutcome;
-
 "use client";
 import Image from "next/image";
 import { motion } from "framer-motion";
@@ -45,7 +15,7 @@ const TrainingOutcome = () => {
         </p>
       </div>
 
-      <motion.div
+      {/* <motion.div
         className="mt-4 relative rounded-xl overflow-hidden shadow-lg group"
         initial={{ opacity: 0, scale: 0.97 }}
         whileInView={{ opacity: 1, scale: 1 }}
@@ -62,7 +32,7 @@ const TrainingOutcome = () => {
         />
 
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/25 to-transparent pointer-events-none"></div>
-      </motion.div>
+      </motion.div> */}
     </div>
   );
 };

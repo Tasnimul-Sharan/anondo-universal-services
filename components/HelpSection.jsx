@@ -93,9 +93,9 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function HelpSection() {
   const stats = [
-    { number: 325, label: "PEOPLE PROTECTED", icon: <FaUsers size={24} /> },
-    { number: 500, label: "SECURITY SYSTEMS INSTALLED", icon: <FaLock size={24} /> },
-    { number: 255, label: "HAPPY CLIENTS", icon: <FaHandshake size={24} /> },
+    { number: 160000, label: "PEOPLE PROTECTED", icon: <FaUsers size={24} /> },
+    { number: 200, label: "TOTAL SECURITY MEMBERS", icon: <FaLock size={24} /> },
+    { number: 127, label: "HAPPY CLIENTS", icon: <FaHandshake size={24} /> },
     { number: 150, label: "SUCCESSFUL PROJECTS", icon: <FaChartLine size={24} /> },
   ];
 
