@@ -16,12 +16,15 @@ import Link from "next/link";
 
 export default function Gallery() {
   const gallery = [
-    { img: "/gallery/gallery1.jpg", title: "Gallery Image 1" },
     { img: "/gallery/gallery2.jpg", title: "Gallery Image 2" },
     { img: "/gallery/gallery3.jpg", title: "Gallery Image 3" },
     { img: "/gallery/gallery4.jpg", title: "Gallery Image 4" },
     { img: "/gallery/gallery5.jpg", title: "Gallery Image 5" },
-    { img: "/gallery/gallery6.jpg", title: "Gallery Image 6" },
+    { img: "/gallery/gallery7.jpg", title: "Gallery Image 7" },
+    { img: "/gallery/gallery8.jpg", title: "Gallery Image 8" },
+    { img: "/gallery/gallery10.jpg", title: "Gallery Image 10" },
+    { img: "/gallery/gallery11.jpg", title: "Gallery Image 11" },
+    { img: "/gallery/gallery12.jpg", title: "Gallery Image 12" },
   ];
 
   const subtitle = "Our Works";

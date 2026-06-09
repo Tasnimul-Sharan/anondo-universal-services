@@ -9,6 +9,7 @@ import LandingPage from "@/components/LandingPage";
 import Services from "@/components/Services";
 import HelpSection from "@/components/HelpSection";
 import AdvisorSection from "@/components/AdvisorSection";
+import VideoSection from "@/components/VideoSection";
 export default function Home() {
   const meta = {
     title:
@@ -41,6 +42,7 @@ export default function Home() {
         <meta name="twitter:image" content={meta.image} />
       </Head>
       <LandingPage />
+      <VideoSection />
       <Services />
       <HelpSection />
       <WhyUsSection />
