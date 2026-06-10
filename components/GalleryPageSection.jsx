@@ -12,7 +12,7 @@ import { FiEye } from "react-icons/fi";
 
 const galleryImageNumbers = [
  2, 3, 4, 5, 7, 8, 10, 11, 12, 13, 15, 16, 17, 19, 21, 25, 26, 31, 32, 33, 34,
-  36,
+  36, 37, 38,
 ];
 
 const galleryImages = galleryImageNumbers.map((imageNumber) => ({

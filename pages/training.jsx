@@ -48,7 +48,6 @@ export default function TrainingPage() {
       />
       <TrainingOverview />
       <ProductsSection />
-      {/* <TrainingKeyFeatures /> */}
       <TrainingCurriculum />
       <TrainingVideo />
       <TrainingVisuals />

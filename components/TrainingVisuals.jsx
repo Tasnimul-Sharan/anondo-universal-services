@@ -47,14 +47,26 @@ export default function TrainingVisuals() {
     {
       title: "Fire Extinguisher Training",
       caption:
-      "Hands-on training on using different types of fire extinguishers",
+        "Hands-on training on using different types of fire extinguishers",
       img: "/training/fire-extinguisher.jpg",
     },
     {
       title: "Personal Development",
       caption:
-      "Sessions focused on communication, discipline, and confidence building",
+        "Sessions focused on communication, discipline, and confidence building",
       img: "/training/personal-development.jpg",
+    },
+    {
+      title: "Classroom Training",
+      caption:
+        "Security personnel attending an interactive classroom session focused on discipline, operational procedures, and professional development",
+      img: "/training/classroom-training.jpg",
+    },
+    {
+      title: "Security Training Session",
+      caption:
+        "Professional instructors conducting theoretical and practical security training to prepare recruits for real-world responsibilities",
+      img: "/training/security-training-session.jpg",
     },
     {
       title: "Health Exercise",

@@ -52,6 +52,7 @@ const clientLogos = [
   "/logo/logo-5.png",
   "/logo/logo-6.jpg",
   // "/logo/logo-7.png",
+  "/logo/logo-8.png",
 ];
 
 export default function TestimonialsAndClients() {
@@ -99,46 +100,6 @@ export default function TestimonialsAndClients() {
         details="Hear what our clients say about us and see the leading brands who trust Anondo Universal Services for their safety and security."
       />
 
-      {/* <div className="max-w-7xl mx-auto overflow-hidden mb-12">
-        <Slider {...logoSettings}>
-          {clientLogos.map((logo, idx) => (
-            <div key={idx} className="flex justify-center px-2 sm:px-4">
-              <div className="bg-white p-4 sm:p-6 rounded-lg flex items-center justify-center w-full">
-                <Image
-                  src={logo}
-                  alt={`Client Logo ${idx + 1}`}
-                  width={160}
-                  height={96}
-                  priority
-                  className="object-cover"
-                />
-              </div>
-            </div>
-          ))}
-        </Slider>
-      </div> */}
-      {/* <div className="max-w-7xl mx-auto mb-16 px-4">
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
-          {clientLogos.map((logo, idx) => (
-            <div
-              key={idx}
-              className="bg-white p-6 rounded-xl flex items-center justify-center
-                   transition-all duration-300
-                   hover:-translate-y-2 hover:shadow-xl"
-            >
-              <Image
-                src={logo}
-                alt={`Client Logo ${idx + 1}`}
-                width={160}
-                height={96}
-                className="object-contain grayscale hover:grayscale-0 transition duration-300"
-              />
-            </div>
-          ))}
-        </div>
-      </div> */}
-
-      {/* ===== Client Logos Grid ===== */}
       <div className="max-w-7xl mx-auto mb-16 px-4">
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
           {clientLogos.map((logo, idx) => (

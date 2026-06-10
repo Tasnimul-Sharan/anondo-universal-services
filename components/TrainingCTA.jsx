@@ -1,3 +1,5 @@
+"use client";
+
 import {
   FiArrowRight,
   FiDownload,
@@ -11,22 +13,23 @@ export default function TrainingCTA() {
     "https://drive.google.com/file/d/18Ax7JZ1eqLYylk7pEksDiCT-on_XqUXS/view?usp=sharing";
 
   return (
-    <section className="relative overflow-hidden bg-soft_black py-16 text-white">
+    <section className="relative overflow-hidden bg-off_white py-16">
       <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-primary to-transparent" />
 
       <div className="custom-container mx-auto">
         <div className="grid items-center gap-10 lg:grid-cols-[1.1fr_0.9fr]">
+          {/* Left Content */}
           <div>
-            <span className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/15 px-4 py-2 text-xs font-semibold uppercase tracking-wide text-primary">
+            <span className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/10 px-4 py-2 text-xs font-semibold uppercase tracking-wide text-primary">
               <FiShield className="h-4 w-4" />
               Professional Security Training
             </span>
 
-            <h2 className="mt-5 max-w-3xl text-3xl font-bold leading-tight md:text-5xl">
+            <h2 className="mt-5 max-w-3xl text-3xl font-bold leading-tight text-soft_black md:text-5xl">
               Ready to Visit Our Training Academy?
             </h2>
 
-            <p className="mt-4 max-w-2xl text-base leading-7 text-white/75">
+            <p className="mt-4 max-w-2xl text-base leading-7 text-gray-600">
               Request the brochure, review the full training structure, or
               schedule a visit to see how Anondo Universal prepares disciplined,
               duty-ready security professionals.
@@ -40,7 +43,7 @@ export default function TrainingCTA() {
               ].map(({ label, icon: Icon }) => (
                 <div
                   key={label}
-                  className="flex items-center gap-3 rounded-md border border-white/10 bg-white/5 px-4 py-3 text-sm font-semibold text-white/90"
+                  className="flex items-center gap-3 rounded-md border border-gray-200 bg-white px-4 py-3 text-sm font-semibold text-soft_black shadow-sm"
                 >
                   <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-md bg-primary text-white">
                     <Icon className="h-4 w-4" />
@@ -51,14 +54,17 @@ export default function TrainingCTA() {
             </div>
           </div>
 
-          <div className="rounded-md border border-white/10 bg-white/[0.06] p-6 shadow-2xl shadow-black/20 backdrop-blur-sm">
+          {/* Right CTA Card */}
+          <div className="rounded-md border border-primary/15 bg-white p-6 shadow-xl">
             <p className="text-sm font-semibold uppercase tracking-wide text-primary">
               Next Step
             </p>
-            <h3 className="mt-3 text-2xl font-bold">
+
+            <h3 className="mt-3 text-2xl font-bold text-soft_black">
               Get the academy details today.
             </h3>
-            <p className="mt-3 text-sm leading-6 text-white/70">
+
+            <p className="mt-3 text-sm leading-6 text-gray-600">
               Download the brochure instantly or contact our team for academy
               visit scheduling and admission guidance.
             </p>
@@ -73,9 +79,10 @@ export default function TrainingCTA() {
                 <FiDownload className="h-4 w-4" />
                 Download Brochure
               </a>
+
               <a
                 href="/contact"
-                className="inline-flex items-center justify-center gap-2 rounded-md border border-white/15 bg-white px-5 py-3 text-sm font-semibold text-gray-900 transition duration-300 hover:border-primary hover:text-primary"
+                className="inline-flex items-center justify-center gap-2 rounded-md border border-gray-200 bg-white px-5 py-3 text-sm font-semibold text-soft_black transition duration-300 hover:border-primary hover:text-primary"
               >
                 Contact Us
                 <FiArrowRight className="h-4 w-4" />

@@ -135,15 +135,17 @@ export default function TrainingOverview() {
               ))}
             </div>
 
-            <div className="mt-6 rounded-md bg-soft_black p-6 text-white shadow-xl shadow-gray-900/15">
+            <div className="mt-6 rounded-md bg-off_white p-6 shadow-xl shadow-gray-200">
               <p className="text-sm font-semibold uppercase tracking-wide text-primary">
                 Academy Philosophy
               </p>
-              <blockquote className="mt-3 text-xl font-semibold leading-8 md:text-2xl">
+
+              <blockquote className="mt-3 text-xl font-semibold leading-8 text-soft_black md:text-2xl">
                 "Discipline and preparation today ensure security and trust
                 tomorrow."
               </blockquote>
-              <p className="mt-4 text-sm leading-6 text-white/70">
+
+              <p className="mt-4 text-sm leading-6 text-gray-600">
                 With a training capacity of over 300 trainees at a time, the
                 academy functions as a self-contained environment where every
                 aspect of a guard's physical, professional, and personal

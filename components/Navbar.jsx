@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import gsap from "gsap";
-import { FaFacebookF, FaLinkedinIn } from "react-icons/fa";
+import { FaFacebookF, FaLinkedinIn, FaYoutube } from "react-icons/fa";
 import { FiClock, FiMail, FiMapPin, FiPhoneCall } from "react-icons/fi";
 import { HiOutlineMenu, HiOutlineX } from "react-icons/hi";
 
@@ -33,6 +33,11 @@ export default function Navbar() {
       label: "LinkedIn",
       href: "https://www.linkedin.com/company/anondo-universal-services-ltd/",
       icon: FaLinkedinIn,
+    },
+    {
+      label: "YouTube",
+      href: "https://www.youtube.com/@AnondoUniversalServicesLimited",
+      icon: FaYoutube,
     },
   ];
 
