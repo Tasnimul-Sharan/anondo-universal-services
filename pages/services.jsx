@@ -14,7 +14,7 @@ export default function ServicesPage() {
     description:
       "Explore Anondo Universal Services Limited’s professional security services in Bangladesh. From manned guarding, corporate event protection, residential and industrial security to CCTV surveillance, risk management, and our state-of-the-art training academy — we ensure safety with discipline and trust.",
     keywords:
-      "Anondo Universal Services, security services Bangladesh, manned guarding, corporate event protection, residential security, industrial site safety, CCTV surveillance, risk management, security training academy",
+      "Anondo Universal Services Limited, security services Bangladesh, manned guarding, corporate event protection, residential security, industrial site safety, CCTV surveillance, risk management, security training academy",
     author: "Anondo Universal Services Limited",
     url: "https://www.anondouniversalserviceslimited.com/services",
     image:

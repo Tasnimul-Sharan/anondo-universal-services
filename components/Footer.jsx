@@ -3,23 +3,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { FaFacebookF, FaLinkedinIn } from "react-icons/fa";
 import { FiMail, FiMapPin, FiPhoneCall } from "react-icons/fi";
-
-const recentPosts = [
-  {
-    id: 1,
-    title: "Inside Our State of the Art Training Academy",
-    date: "06 June 2018",
-    img: "/blogs/blog-1.jpg",
-    slug: "training-academy-overview",
-  },
-  {
-    id: 2,
-    title: "Why Training Defines Reliable Security",
-    date: "06 June 2018",
-    img: "/blogs/blog-2.jpg",
-    slug: "importance-of-security-training",
-  },
-];
+import { recentBlogPosts } from "@/data/blogPostsData";
+import { corporateDescription, siteConfig } from "@/data/siteConfig";
 
 export default function Footer() {
   return (
@@ -35,17 +20,12 @@ export default function Footer() {
               height={100}
               className="object-cover rounded-full"
             />
-            <span className="text-sm text-white inline-block">
-              <span className="text-primary text-xl font-bold block">
-                Anondo
-              </span>
-              Universal Services
+            <span className="max-w-40 text-sm font-semibold text-white">
+              {siteConfig.companyName}
             </span>
           </div>
           <p className="text-sm leading-relaxed mb-6 text-off_white">
-            Enthusiastically mesh long-term high-impact infrastructures
-            vis-a-vis service. Leverage agile frameworks to provide a robust
-            synopsis for high-level overviews.
+            {corporateDescription}
           </p>
           <div className="flex space-x-3">
             <Link
@@ -98,7 +78,7 @@ export default function Footer() {
               </Link>
             </li>
             <li>
-              <Link href="/portfolio" className="hover:text-white transition">
+              <Link href="/gallery" className="hover:text-white transition">
                 Gallery
               </Link>
             </li>
@@ -121,7 +101,7 @@ export default function Footer() {
             <span className="block w-10 h-[2px] bg-primary mt-2"></span>
           </h3>
           <div className="space-y-6">
-            {recentPosts.map((post) => (
+            {recentBlogPosts.map((post) => (
               <Link
                 href={`/blogs/${post.slug}`}
                 key={post.id}
@@ -157,29 +137,28 @@ export default function Footer() {
                 <FiMapPin className="text-lg" />
               </span>
               <p className="leading-relaxed text-white">
-                Printers Building, 14th Floor, 5 Rajuk Avenue, Motijheel, 1000
-                Dhaka
+                {siteConfig.contact.address}
               </p>
             </div>
 
             <a
-              href="tel:+8801313775333"
+              href={siteConfig.contact.phoneHref}
               className="flex items-center gap-3 transition hover:text-primary"
             >
               <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-md bg-primary/20 text-primary">
                 <FiPhoneCall className="text-lg" />
               </span>
-              <span className="text-white">+880 1331-115500</span>
+              <span className="text-white">{siteConfig.contact.phone}</span>
             </a>
 
             <a
-              href="mailto:anondo.ausl@gmail.com"
+              href={siteConfig.contact.emailHref}
               className="flex items-center gap-3 transition hover:text-primary"
             >
               <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-md bg-primary/20 text-primary">
                 <FiMail className="text-lg" />
               </span>
-              <span className="text-primary">anondo.ausl@gmail.com</span>
+              <span className="text-primary">{siteConfig.contact.email}</span>
             </a>
           </div>
         </div>
@@ -189,7 +168,7 @@ export default function Footer() {
         <p className="text-sm text-off_white">
           Copyright © {new Date().getFullYear()}{" "}
           <span className="text-primary font-semibold">
-            Anondo Universal Services
+            {siteConfig.companyName}
           </span>
           . All rights reserved.
         </p>

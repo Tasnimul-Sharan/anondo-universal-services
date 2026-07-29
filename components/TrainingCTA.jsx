@@ -31,7 +31,7 @@ export default function TrainingCTA() {
 
             <p className="mt-4 max-w-2xl text-base leading-7 text-gray-600">
               Request the brochure, review the full training structure, or
-              schedule a visit to see how Anondo Universal prepares disciplined,
+              schedule a visit to see how Anondo Universal Services Limited prepares disciplined,
               duty-ready security professionals.
             </p>
 

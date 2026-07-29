@@ -5,6 +5,7 @@ import { FiMail, FiMapPin, FiPhoneCall } from "react-icons/fi";
 import { FaRegPaperPlane } from "react-icons/fa";
 import { AiFillCheckCircle } from "react-icons/ai";
 import { FiXCircle } from "react-icons/fi";
+import { siteConfig } from "@/data/siteConfig";
 
 export default function ContactSection() {
   const buttonRef = useRef(null);
@@ -37,7 +38,7 @@ export default function ContactSection() {
 
       form.append(
         "subject",
-        "New Contact Message from Anondo Universal Security",
+        `New Contact Message from ${siteConfig.companyName}`,
       );
 
       // Form fields
@@ -82,7 +83,7 @@ export default function ContactSection() {
             </p>
             <h2 className="md:text-3xl text-3xl font-bold mb-4 leading-snug">
               Connect with{" "}
-              <span className="text-primary"> Anondo Universal Security </span>{" "}
+              <span className="text-primary"> {siteConfig.companyName} </span>{" "}
               <br /> for reliable protection anytime
             </h2>
             <p className="text-gray-500 mb-6 max-w-xl">
@@ -100,8 +101,7 @@ export default function ContactSection() {
               <div>
                 <h4 className="font-semibold">Our Address</h4>
                 <p className="text-sm opacity-90">
-                  Printers Building, 14th Floor, 5 Rajuk Avenue, Motijheel, 1000
-                  Dhaka
+                  {siteConfig.contact.address}
                 </p>
               </div>
             </div>
@@ -112,9 +112,12 @@ export default function ContactSection() {
               </div>
               <div>
                 <h4 className="font-semibold">Our Phone</h4>
-                <p className="text-sm opacity-90">
-                  +880 1331-115500, +880 1331-115511, +880 1324-711849
-                </p>
+                <a
+                  className="text-sm opacity-90 hover:text-primary"
+                  href={siteConfig.contact.phoneHref}
+                >
+                  {siteConfig.contact.phone}
+                </a>
               </div>
             </div>
             <div className="flex items-start gap-4 bg-white rounded-lg p-6 text-gray-700">
@@ -123,9 +126,12 @@ export default function ContactSection() {
               </div>
               <div>
                 <h4 className="font-semibold">Our Email</h4>
-                <p className="text-sm opacity-90">
-                  contact@anondouniversalserviceslimited.com
-                </p>
+                <a
+                  className="text-sm opacity-90 hover:text-primary"
+                  href={siteConfig.contact.emailHref}
+                >
+                  {siteConfig.contact.email}
+                </a>
               </div>
             </div>
           </div>

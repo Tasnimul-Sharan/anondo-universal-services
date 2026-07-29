@@ -88,7 +88,7 @@ export default function ChatBot() {
         >
           <div className="bg-primary text-white px-4 py-4 flex justify-between items-center">
             <span className="font-semibold">
-              Anondo Universal Services ChatBot
+              Anondo Universal Services Limited Chatbot
             </span>
           </div>
           <div

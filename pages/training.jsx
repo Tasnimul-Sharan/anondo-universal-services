@@ -7,15 +7,16 @@ import TrainingCTA from "@/components/TrainingCTA";
 import TrainingVisuals from "@/components/TrainingVisuals";
 import ProductsSection from "@/components/ProductsSection";
 import TrainingVideo from "@/components/TrainingVideo";
+import { siteConfig } from "@/data/siteConfig";
 export default function TrainingPage() {
   const meta = {
     title:
       "Training | Anondo Universal Services Limited - Security Guard Training Academy in Bangladesh",
     description:
-      "Discover Anondo Universal’s state-of-the-art Security Training Academy in Bangladesh. Our 45-day intensive program covers physical drills, legal awareness, professional skills, personal development, and modern surveillance techniques to prepare disciplined and reliable security personnel.",
+      `Discover ${siteConfig.companyName}’s state-of-the-art Security Training Academy in Bangladesh. Our ${siteConfig.trainingDurationDays}-day intensive program covers physical drills, legal awareness, professional skills, personal development, and modern surveillance techniques to prepare disciplined and reliable security personnel.`,
     keywords:
-      "Anondo Universal Services training, security guard training Bangladesh, 45-day security program, security training academy, guard training Dhaka, physical drills, legal awareness, professional security skills, CCTV training, personal development",
-    author: "Anondo Universal Services Limited",
+      `${siteConfig.companyName} training, security guard training Bangladesh, ${siteConfig.trainingDurationDays}-day security program, security training academy, guard training Dhaka, physical drills, legal awareness, professional security skills, CCTV training, personal development`,
+    author: siteConfig.companyName,
     url: "https://www.anondouniversalserviceslimited.com/training",
     image:
       "https://www.anondouniversalserviceslimited.com/training/training-og.jpg",

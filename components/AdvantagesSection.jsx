@@ -206,7 +206,7 @@ export default function AdvantagesSection() {
         <SectionHeader
           subtitle="Dedicated to Excellence in Security"
           title="Our Competitive Advantages"
-          details="Anondo Universal Security Services Ltd stands apart with a unique blend of training, professionalism, and integrity."
+          details="Anondo Universal Services Limited stands apart with a unique blend of training, professionalism, and integrity."
         />
 
         <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-8">

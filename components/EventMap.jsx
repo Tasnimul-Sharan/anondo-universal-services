@@ -3,6 +3,7 @@
 import dynamic from "next/dynamic";
 import "leaflet/dist/leaflet.css";
 import { useEffect, useState } from "react";
+import { siteConfig } from "@/data/siteConfig";
 
 const MapContainer = dynamic(
   () => import("react-leaflet").then((mod) => mod.MapContainer),
@@ -65,8 +66,7 @@ export default function EventMap() {
         {customIcon && (
           <Marker position={position} icon={customIcon}>
             <Popup>
-              📍 Printers Building <br /> 12–13th Floor, 5 Rajuk Avenue,
-              Motijheel, Dhaka
+              📍 {siteConfig.contact.address}
             </Popup>
           </Marker>
         )}

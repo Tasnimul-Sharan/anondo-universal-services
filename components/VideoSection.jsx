@@ -11,7 +11,7 @@ export default function VideoSection() {
           </span>
 
           <h2 className="text-3xl md:text-5xl font-bold text-soft_black mb-4">
-            Experience the Strength of Anondo Universal Services
+            Experience the Strength of Anondo Universal Services Limited
                   </h2>
                   
           <p className="max-w-3xl mx-auto text-gray-600 text-lg leading-relaxed">

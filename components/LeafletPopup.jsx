@@ -53,7 +53,7 @@ export default function LeafletPopup() {
         <div className="flex min-h-14 items-center justify-between gap-3 border-b border-gray-100 bg-white px-3 py-2 sm:px-4 md:px-6">
           <div className="min-w-0">
             <p className="truncate text-[10px] font-semibold uppercase tracking-widest text-primary sm:text-xs">
-              Anondo Universal Services
+              Anondo Universal Services Limited
             </p>
             <h2 className="text-sm font-bold text-secondary sm:text-base md:text-lg">
               Universal Leaflet

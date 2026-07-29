@@ -7,6 +7,7 @@ import gsap from "gsap";
 import { FaFacebookF, FaLinkedinIn, FaYoutube } from "react-icons/fa";
 import { FiClock, FiMail, FiMapPin, FiPhoneCall } from "react-icons/fi";
 import { HiOutlineMenu, HiOutlineX } from "react-icons/hi";
+import { siteConfig } from "@/data/siteConfig";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -43,18 +44,18 @@ export default function Navbar() {
 
   const topbarItems = [
     {
-      text: "Printers Building, 14th Floor, 5 Rajuk Avenue, Motijheel, 1000 Dhaka",
+      text: siteConfig.contact.address,
       icon: FiMapPin,
     },
     {
-      text: "+880 1313775333",
+      text: siteConfig.contact.phone,
       icon: FiPhoneCall,
-      href: "tel:+8801313775333",
+      href: siteConfig.contact.phoneHref,
     },
     {
-      text: "anondo.ausl@gmail.com",
+      text: siteConfig.contact.email,
       icon: FiMail,
-      href: "mailto:anondo.ausl@gmail.com",
+      href: siteConfig.contact.emailHref,
     },
   ];
 
@@ -173,7 +174,7 @@ export default function Navbar() {
             <span className="flex h-16 w-20 items-center justify-center rounded-md bg-white shadow-sm transition duration-500">
               <Image
                 src="/anondo-universal-services-logo.jpg"
-                alt="Anondo Universal Services Logo"
+                alt={`${siteConfig.companyName} logo`}
                 width={1200}
                 height={1200}
                 className="h-20 w-20 object-cover"
@@ -181,11 +182,8 @@ export default function Navbar() {
               />
             </span>
             <div className="leading-tight">
-              <span className="block text-[26px] font-extrabold leading-none text-primary">
-                Anondo
-              </span>
-              <span className="mt-1 block text-sm font-medium leading-none text-gray-600">
-                Universal Services
+              <span className="block max-w-48 text-lg font-extrabold leading-tight text-primary">
+                {siteConfig.companyName}
               </span>
             </div>
           </Link>
@@ -263,8 +261,7 @@ export default function Navbar() {
                 <div>
                   <p className="font-semibold">Our Address</p>
                   <p className="mt-0.5 text-sm text-gray-600">
-                    Printers Building, 14th Floor, 5 Rajuk Avenue, Motijheel,
-                    1000 Dhaka
+                    {siteConfig.contact.address}
                   </p>
                 </div>
               </div>
@@ -276,10 +273,10 @@ export default function Navbar() {
                 <div>
                   <p className="font-semibold">Call Us</p>
                   <a
-                    href="tel:+8801313775333"
+                    href={siteConfig.contact.phoneHref}
                     className="mt-0.5 block text-sm text-gray-600"
                   >
-                    +880 1331-115500
+                    {siteConfig.contact.phone}
                   </a>
                 </div>
               </div>
@@ -291,10 +288,10 @@ export default function Navbar() {
                 <div>
                   <p className="font-semibold">Mail Us</p>
                   <a
-                    href="mailto:anondo.ausl@gmail.com"
+                    href={siteConfig.contact.emailHref}
                     className="mt-0.5 block text-sm text-gray-600"
                   >
-                    anondo.ausl@gmail.com
+                    {siteConfig.contact.email}
                   </a>
                 </div>
               </div>
@@ -324,7 +321,7 @@ export default function Navbar() {
           </div>
 
           <div className="mt-auto pt-6 text-xs text-gray-400">
-            Copyright {new Date().getFullYear()} Anondo Universal Services
+            Copyright {new Date().getFullYear()} {siteConfig.companyName}
           </div>
         </div>
       </div>

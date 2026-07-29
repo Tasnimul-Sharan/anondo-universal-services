@@ -26,7 +26,7 @@ export default function AdvisorSection() {
 
             <p className="text-lg text-gray-700 leading-relaxed italic mb-6">
               “Security is not merely about protection—it is about trust,
-              responsibility, and commitment. At Anondo Universal Services
+              responsibility, and commitment. At Anondo Universal Services Limited
               Limited, we dedicate ourselves to creating a safe and confident
               environment through professionalism, discipline, and integrity.”
             </p>

@@ -6,33 +6,17 @@ import Thumbnails from "yet-another-react-lightbox/plugins/thumbnails";
 import Zoom from "yet-another-react-lightbox/plugins/zoom";
 import Fullscreen from "yet-another-react-lightbox/plugins/fullscreen";
 import Slideshow from "yet-another-react-lightbox/plugins/slideshow";
+import Captions from "yet-another-react-lightbox/plugins/captions";
 import "yet-another-react-lightbox/styles.css";
 import "yet-another-react-lightbox/plugins/thumbnails.css";
+import "yet-another-react-lightbox/plugins/captions.css";
 import { FiEye } from "react-icons/fi";
-
-const galleryImageNumbers = [
- 2, 3, 4, 5, 7, 8, 10, 11, 12, 13, 15, 16, 17, 19, 21, 25, 26, 31, 32, 33, 34,
-  36, 37, 38,
-];
-
-const galleryImages = galleryImageNumbers.map((imageNumber) => ({
-  img: `/gallery/gallery${imageNumber}.jpg`,
-  alt: `Gallery image ${imageNumber}`,
-}));
-
-const socialActivities = Array.from({ length: 6 }, (_, index) => {
-  const imageNumber = index + 1;
-
-  return {
-    img: `/gallery/social/social${imageNumber}.jpg`,
-    alt: `Social activity ${imageNumber}`,
-  };
-});
+import { galleryImages, socialActivityImages } from "@/data/galleryData";
 
 export default function GalleryPageSection() {
   const sections = [
     { title: "Explore Our Gallery", images: galleryImages },
-    { title: "Social Activities", images: socialActivities },
+    { title: "Social Activities", images: socialActivityImages },
   ];
   const allImages = sections.flatMap((section) => section.images);
 
@@ -74,19 +58,25 @@ export default function GalleryPageSection() {
                     >
                       <Image
                         src={item.img}
-                        alt={item.alt}
+                        alt={`${item.title} — ${item.category}`}
                         width={1200}
                         height={900}
                         className="h-full w-full object-cover transition-all duration-1000 ease-in group-hover:scale-110"
                       />
 
-                      <div className="absolute inset-0 flex items-end justify-center bg-black/0 p-4 transition duration-500 group-hover:bg-black/35">
+                      <div className="absolute inset-0 flex items-end justify-between gap-4 bg-gradient-to-t from-black/85 via-black/10 to-transparent p-4">
+                        <div className="text-left text-white">
+                          <p className="text-xs font-semibold uppercase tracking-wider text-primary">
+                            {item.category}
+                          </p>
+                          <h3 className="mt-1 font-semibold">{item.title}</h3>
+                        </div>
                         <button
-                          className="flex translate-y-6 items-center gap-2 rounded-md bg-primary px-6 py-4 text-white opacity-0 transition-all duration-500 ease-out group-hover:translate-y-0 group-hover:opacity-100"
+                          aria-label={`View ${item.title}`}
+                          className="flex shrink-0 translate-y-6 items-center gap-2 rounded-md bg-primary p-3 text-white opacity-0 transition-all duration-500 ease-out group-hover:translate-y-0 group-hover:opacity-100"
                           type="button"
                         >
                           <FiEye className="text-lg" />
-                          View Image
                         </button>
                       </div>
                     </div>
@@ -105,10 +95,12 @@ export default function GalleryPageSection() {
           index={currentIndex}
           slides={allImages.map((image) => ({
             src: image.img,
-            alt: image.alt,
+            title: image.title,
+            description: `${image.category} — ${image.description}`,
           }))}
-          plugins={[Thumbnails, Zoom, Fullscreen, Slideshow]}
+          plugins={[Thumbnails, Captions, Zoom, Fullscreen, Slideshow]}
           thumbnails={{ position: "bottom", width: 100, height: 70 }}
+          captions={{ descriptionTextAlign: "center" }}
           zoom={{ maxZoomPixelRatio: 3, scrollToZoom: true }}
           slideshow={{ autoplay: false, delay: 4000 }}
         />

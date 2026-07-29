@@ -35,12 +35,12 @@ export default function ServicesDetailsPage() {
   }
 
   const meta = {
-    title: `${service.services.title} | Anondo Universal Security Services – Professional Security Services in Bangladesh`,
+    title: `${service.services.title} | Anondo Universal Services Limited – Professional Security Services in Bangladesh`,
     description:
       service.services.description ||
-      `Learn more about our ${service.services.title} services by Anondo Universal Security Services. We provide disciplined, trained, and reliable security solutions including household, office, factory, event, money transfer, CCTV surveillance, crowd control, and VIP protection across Bangladesh.`,
-    keywords: `${service.services.title}, Anondo Universal Security Services, private security company Bangladesh, household security, office security, factory security, event security, money transfer security, CCTV surveillance, crowd control, bodyguard services`,
-    author: "Anondo Universal Security Services",
+      `Learn more about our ${service.services.title} services by Anondo Universal Services Limited. We provide disciplined, trained, and reliable security solutions including household, office, factory, event, money transfer, CCTV surveillance, crowd control, and VIP protection across Bangladesh.`,
+    keywords: `${service.services.title}, Anondo Universal Services Limited, private security company Bangladesh, household security, office security, factory security, event security, money transfer security, CCTV surveillance, crowd control, bodyguard services`,
+    author: "Anondo Universal Services Limited",
     url: `https://www.anondouniversalserviceslimited.com/services/${service.slug}`,
     image:
       service.services.image ||

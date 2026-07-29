@@ -3,39 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { FaArrowRight, FaRegCalendarAlt, FaRegUser } from "react-icons/fa";
 import SectionHeader from "./SectionHeader";
-
-const blogs = [
-  {
-    id: 1,
-    img: "/blogs/blog-1.jpg",
-    date: "September 25, 2025",
-    author: "Admin",
-    title: "Inside Our State-of-the-Art Training Academy",
-    excerpt:
-      "Take an inside look at Anondo Universal’s Training Academy — a two-acre facility equipped with dormitories, simulation areas, CCTV labs, and fitness grounds designed to prepare disciplined security professionals.",
-    slug: "training-academy-overview",
-  },
-  {
-    id: 2,
-    img: "/blogs/blog-2.jpg",
-    date: "September 20, 2025",
-    author: "Admin",
-    title: "Why Training Defines Reliable Security",
-    excerpt:
-      "Unlike traditional providers, Anondo Universal ensures every guard completes a rigorous 45-day program blending physical drills, legal awareness, and personal development for complete readiness.",
-    slug: "importance-of-security-training",
-  },
-  {
-    id: 3,
-    img: "/blogs/blog-3.jpg",
-    date: "September 15, 2025",
-    author: "Admin",
-    title: "Comprehensive Services for Every Sector",
-    excerpt:
-      "From households and offices to factories, events, and financial institutions — explore how our tailored services deliver discipline, trust, and professionalism in every assignment.",
-    slug: "comprehensive-security-services",
-  },
-];
+import { blogPosts } from "@/data/blogPostsData";
 
 export default function BlogSection() {
   return (
@@ -48,7 +16,7 @@ export default function BlogSection() {
         />
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {blogs.map((blog) => (
+          {blogPosts.slice(0, 3).map((blog) => (
             <Link key={blog.id} href={`/blogs/${blog.slug}`}>
               <div className="group rounded overflow-hidden cursor-pointer">
                 <div className="relative w-full h-64 overflow-hidden">

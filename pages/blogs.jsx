@@ -8,7 +8,7 @@ export default function BlogsPage() {
     description:
       "Read blogs and articles from Anondo Universal Services Limited on professional security training, risk management, residential protection, corporate event safety, industrial site security, and modern surveillance technology in Bangladesh.",
     keywords:
-      "Anondo Universal Services blogs, security training Bangladesh, risk management articles, residential protection tips, corporate event safety, industrial site security, CCTV surveillance Bangladesh, professional guards insights",
+      "Anondo Universal Services Limited blogs, security training Bangladesh, risk management articles, residential protection tips, corporate event safety, industrial site security, CCTV surveillance Bangladesh, professional guards insights",
     author: "Anondo Universal Services Limited",
     url: "https://www.anondouniversalserviceslimited.com/blogs",
     image: "https://www.anondouniversalserviceslimited.com/blogs/blog-og.jpg",

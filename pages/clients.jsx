@@ -7,9 +7,9 @@ export default function OurClientPage() {
   const meta = {
     title: "Our Clients | Anondo Universal Services Limited",
     description:
-      "Discover the organizations and corporate partners that trust Anondo Universal Services Limited for professional security solutions, trained personnel deployment, and advanced surveillance services across Bangladesh.",
+      "Explore the sectors supported by Anondo Universal Services Limited through professional security solutions, trained personnel deployment, and surveillance services across Bangladesh.",
     keywords:
-      "Anondo Universal Services clients, security company clients Bangladesh, corporate security partners, trusted security service provider Bangladesh, industrial security clients, residential security partnerships",
+      "Anondo Universal Services Limited clients, security company sectors Bangladesh, corporate security, industrial security, residential security partnerships",
     author: "Anondo Universal Services Limited",
     url: "https://www.anondouniversalserviceslimited.com/our-clients",
     image: "https://www.anondouniversalserviceslimited.com/og/clients-og.jpg",

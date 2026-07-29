@@ -69,7 +69,7 @@ export default function FutureVision() {
           <p className="text-lg text-gray-700 font-medium">
             Through these initiatives,{" "}
             <span className="text-primary font-bold">
-              Anondo Universal Security Services Ltd
+              Anondo Universal Services Limited
             </span>{" "}
             aims to become the benchmark for private security in Bangladesh —
             trusted both locally and internationally.

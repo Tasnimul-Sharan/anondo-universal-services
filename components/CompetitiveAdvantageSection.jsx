@@ -53,7 +53,7 @@ export default function CompetitiveAdvantageSection() {
       <div className="max-w-7xl mx-auto px-6 md:px-0">
         <SectionHeader
           subtitle="Competitive Advantage"
-          title="Why Choose Anondo Universal"
+          title="Why Choose Anondo Universal Services Limited"
           details="We go beyond basic security services by combining skilled personnel, advanced technology, and client-focused solutions."
         />
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-gray-700 mt-8">

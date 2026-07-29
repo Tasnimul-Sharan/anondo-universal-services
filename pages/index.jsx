@@ -17,8 +17,8 @@ export default function Home() {
     description:
       "Anondo Universal Services Limited is a leading private security provider in Bangladesh. Offering household, corporate, industrial, event, and VIP protection services backed by a state-of-the-art training academy and professional monitoring.",
     keywords:
-      "Anondo Universal Security, security services Bangladesh, private security Dhaka, armed guards Bangladesh, bodyguard services Dhaka, event security Bangladesh, factory security, money transfer security, residential security, professional guards Bangladesh",
-    author: "Anondo Universal Security Services Limited",
+      "Anondo Universal Services Limited, security services Bangladesh, private security Dhaka, armed guards Bangladesh, bodyguard services Dhaka, event security Bangladesh, factory security, money transfer security, residential security, professional guards Bangladesh",
+    author: "Anondo Universal Services Limited",
     url: "https://www.anondouniversalserviceslimited.com/",
     image: "https://www.anondouniversalserviceslimited.com/og-image.jpg",
   };

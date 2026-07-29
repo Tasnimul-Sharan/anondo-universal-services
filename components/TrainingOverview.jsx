@@ -1,3 +1,4 @@
+import Image from "next/image";
 import {
   FiBookOpen,
   FiCamera,
@@ -70,7 +71,7 @@ export default function TrainingOverview() {
 
             <div className="mt-6 space-y-4 text-base leading-8 text-gray-700">
               <p>
-                At the core of Anondo Universal Security Services Ltd lies its
+                At the core of Anondo Universal Services Limited lies its
                 pride and strength, the <strong>Training Academy</strong>, a
                 dedicated facility where men and women are transformed into
                 disciplined, skilled, and confident security professionals.
@@ -96,6 +97,27 @@ export default function TrainingOverview() {
                 <p className="text-3xl font-bold text-primary">2+</p>
                 <p className="mt-1 text-sm font-medium text-gray-600">
                   Acres of Training Space
+                </p>
+              </div>
+            </div>
+ 
+            <div className="mt-6 overflow-hidden rounded-md bg-white shadow-xl shadow-gray-200">
+              <div className="relative aspect-[4/3] w-full">
+                <Image
+                  src="/training/training-academy.jpg"
+                  alt="Anondo Universal Services Limited training academy campus"
+                  fill
+                  sizes="(min-width: 1024px) 36vw, 100vw"
+                  className="object-cover"
+                />
+              </div>
+              <div className="p-4">
+                <p className="text-xs font-semibold uppercase tracking-wide text-primary">
+                  Academy Campus
+                </p>
+                <p className="mt-1 text-sm leading-6 text-gray-600">
+                  A dedicated training environment for discipline, practical
+                  drills, classroom learning, and professional development.
                 </p>
               </div>
             </div>

@@ -1,12 +1,12 @@
 export const servicesDetailsData = {
   meta: {
     title:
-      "Service Details | Anondo Universal Security Services – Professional Security Solutions in Bangladesh",
+      "Service Details | Anondo Universal Services Limited – Professional Security Solutions in Bangladesh",
     description:
-      "Explore detailed information about Anondo Universal Security Services including household security, office and factory security, money transfer protection, event security, CCTV surveillance, crowd control, and VIP bodyguard services across Bangladesh.",
+      "Explore detailed information about Anondo Universal Services Limited including household security, office and factory security, money transfer protection, event security, CCTV surveillance, crowd control, and VIP bodyguard services across Bangladesh.",
     keywords:
       "security service details Bangladesh, private security company Bangladesh, household security, office security, factory security, money transfer security, event security, CCTV surveillance, crowd control, bodyguard services",
-    author: "Anondo Universal Security Services",
+    author: "Anondo Universal Services Limited",
     url: "https://www.anondouniversalserviceslimited.com/services/details",
     image:
       "https://www.anondouniversalserviceslimited.com/services/service-details-og.jpg",

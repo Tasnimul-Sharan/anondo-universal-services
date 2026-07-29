@@ -40,7 +40,7 @@ export default function BlogDetailsDataPage() {
       `Read "${blog.blogPost.title}" – an insightful article from Anondo Universal Services Limited about professional security services, training programs, and industry insights in Bangladesh.`,
     keywords: `${blog.blogPost.postTags.join(
       ", ",
-    )}, Anondo Universal Services blog, security services Bangladesh, security training, professional guards`,
+    )}, Anondo Universal Services Limited blog, security services Bangladesh, security training, professional guards`,
     author: blog.blogPost.author || "Anondo Universal Services Limited",
     url: `https://www.anondouniversalserviceslimited.com/blogs/${blog.slug}`,
     image:

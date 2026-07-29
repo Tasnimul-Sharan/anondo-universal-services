@@ -13,7 +13,7 @@ export const blogDetailsData = {
     description:
       "Explore in-depth blogs from Anondo Universal Services Limited covering our training academy, 30-day training program, security services, mission & vision, future vision, and quality assurance in the security industry of Bangladesh.",
     keywords:
-      "Anondo Universal Services blog, security training Bangladesh, 30-day training program, mission and vision, future security vision, quality assurance, comprehensive security services",
+      "Anondo Universal Services Limited blog, security training Bangladesh, 30-day training program, mission and vision, future security vision, quality assurance, comprehensive security services",
     author: "Anondo Universal Services Limited",
     url: "https://anondouniversalserviceslimited.com/blogs",
     image: "https://anondouniversalserviceslimited.com/blogs/blogs-og.jpg",
@@ -24,10 +24,10 @@ export const blogDetailsData = {
       blogPost: {
         title: "Inside Our State-of-the-Art Training Academy",
         image: "/blogs/blog-1.jpg",
-        author: "Anondo Universal Team",
-        date: "25 SEPTEMBER, 2025",
+        author: "AUSL Editorial Team",
+        date: "September 25, 2025",
         description:
-          "Take an inside look at Anondo Universal’s Training Academy — a two-acre facility designed to prepare disciplined security professionals through modern infrastructure and training tools.",
+          "Take an inside look at Anondo Universal Services Limited’s Training Academy — a two-acre facility designed to prepare disciplined security professionals through modern infrastructure and training tools.",
         checklist: [
           "Two-acre campus with dormitories and fitness grounds.",
           "Dedicated CCTV labs and simulation areas.",
@@ -66,10 +66,10 @@ export const blogDetailsData = {
       blogPost: {
         title: "Why Training Defines Reliable Security",
         image: "/blogs/blog-2.jpg",
-        author: "Anondo Universal Team",
-        date: "20 SEPTEMBER, 2025",
+        author: "AUSL Editorial Team",
+        date: "September 20, 2025",
         description:
-          "Unlike traditional providers, Anondo Universal ensures every guard completes a rigorous 30-day program blending physical drills, legal awareness, and personal development for complete readiness.",
+          "Every Anondo Universal Services Limited guard completes a rigorous 30-day program blending physical drills, legal awareness, and personal development for complete readiness.",
         checklist: [
           "Physical training and endurance building.",
           "Legal rights and compliance awareness.",
@@ -108,8 +108,8 @@ export const blogDetailsData = {
       blogPost: {
         title: "Comprehensive Services for Every Sector",
         image: "/blogs/blog-3.jpg",
-        author: "Anondo Universal Team",
-        date: "15 SEPTEMBER, 2025",
+        author: "AUSL Editorial Team",
+        date: "September 15, 2025",
         description:
           "From households and offices to factories, events, and financial institutions — explore how our tailored services deliver discipline, trust, and professionalism in every assignment.",
         checklist: [
@@ -150,10 +150,10 @@ export const blogDetailsData = {
       blogPost: {
         title: "Our Mission & Vision: Redefining Security in Bangladesh",
         image: "/blogs/blog-4.jpg",
-        author: "Anondo Universal Team",
-        date: "10 SEPTEMBER, 2025",
+        author: "AUSL Editorial Team",
+        date: "September 10, 2025",
         description:
-          "Learn how Anondo Universal is setting new benchmarks in private security through uncompromising training quality, ethical values, and future-focused practices.",
+          "Learn how Anondo Universal Services Limited is setting new benchmarks in private security through uncompromising training quality, ethical values, and future-focused practices.",
         checklist: [
           "Clear mission to deliver disciplined services.",
           "Vision to expand nationwide academies.",
@@ -192,8 +192,8 @@ export const blogDetailsData = {
       blogPost: {
         title: "The 30-Day Training Curriculum Explained",
         image: "/blogs/blog-5.jpg",
-        author: "Anondo Universal Team",
-        date: "07 SEPTEMBER, 2025",
+        author: "AUSL Editorial Team",
+        date: "September 7, 2025",
         description:
           "Discover the four pillars of our training program — Field Training, Professional Skills, Theoretical Knowledge, and Personal Development — that shape disciplined and trustworthy guards.",
         checklist: [
@@ -235,8 +235,8 @@ export const blogDetailsData = {
       blogPost: {
         title: "Future Vision: Building Tomorrow’s Security Standards",
         image: "/blogs/blog-6.jpg",
-        author: "Anondo Universal Team",
-        date: "03 SEPTEMBER, 2025",
+        author: "AUSL Editorial Team",
+        date: "September 3, 2025",
         description:
           "Our roadmap includes nationwide academies, AI-based surveillance, drone monitoring, and international guard deployment to meet global security demands.",
         checklist: [
@@ -277,8 +277,8 @@ export const blogDetailsData = {
       blogPost: {
         title: "Quality Assurance in Every Guard Deployment",
         image: "/blogs/blog-7.jpg",
-        author: "Anondo Universal Team",
-        date: "30 AUGUST, 2025",
+        author: "AUSL Editorial Team",
+        date: "August 30, 2025",
         description:
           "Strict evaluation, surprise inspections, refresher courses, and client feedback loops ensure every guard remains disciplined, alert, and professional.",
         checklist: [
@@ -319,10 +319,10 @@ export const blogDetailsData = {
       blogPost: {
         title: "Competitive Advantage: Why Clients Trust Us",
         image: "/blogs/blog-8.jpg",
-        author: "Anondo Universal Team",
-        date: "25 AUGUST, 2025",
+        author: "AUSL Editorial Team",
+        date: "August 25, 2025",
         description:
-          "With our own academy, professional trainers, cutting-edge practices, and a strong value system, Anondo Universal stands apart in Bangladesh’s security industry.",
+          "With its own academy, professional trainers, modern practices, and a strong value system, Anondo Universal Services Limited stands apart in Bangladesh’s security industry.",
         checklist: [
           "In-house training academy with expert trainers.",
           "Ethical and professional value system.",

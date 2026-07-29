@@ -10,7 +10,7 @@ export default function ContactPage() {
     description:
       "Get in touch with Anondo Universal Services Limited for inquiries, service requests, or consultations. Serving Bangladesh with manned guarding, corporate event protection, residential and industrial security, CCTV surveillance, and training programs.",
     keywords:
-      "Anondo Universal contact, security services Bangladesh, manned guarding inquiry, corporate event security contact, residential security, industrial security, CCTV services, security training, Anondo Universal phone, Anondo Universal email",
+      "Anondo Universal Services Limited contact, security services Bangladesh, manned guarding inquiry, corporate event security contact, residential security, industrial security, CCTV services, security training",
     author: "Anondo Universal Services Limited",
     url: "https://www.anondouniversalserviceslimited.com/contact",
     image:

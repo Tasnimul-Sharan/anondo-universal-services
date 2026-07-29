@@ -8,7 +8,7 @@ export default function GalleryPage() {
     description:
       "Explore the Anondo Universal Services Limited Gallery featuring our security training academy, professional guard deployments, corporate event coverage, residential safety operations, and modern surveillance technology in Bangladesh.",
     keywords:
-      "Anondo Universal Services gallery, security services Bangladesh, guard training academy photos, professional guards images, event security gallery, residential protection photos, industrial security visuals, CCTV and surveillance Bangladesh",
+      "Anondo Universal Services Limited gallery, security services Bangladesh, guard training academy photos, professional guards images, event security gallery, residential protection photos, industrial security visuals, CCTV and surveillance Bangladesh",
     author: "Anondo Universal Services Limited",
     url: "https://www.anondouniversalserviceslimited.com/gallery",
     image:

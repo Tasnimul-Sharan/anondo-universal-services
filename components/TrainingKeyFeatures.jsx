@@ -8,7 +8,7 @@ export default function TrainingKeyFeatures() {
     },
     {
       title: "Dormitory Facilities",
-      desc: "Long-stay accommodation supporting a disciplined 45-day residential program.",
+      desc: "Long-stay accommodation supporting a disciplined 30-day residential program.",
     },
     {
       title: "Classrooms & Simulation Areas",

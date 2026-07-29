@@ -7,6 +7,7 @@ import Head from "next/head";
 import FAQ from "@/components/FAQ";
 import VisionMissionGoals from "@/components/VisionMissionGoals";
 import FutureVision from "@/components/FutureVision";
+import { siteConfig } from "@/data/siteConfig";
 export default function AboutPage() {
   const meta = {
     title:
@@ -31,7 +32,7 @@ export default function AboutPage() {
       {
         question: "Where is Anondo Universal Services Limited located?",
         answer:
-          "Our Head Office is at Printers Building, 12–14th Floor, 5 Rajuk Avenue, Motijheel, Dhaka–1000, Bangladesh. We operate nationwide, serving residential, commercial, and industrial clients with 24/7 support and rapid response services.",
+          `Our Head Office is at ${siteConfig.contact.address}. We operate nationwide, serving residential, commercial, and industrial clients with 24/7 support and rapid response services.`,
       },
       {
         question: "What is the vision of AUSL?",
@@ -51,7 +52,7 @@ export default function AboutPage() {
       {
         question: "How many security professionals are employed by AUSL?",
         answer:
-          "We have more than 2,000 trained security professionals deployed across Bangladesh, supported by supervisors, caretakers, drivers, and specialized operational teams.",
+          `${siteConfig.companyName} has ${siteConfig.approvedStatistics.securityMembers} security members, supported by supervisors and specialized operational teams.`,
       },
       {
         question: "How is safety and quality ensured?",
@@ -71,7 +72,7 @@ export default function AboutPage() {
       {
         question: "How can I contact Anondo Universal Services Limited?",
         answer:
-          "📍 Head Office: Printers Building, 12–14th Floor, 5 Rajuk Avenue, Motijheel, Dhaka–1000, Bangladesh.\n📞 Phone: +880 1313-775333\n📧 Email: contact@anondouniversalserviceslimited.com\n🌐 Website: https://anondouniversalserviceslimited.com/",
+          `📍 Head Office: ${siteConfig.contact.address}\n📞 Phone: ${siteConfig.contact.phone}\n📧 Email: ${siteConfig.contact.email}\n🌐 Website: https://anondouniversalserviceslimited.com/`,
       },
     ],
   };

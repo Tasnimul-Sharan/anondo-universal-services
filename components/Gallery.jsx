@@ -13,19 +13,10 @@ import "yet-another-react-lightbox/plugins/captions.css";
 import { FiEye } from "react-icons/fi";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { galleryImages } from "@/data/galleryData";
 
 export default function Gallery() {
-  const gallery = [
-    { img: "/gallery/gallery2.jpg", title: "Gallery Image 2" },
-    { img: "/gallery/gallery3.jpg", title: "Gallery Image 3" },
-    { img: "/gallery/gallery4.jpg", title: "Gallery Image 4" },
-    { img: "/gallery/gallery5.jpg", title: "Gallery Image 5" },
-    { img: "/gallery/gallery7.jpg", title: "Gallery Image 7" },
-    { img: "/gallery/gallery8.jpg", title: "Gallery Image 8" },
-    { img: "/gallery/gallery10.jpg", title: "Gallery Image 10" },
-    { img: "/gallery/gallery11.jpg", title: "Gallery Image 11" },
-    { img: "/gallery/gallery12.jpg", title: "Gallery Image 12" },
-  ];
+  const gallery = galleryImages.slice(0, 9);
 
   const subtitle = "Our Works";
   const title = "Explore Our Gallery";
@@ -92,20 +83,27 @@ export default function Gallery() {
           >
             <Image
               src={itemData.img}
-              alt={`gallery-${idx}`}
+              alt={`${itemData.title} — ${itemData.category}`}
               width={1200}
               height={1200}
               className="w-full h-full object-cover transition-all transform duration-1000 ease-in group-hover:scale-125"
             />
 
-            <div className="absolute inset-0 flex items-end justify-center p-4">
+            <div className="absolute inset-0 flex items-end justify-between gap-4 bg-gradient-to-t from-black/80 via-black/10 to-transparent p-4">
+              <div className="text-left text-white">
+                <p className="text-xs font-semibold uppercase tracking-wider text-primary">
+                  {itemData.category}
+                </p>
+                <h3 className="mt-1 font-semibold">{itemData.title}</h3>
+              </div>
               <button
-                className="opacity-0 translate-y-6 group-hover:opacity-100 group-hover:translate-y-0
-                transition-all duration-500 ease-out bg-primary text-white px-6 py-4 rounded-md
+                type="button"
+                aria-label={`View ${itemData.title}`}
+                className="shrink-0 opacity-0 translate-y-6 group-hover:opacity-100 group-hover:translate-y-0
+                transition-all duration-500 ease-out bg-primary text-white p-3 rounded-md
                 flex items-center gap-2"
               >
                 <FiEye className="text-lg" />
-                View Image
               </button>
             </div>
           </motion.div>
@@ -139,7 +137,7 @@ export default function Gallery() {
           slides={gallery.map((g) => ({
             src: g.img,
             title: g.title,
-            description: g.desc,
+            description: `${g.category} — ${g.description}`,
           }))}
           plugins={[Thumbnails, Captions, Zoom, Fullscreen, Slideshow]}
           animation={{ fade: 500, swipe: 400 }}
@@ -148,68 +146,8 @@ export default function Gallery() {
           thumbnails={{ position: "bottom", width: 100, height: 70 }}
           captions={{ descriptionTextAlign: "center" }}
           zoom={{ maxZoomPixelRatio: 3, scrollToZoom: true }}
-
-          // thumbnails={{ position: "bottom", width: 100, height: 70 }}
-          // captions={{ descriptionTextAlign: "center" }}
-          // zoom={{ maxZoomPixelRatio: 3, scrollToZoom: true }}
-          // slideshow={{ autoplay: false, delay: 4000 }}
         />
       )}
     </div>
   );
 }
-
-// "use client";
-// import { SlideshowLightbox } from "lightbox.js-react";
-// import SectionHeader from "./SectionHeader";
-// // import "lightbox.js-react/style.css";
-
-// export default function Gallery() {
-//   const gallery = [
-//     {
-//       img: "/gallery/gallery1.jpg",
-//       title: "Gallery Image 1",
-//     },
-//     {
-//       img: "/gallery/gallery2.jpg",
-//       title: "Gallery Image 2",
-//     },
-//     {
-//       img: "/gallery/gallery3.jpg",
-//       title: "Gallery Image 3",
-//     },
-//     {
-//       img: "/gallery/gallery4.jpg",
-//       title: "Gallery Image 4",
-//     },
-//     {
-//       img: "/gallery/gallery5.jpg",
-//       title: "Gallery Image 5",
-//     },
-//     {
-//       img: "/gallery/gallery6.jpg",
-//       title: "Gallery Image 6",
-//     },
-//   ];
-
-//   return (
-//     <div className="custom-container mx-auto py-16">
-//      <SectionHeader
-//   subtitle="Our Works"
-//   title="Explore Our Gallery"
-//   details="Take a look at our security operations, events, and on-field activities that highlight our commitment to safety and protection."
-// />
-
-//       <SlideshowLightbox modalClose="clickOutside"  showThumbnails={true} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-//           {gallery.map((item, idx) => (
-//           <img
-//             key={idx}
-//             src={item.img}
-//             alt={item.title}
-//             className="w-full h-full object-cover rounded-md hover:scale-105 transition-all duration-500"
-//           />
-//         ))}
-//         </SlideshowLightbox>
-//     </div>
-//   );
-// }

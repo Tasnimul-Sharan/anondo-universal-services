@@ -1,52 +1,48 @@
-"use client";
-
-import Image from "next/image";
+import {
+  FaBuilding,
+  FaCalendarCheck,
+  FaHome,
+  FaIndustry,
+  FaUniversity,
+} from "react-icons/fa";
 import SectionHeader from "./SectionHeader";
+import { siteConfig } from "@/data/siteConfig";
 
-const clientLogos = [
-  "/logo/logo-1.jpg",
-  "/logo/logo-2.jpg",
-  "/logo/logo-3.jpg",
-  "/logo/logo-4.jpg",
-  "/logo/logo-5.png",
-  "/logo/logo-6.jpg",
-  "/logo/logo-7.png",
-  "/logo/logo-8.png",
-  "/logo/logo-9.png",
+const clientSectors = [
+  { label: "Corporate offices", icon: FaBuilding },
+  { label: "Industrial facilities", icon: FaIndustry },
+  { label: "Residential communities", icon: FaHome },
+  { label: "Financial institutions", icon: FaUniversity },
+  { label: "Events and venues", icon: FaCalendarCheck },
 ];
 
 export default function OurClientSection() {
   return (
-    <section className="py-20 bg-gray-50">
-      <div className="max-w-6xl mx-auto px-6">
+    <section className="bg-gray-50 py-20">
+      <div className="mx-auto max-w-6xl px-6">
         <SectionHeader
-          subtitle="Corporate Alliances"
-          title="Trusted by Industry Leaders"
-          details="Our commitment to precision, compliance, and service excellence has earned the confidence of established organizations across multiple sectors."
+          subtitle="Client Partnerships"
+          title="Security Support Across Key Sectors"
+          details={`${siteConfig.companyName} serves organizations and communities across Bangladesh while respecting client confidentiality.`}
         />
 
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-6 items-center">
-          {clientLogos.map((logo, idx) => (
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-5">
+          {clientSectors.map(({ label, icon: Icon }) => (
             <div
-              key={idx}
-              className="group bg-white rounded-2xl border border-gray-100 
-                         p-6 flex items-center justify-center 
-                         transition-all duration-300
-                         hover:shadow-lg hover:-translate-y-1"
+              key={label}
+              className="rounded-2xl border border-gray-100 bg-white p-6 text-center shadow-sm"
             >
-              <Image
-                src={logo}
-                alt={`Client Logo ${idx + 1}`}
-                width={1200}
-                height={1200}
-                className="object-cover h-full w-full
-                           transition-all duration-500
-                           group-hover:opacity-100 
-                           group-hover:scale-105"
-              />
+              <Icon className="mx-auto text-3xl text-primary" />
+              <h3 className="mt-4 font-semibold text-secondary">{label}</h3>
             </div>
           ))}
         </div>
+
+        <p className="mx-auto mt-10 max-w-3xl rounded-lg border border-primary/20 bg-primary/5 p-5 text-center text-sm leading-relaxed text-gray-600">
+          Client names, logos, and endorsements are published only after written
+          authorization. Verified references can be requested through our
+          corporate office.
+        </p>
       </div>
     </section>
   );
