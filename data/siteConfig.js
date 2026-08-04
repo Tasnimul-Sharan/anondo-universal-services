@@ -11,8 +11,14 @@ export const siteConfig = {
   contact: {
     address:
       "Printers Building, 14th Floor, 5 Rajuk Avenue, Motijheel, Dhaka 1000, Bangladesh",
-    phone: "+880 1331-115500",
-    phoneHref: "tel:+8801331115500",
+    phone: "+8801324711845",
+    phoneHref: "tel:+8801324711845",
+    additionalPhones: [
+      {
+        phone: "+8801324711849",
+        phoneHref: "tel:+8801324711849",
+      },
+    ],
     email: "contact@anondouniversalserviceslimited.com",
     emailHref: "mailto:contact@anondouniversalserviceslimited.com",
   },

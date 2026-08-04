@@ -112,12 +112,23 @@ export default function ContactSection() {
               </div>
               <div>
                 <h4 className="font-semibold">Our Phone</h4>
-                <a
-                  className="text-sm opacity-90 hover:text-primary"
-                  href={siteConfig.contact.phoneHref}
-                >
-                  {siteConfig.contact.phone}
-                </a>
+                <div className="flex flex-col gap-1">
+                  {[
+                    {
+                      phone: siteConfig.contact.phone,
+                      phoneHref: siteConfig.contact.phoneHref,
+                    },
+                    ...siteConfig.contact.additionalPhones,
+                  ].map(({ phone, phoneHref }) => (
+                    <a
+                      key={phone}
+                      className="text-sm opacity-90 hover:text-primary"
+                      href={phoneHref}
+                    >
+                      {phone}
+                    </a>
+                  ))}
+                </div>
               </div>
             </div>
             <div className="flex items-start gap-4 bg-white rounded-lg p-6 text-gray-700">
